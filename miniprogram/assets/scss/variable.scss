@@ -1,0 +1,18 @@
+page,
+view,
+text,
+image,
+button,
+video,
+map,
+scroll-view,
+swiper,
+input,
+textarea,
+navigator {
+  box-sizing: border-box;
+  background-origin: border-box;
+}
+page {
+  height: 100%;
+}

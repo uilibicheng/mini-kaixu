@@ -1,0 +1,23 @@
+<!--components/common/actionSheet/index.wxml-->
+<root-portal wx:if="{{display}}" enable="{{true}}">
+  <WaterMark id="water-mark" />
+
+  <view class="action-sheet">
+    <view class="sheet-mask {{show ? 'show' : ''}}" catchtap="clickMask" />
+    <view class="sheet-box {{show ? 'popup' : ''}}" style="{{height ? 'height:' + height : ''}}">
+      <view class="sheet-header flex-header" wx:if="{{isShowHeader}}">
+        {{title}}
+        <image class="sheet-close" src="/assets/images/icon/icon-close.png" catch:tap="close" />
+      </view>
+      <view class="flex-header" wx:else>
+        <!-- prettier-ignore -->
+        <slot name="header" />
+      </view>
+
+      <scroll-view class="sheet-content" bounces="{{bounces}}" scroll-y type="custom">
+        <!-- prettier-ignore -->
+        <slot name="content" />
+      </scroll-view>
+    </view>
+  </view>
+</root-portal>

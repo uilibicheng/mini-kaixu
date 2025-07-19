@@ -1,0 +1,5 @@
+<view style="position: relative;{{customStyle}};{{painterStyle}}">
+  <!-- <block wx:if="{{use2D}}"> -->
+  <canvas type="2d" id="photo" style="{{photoStyle}}" />
+  <!-- </block> -->
+</view>

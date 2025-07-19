@@ -1,0 +1,30 @@
+<!--components/languageSheet/languageSheet.wxml-->
+<ActionSheet
+  id="actionSheet"
+  visible="{{visible}}"
+  title=""
+  height="648rpx"
+  isShowHeader="{{false}}"
+  canCancel="{{true}}"
+  bounces="{{false}}"
+  bind:close="handleClose"
+>
+  <view slot="header" class="area-modal-header">
+    <text class="area-cancel-button" bind:tap="handleClose">取消'</text>
+    <text class="area-title">{{ title }}</text>
+    <text class="area-confirm-button" bind:tap="handleConfirm">确定</text>
+  </view>
+  <view slot="content" class="area-box">
+    <picker-view
+      indicator-style
+      value="{{[selectedIndex]}}"
+      bindchange="columnChange"
+      indicator-class="shit"
+      class="slide-up"
+    >
+      <picker-view-column>
+        <view wx:for="{{list}}" class="shit" wx:key="index">{{item[name]}} </view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</ActionSheet>

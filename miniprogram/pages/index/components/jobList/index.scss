@@ -1,0 +1,126 @@
+/* pages/index/components/jobList/index.wxss */
+.job-list {
+  @include global.flex(y, start, start);
+  width: 100%;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  .job-item {
+    width: 100%;
+    height: 220rpx;
+    background-color: global.$white-color;
+    border-radius: 16rpx;
+    margin-bottom: 20rpx;
+    padding: 24rpx;
+    box-sizing: border-box;
+    @include global.flex(y, start, start);
+
+    .flex-row {
+      width: 100%;
+      @include global.flex(x, between, center);
+    }
+
+    .job-name {
+      font-size: 32rpx;
+      color: rgba(0, 0, 0, 0.9);
+      font-weight: bold;
+    }
+    .job-salary {
+      color: #f2505d;
+      font-weight: bold;
+      font-size: 28rpx;
+    }
+
+    .job-requirement {
+      justify-content: start;
+      margin-top: 8rpx;
+
+      .requirement-item {
+        height: 32rpx;
+        line-height: 32rpx;
+        padding: 0 12rpx;
+        background: rgba(0, 0, 0, 0.04);
+        font-size: 20rpx;
+        color: rgba(0, 0, 0, 0.7);
+        margin-right: 16rpx;
+      }
+    }
+
+    .job-info {
+      flex: 1;
+      margin-top: 20rpx;
+      .info-left {
+        flex: 1;
+        @include global.flex(x, start, center);
+
+        .info-avatar {
+          flex-shrink: 0;
+          width: 46rpx;
+          height: 46rpx;
+          border-radius: 46rpx;
+          position: relative;
+          background-color: #D8D8D8;
+          image {
+            width: 100%;
+            height: 100%;
+            border-radius: 46rpx;
+            overflow: hidden;
+          }
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: -8rpx;
+            top: -2rpx;
+            width: 16rpx;
+            height: 16rpx;
+            border-radius: 16rpx;
+            background-color: #F2505D;
+          }
+          &.online::after {
+            background-color: global.$main-color;
+          }
+        }
+        .info-text {
+          flex: 1;
+          margin-left: 16rpx;
+          @include global.flex(y, start, start);
+          color: rgba(0,0,0,0.9);
+          font-size: 20rpx;
+
+          .info-text-row {
+            @include global.flex(x, start, center);
+            .info-split {
+              margin: 0 6rpx;
+              width: 2rpx;
+              height: 18rpx;
+              background-color: #D8D8D8;
+            }
+
+            .icon-safe {
+              margin-left: 6rpx;
+              width: 24rpx;
+              height: 24rpx;
+            }
+          }
+          .info-area {
+            color: rgba(0,0,0,0.5);
+            margin-top: 4rpx;
+            line-height: 34rpx;
+          }
+        }
+      }
+
+      .info-btn {
+        flex-shrink: 0;
+        width: 160rpx;
+        height: 48rpx;
+        background-color: #e5fcf4;
+        border-radius: 8rpx;
+        color: global.$main-color;
+        font-size: 24rpx;
+        font-weight: bold;
+        @include global.flex(x, center, center);
+      }
+    }
+  }
+}

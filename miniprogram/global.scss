@@ -1,0 +1,42 @@
+/**
+  样式全局变量，使用方式为global.xxx
+*/
+
+/* 颜色变量 */
+$white-color: #fff;
+$black-color: #000;
+$main-color: #07C160;
+$gray-color: #f7f7f7;
+$minor-color: #5f5f5f;
+$active-color: #c6a47e;
+
+// 背景图
+$intro-bg: url('https://h5rsc.vipstatic.com/mini/mini-kaiyun/bg/20240910/intro-bg.png');
+$login-bg: url('https://h5rsc.vipstatic.com/mini/mini-kaiyun/bg/20240910/login-bg.png');
+$mail-binding-bg: url('https://h5rsc.vipstatic.com/mini/mini-kaiyun/bg/20240910/mail-binding-bg.png');
+$invite-bg: url('https://h5rsc.vipstatic.com/mini/mini-kaiyun/bg/20240910/invite-bg.png');
+$user-bg: url('https://h5rsc.vipstatic.com/mini/mini-kaiyun/bg/20240910/user-bg.png');
+
+/* flex 布局 */
+$flex-params: (
+  x: row,
+  y: column,
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  around: space-around,
+  between: space-between,
+);
+
+@mixin flex($coor: null, $justify: null, $alignItems: null) {
+  display: flex;
+  @if $coor {
+    flex-direction: map-get($flex-params, $coor);
+  }
+  @if $justify {
+    justify-content: map-get($flex-params, $justify);
+  }
+  @if $alignItems {
+    align-items: map-get($flex-params, $alignItems);
+  }
+}

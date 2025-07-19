@@ -1,0 +1,36 @@
+# 操作系统生成文件
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE/编辑器配置
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+
+# 依赖与构建产物
+node_modules/
+dist/
+build/
+package-lock.json
+yarn.lock
+
+# 日志与调试文件
+*.log
+npm-debug.log*
+yarn-error.log*
+miniprogram_npm-debug.log*
+
+# 微信小程序特有文件
+miniprogram_npm/
+*.wxss.map
+*.wxml.map
+.env*
+project.config.local.json
+
+# 本地环境配置
+.env.production

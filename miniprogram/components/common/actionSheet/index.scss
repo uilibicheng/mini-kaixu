@@ -1,0 +1,81 @@
+/* components/common/actionSheet/index.wxss */
+@import '../../../assets/scss/variable.scss';
+
+.action-sheet {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+
+  .sheet-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    transition: opacity 0.3s;
+    opacity: 0;
+
+    &.show {
+      opacity: 1;
+    }
+  }
+
+  .sheet-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+    max-height: 1010rpx;
+    display: flex;
+    flex-direction: column;
+    background-color: global.$white-color;
+    border-radius: 24rpx 24rpx 0 0;
+    z-index: 999;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+    transform: translateY(100%);
+    transition: transform 0.25s;
+
+    &.popup {
+      transform: translateY(0);
+    }
+
+    .sheet-header {
+      flex-shrink: 0;
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 112rpx;
+      align-items: center;
+      justify-content: center;
+      color: global.$black-color;
+      font-size: 36rpx;
+      font-weight: bold;
+
+      .sheet-close {
+        position: absolute;
+        right: 32rpx;
+        top: 32rpx;
+        width: 45rpx;
+        height: 45rpx;
+      }
+    }
+
+    .flex-header {
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+
+    .sheet-content {
+      flex: 1;
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+}

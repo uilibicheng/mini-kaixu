@@ -1,0 +1,9 @@
+<!--components/smartImage/index.wxml-->
+<image
+  class="smart-img"
+  src="{{(imageErr || !src) ? defaultImage : src}}"
+  mode="{{mode}}"
+  lazy-load="{{lazyLoad}}"
+  binderror="errorHandler"
+  bindload="loadHandler"
+/>
