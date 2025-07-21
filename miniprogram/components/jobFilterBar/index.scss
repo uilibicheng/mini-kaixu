@@ -1,0 +1,25 @@
+/* components/jobFilterBar/index.wxss */
+.filter-list {
+  @include global.flex(x, start, center);
+  .filter-btn {
+    width: 88rpx;
+    height: 44rpx;
+    border-radius: 4rpx;
+    background-color: global.$white-color;
+    @include global.flex(x, center, center);
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 24rpx;
+    position: relative;
+    margin-right: 20rpx;
+    &:last-child {
+      margin-right: 0;
+    }
+    .filter-arrow {
+      position: absolute;
+      bottom: 4rpx;
+      right: 4rpx;
+      width: 12rpx;
+      height: 12rpx;
+    }
+  }
+}

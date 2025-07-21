@@ -111,7 +111,7 @@
 
               &::after {
                 display: block;
-                content: "";
+                content: '';
                 position: absolute;
                 bottom: -8rpx;
                 left: 50%;
@@ -125,7 +125,7 @@
 
             &.dot::after {
               display: block;
-              content: "";
+              content: '';
               position: absolute;
               right: -14rpx;
               top: -2rpx;
@@ -133,32 +133,6 @@
               height: 16rpx;
               border-radius: 16rpx;
               background: #f2505d;
-            }
-          }
-        }
-
-        .filter-list {
-          margin-top: 2rpx;
-          @include global.flex(x, start, center);
-          .filter-btn {
-            width: 88rpx;
-            height: 44rpx;
-            border-radius: 4rpx;
-            background-color: global.$white-color;
-            @include global.flex(x, center, center);
-            color: rgba(0, 0, 0, 0.7);
-            font-size: 24rpx;
-            position: relative;
-            margin-right: 20rpx;
-            &:last-child {
-              margin-right: 0;
-            }
-            .filter-arrow {
-              position: absolute;
-              bottom: 4rpx;
-              right: 4rpx;
-              width: 12rpx;
-              height: 12rpx;
             }
           }
         }
@@ -178,6 +152,56 @@
         width: 170rpx;
         height: 164rpx;
         z-index: 98;
+      }
+
+      .wechat-notice {
+        position: absolute;
+        bottom: 26rpx;
+        left: 24rpx;
+        width: 702rpx;
+        height: 120rpx;
+        border: 2rpx solid rgba(7, 193, 96, 0.4);
+        border-radius: 16rpx;
+        @include global.flex(x, between, center);
+        background-color: global.$white-color;
+        padding-left: 24rpx;
+        .wechat-notice-left {
+          @include global.flex(x, start, center);
+          .icon-wechat {
+            width: 74rpx;
+            height: 74rpx;
+            margin-right: 24rpx;
+          }
+          .wechat-tip {
+            font-weight: 600;
+            font-size: 28rpx;
+            color: rgba(0, 0, 0, 0.9);
+          }
+          .wechat-text {
+            margin-top: 4rpx;
+            font-size: 24rpx;
+            color: rgba(0, 0, 0, 0.9);
+          }
+        }
+
+        .wechat-btn {
+          margin-right: 80rpx;
+          width: 160rpx;
+          height: 64rpx;
+          background-color: global.$main-color;
+          border-radius: 8rpx;
+          @include global.flex(x, center, center);
+          font-weight: 500;
+          font-size: 28rpx;
+          color: global.$white-color;
+        }
+        .wechat-close {
+          width: 40rpx;
+          height: 40rpx;
+          position: absolute;
+          right: 8rpx;
+          top: 8rpx;
+        }
       }
     }
   }

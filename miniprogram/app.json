@@ -5,9 +5,12 @@
     "pages/message/message",
     "pages/notice/notice",
     "pages/selectCharacter/selectCharacter",
-    "pages/jobDetail/jobDetail"
+    "pages/jobDetail/jobDetail",
+    "pages/jobSearch/jobSearch"
   ],
-  "requiredPrivateInfos": ["chooseAddress"],
+  "requiredPrivateInfos": [
+    "chooseAddress"
+  ],
   "window": {
     "navigationBarTextStyle": "black",
     "backgroundColor": "#ffffff",

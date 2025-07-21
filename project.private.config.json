@@ -4,11 +4,18 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/jobDetail/jobDetail",
-          "pathName": "pages/jobDetail/jobDetail",
+          "name": "pages/jobSearch/jobSearch",
+          "pathName": "pages/jobSearch/jobSearch",
           "query": "",
           "scene": null,
           "launchMode": "default"
+        },
+        {
+          "name": "pages/jobDetail/jobDetail",
+          "pathName": "pages/jobDetail/jobDetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "pages/selectCharacter/selectCharacter",

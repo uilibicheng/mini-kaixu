@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "JobFilterBar": "/components/jobFilterBar/index"
+  }
+}

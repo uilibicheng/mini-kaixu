@@ -1,0 +1,15 @@
+<!-- components/jobFilterBar/index.wxml -->
+<view class="filter-list">
+  <view class="filter-btn" style="{{background ? 'background: ' + background + ';' : ''}} {{color ? 'color: ' + color + ';' : ''}}">
+    城市
+    <image class="filter-arrow" src="/assets/images/job/filter-arrow.svg" />
+  </view>
+  <view class="filter-btn" style="{{background ? 'background: ' + background + ';' : ''}} {{color ? 'color: ' + color + ';' : ''}}">
+    岗位
+    <image class="filter-arrow" src="/assets/images/job/filter-arrow.svg" />
+  </view>
+  <view class="filter-btn" style="{{background ? 'background: ' + background + ';' : ''}} {{color ? 'color: ' + color + ';' : ''}}">
+    筛选
+    <image class="filter-arrow" src="/assets/images/job/filter-arrow.svg" />
+  </view>
+</view>

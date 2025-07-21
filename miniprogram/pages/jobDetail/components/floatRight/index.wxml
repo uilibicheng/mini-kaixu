@@ -2,7 +2,8 @@
 <root-portal>
   <view class="float-right">
     <view class="float-item">
-      <image class="float-img" src="/assets/images/jobDetail/icon-star.svg" />
+      <image wx:if="{{false}}" class="float-img" src="/assets/images/jobDetail/icon-star.svg" />
+      <image wx:else class="float-img" src="/assets/images/jobDetail/icon-star-active.svg" />
       收藏
     </view>
     <view class="float-item">

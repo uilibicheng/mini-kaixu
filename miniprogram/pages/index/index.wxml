@@ -25,20 +25,7 @@
           <view class="filter-sort-item dot">最新</view>
           <view class="filter-sort-item">提前批</view>
         </view>
-        <view class="filter-list">
-          <view class="filter-btn">
-            城市
-            <image class="filter-arrow" src="/assets/images/job/filter-arrow.svg" />
-          </view>
-          <view class="filter-btn">
-            岗位
-            <image class="filter-arrow" src="/assets/images/job/filter-arrow.svg" />
-          </view>
-          <view class="filter-btn">
-            筛选
-            <image class="filter-arrow" src="/assets/images/job/filter-arrow.svg" />
-          </view>
-        </view>
+        <JobFilterBar />
       </view>
       <scroll-view class="job-scroll" scroll-y="{{true}}">
         <!-- 岗位列表 -->
@@ -46,9 +33,28 @@
       </scroll-view>
 
       <image
+        wx:if="{{false}}"
         class="association-img"
         src="/assets/images/job/association.png"
       />
+
+      <view class="wechat-notice">
+        <view class="wechat-notice-left">
+          <image
+            class="icon-wechat"
+            src="/assets/images/icon/icon-wechat.png"
+          />
+          <view>
+            <view class="wechat-tip">微信开启提醒</view>
+            <view class="wechat-text">不错过重要求职消息！</view>
+          </view>
+        </view>
+        <view class="wechat-btn">开启通知</view>
+        <image
+          class="wechat-close"
+          src="/assets/images/job/wechat-close.svg"
+        />
+      </view>
     </view>
   </view>
 </view>
