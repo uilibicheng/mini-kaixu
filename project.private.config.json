@@ -1,9 +1,35 @@
 {
   "libVersion": "3.8.11",
-  "condition": {},
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/jobDetail/jobDetail",
+          "pathName": "pages/jobDetail/jobDetail",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
+        },
+        {
+          "name": "pages/selectCharacter/selectCharacter",
+          "pathName": "pages/selectCharacter/selectCharacter",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
   "projectname": "%E5%BC%80%E6%97%AD%E6%95%99%E5%B8%88%E6%8B%9B%E8%81%98",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "coverView": false,
     "lazyloadPlaceholderEnable": false,
     "skylineRenderEnable": true,

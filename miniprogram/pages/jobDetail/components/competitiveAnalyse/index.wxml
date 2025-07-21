@@ -1,0 +1,40 @@
+<!--pages/jobDetail/components/competitiveAnalyse/index.wxml-->
+<view class="mgt24 job-block">
+  <image
+    class="analyse-bg"
+    src="/assets/images/jobDetail/analyse-bg.png"
+    mode="widthFix"
+  />
+  <view class="analyse-content">
+    <view class="analyse-row">
+      <view class="job-block-title">
+        竞争力分析
+        <view class="analyse-sub-title">让求职更有把握</view>
+      </view>
+      <view class="analyse-btn">
+        立即分析
+      </view>
+    </view>
+
+    <text class="analyse-text">
+      <text>一共</text>
+      <text class="active-text text-mask">671人</text>
+      <text>投递此职位，你是第</text>
+      <text class="active-text text-mask">901名</text>
+      <text>投递，报录比越低，上岸概率越大，看来看看自己概率有多大</text>
+    </text>
+
+    <view class="analyse-bar-wrap">
+      <image
+        class="analyse-bar"
+        src="/assets/images/jobDetail/analyse-bar.png"
+      />
+      <view class="analyse-row">
+        <view class="analyse-bar-item">一般</view>
+        <view class="analyse-bar-item">良好</view>
+        <view class="analyse-bar-item">优秀</view>
+        <view class="analyse-bar-item">极好</view>
+      </view>
+    </view>
+  </view>
+</view>

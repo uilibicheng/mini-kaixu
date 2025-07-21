@@ -1,0 +1,20 @@
+<!-- pages/jobDetail/jobDetail.wxml -->
+<view class="job-detail-page">
+  <NavigationBar title="职位详情" color="black" background="#F2F2F6" />
+  <scroll-view class="detail-scroll" scroll-y type="list">
+    <view class="detail-content">
+      <!-- 职位信息 -->
+      <Jobinfo />
+      <!-- 职位福利 -->
+      <JobBenefits />
+      <!-- 单位信息 -->
+      <SchoolInfo />
+      <!-- 竞争力分析 -->
+      <CompetitiveAnalyse />
+      <!-- 单位点评 -->
+      <SchoolEvaluation />
+    </view>
+  </scroll-view>
+  <!-- 底部按钮 -->
+  <Footer />
+</view>

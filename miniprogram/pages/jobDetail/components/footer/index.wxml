@@ -1,0 +1,19 @@
+<!-- pages/jobDetail/components/footer/footer.wxml -->
+<view class="page-footer safe-bottom">
+  <view class="footer-row">
+    <view class="row-left">
+      <view class="row-item">
+        <image class="row-item-icon" src="/assets/images/icon/icon-phone.svg" />
+        电话
+      </view>
+      <view class="row-item">
+        <image class="row-item-icon" src="/assets/images/icon/icon-message.svg" />
+        在线聊
+      </view>
+    </view>
+    <view class="row-right">
+      <view class="row-btn">委托找工作</view>
+      <view class="row-btn row-active-btn">投递简历</view>
+    </view>
+  </view>
+</view>

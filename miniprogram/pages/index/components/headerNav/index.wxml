@@ -2,7 +2,7 @@
 <view class="header-title">
     <NavigationBar title="" showNavigationLeft="{{false}}" color="black" background="transparent">
       <view slot="center" class="header-left">
-        <image class="header-logo" src="/assets/images/job/logo.png"  />
+        <image class="header-logo" src="/assets/images/job/logo.svg"  />
         <view class="header-nav">
           <view class="nav-title">开旭教师招聘</view>
           <view class="nav-sologn">教师找工作，学校直接聊</view>
@@ -12,13 +12,9 @@
     
     <view class="header-search">
       <view class="search-box">
-        <view class="search-lbs">
-          杭州·余杭
-          <image class="lbs-arrow" src="/assets/images/job/lbs-arrow.png" />
-        </view>
         <view class="search-input">
           搜索职位/单位名称
-          <image class="icon-search" src="/assets/images/icon/icon-search.png" />
+          <image class="icon-search" src="/assets/images/icon/icon-search.svg" />
         </view>
       </view>
     </view>

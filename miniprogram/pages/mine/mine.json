@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "LoginModal": "/components/loginModal/index"
+  }
 }

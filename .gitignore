@@ -34,3 +34,4 @@ project.config.local.json
 
 # 本地环境配置
 .env.production
+project.private.config.json

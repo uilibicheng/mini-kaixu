@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "Jobinfo": "./components/jobinfo/index",
+    "JobBenefits": "./components/jobBenefits/index",
+    "SchoolInfo": "./components/schoolInfo/index",
+    "CompetitiveAnalyse": "./components/competitiveAnalyse/index",
+    "SchoolEvaluation": "./components/schoolEvaluation/index",
+    "Footer": "./components/footer/index"
+  }
+}

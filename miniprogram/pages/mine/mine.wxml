@@ -1,2 +1,7 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<!-- pages/mine/mine.wxml -->
+ <view class="mine-page tabbar-page">
+   <NavigationBar title="我的" back="{{false}}" color="black" background="#fff" />
+   
+   <MessageBox id="message-box" />
+   <LoginModal visible="{{loginVisible}}" />
+ </view>

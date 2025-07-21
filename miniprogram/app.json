@@ -3,11 +3,11 @@
     "pages/index/index",
     "pages/mine/mine",
     "pages/message/message",
-    "pages/notice/notice"
+    "pages/notice/notice",
+    "pages/selectCharacter/selectCharacter",
+    "pages/jobDetail/jobDetail"
   ],
-  "requiredPrivateInfos": [
-    "chooseAddress"
-  ],
+  "requiredPrivateInfos": ["chooseAddress"],
   "window": {
     "navigationBarTextStyle": "black",
     "backgroundColor": "#ffffff",
@@ -49,7 +49,8 @@
     }
   },
   "usingComponents": {
-    "NavigationBar": "./components/navigationBar/navigationBar"
+    "NavigationBar": "./components/navigationBar/navigationBar",
+    "MessageBox": "./components/common/messageBox/index"
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",

@@ -1,0 +1,22 @@
+<!--components/common/bottomBtnGroup/index.wxml-->
+<view
+  wx:if="{{btnArr && btnArr.length}}"
+  class="fixed-bottom {{needSafeArea ? 'safe-bottom' : ''}}"
+  style="{{zIndex ? 'z-index: ' + zIndex : ''}}"
+>
+  <view
+    class="bottom-btn"
+    style="height:{{height}};justify-content: {{justifyContent}};{{zIndex ? 'z-index: ' + zIndex : ''}}"
+  >
+    <block wx:for="{{btnArr}}" wx:key="index">
+      <view
+        class="btn {{item.isActive ? 'active-btn' : ''}} {{!item.width ? 'adjust-btn' : ''}}"
+        style="width: {{item.width ? item.width : ''}}; height: {{item.height ? item.height : ''}}; {{item.background ? 'background:' + item.background : ''}};{{color ? item.color : ''}}"
+        data-method="{{item.method}}"
+        bindtap="handleClick"
+      >
+        {{ item.name }}
+      </view>
+    </block>
+  </view>
+</view>

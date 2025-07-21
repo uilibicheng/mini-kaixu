@@ -1,7 +1,7 @@
 <!-- pages/index/components/jobList/index.wxml -->
 <view class="job-list">
   <block wx:for="{{6}}" wx:key="index">
-    <view class="job-item">
+    <view class="job-item" bindtap="jumpToJobDetail">
       <view class="flex-row">
         <text class="job-name">【杭州·公办·非编】小学语文</text>
         <view class="job-salary">10-12K/年</view>
@@ -28,7 +28,7 @@
               <view>张老师</view>
               <image
                 class="icon-safe"
-                src="/assets/images/job/icon-safe.png"
+                src="/assets/images/job/icon-safe.svg"
               />
             </view>
             <view class="info-area">杭州市 余杭区</view>

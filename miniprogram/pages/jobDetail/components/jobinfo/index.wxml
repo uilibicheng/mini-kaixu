@@ -1,0 +1,42 @@
+<!-- pages/jobDetail/components/jobinfo/index.wxml -->
+<view class="job-block">
+  <view class="job-name">杭州·公办·代课｜初中语文</view>
+  <view class="mgt20 job-salary">9-12K/年</view>
+  <view class="mgt20 job-request">
+    <view class="request-item">
+      <image class="request-item-icon" src="/assets/images/jobDetail/icon-lbs.svg" />
+      <view>杭州·上城区</view>
+    </view>
+    <view class="request-item">
+      <image class="request-item-icon" src="/assets/images/jobDetail/icon-education.svg" />
+      <view>本科学历</view>
+    </view>
+    <view class="request-item">
+      <image class="request-item-icon" src="/assets/images/jobDetail/icon-experience.svg" />
+      <view>1年以上经验</view>
+    </view>
+  </view>
+  <view class="job-update">
+    <view>更新于：06-07</view>
+    <view class="update-info">
+      <view class="mgr24">浏览：4059</view>
+      <view>投递：1</view>
+    </view>
+  </view>
+  <view class="job-concat">
+    <view class="concat-left">
+      <image class="concat-avatar" src="" mode="scaleToFill" />
+      <view class="concat-info">
+        <view class="concat-name">张老师文字文字文字文字文字文</view>
+        <view class="concat-school">杭州市听涛小学</view>
+        <view class="concat-area">IP属地：杭州市</view>
+      </view>
+    </view>
+    <view class="concat-right">
+      <image class="icon-message" src="/assets/images/jobDetail/icon-message.svg" />
+      <view class="">立即沟通</view>
+    </view>
+  </view>
+  <view class=""></view>
+  <view class=""></view>
+</view>

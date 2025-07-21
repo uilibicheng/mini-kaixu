@@ -23,7 +23,7 @@
                 <image
                   wx:if="{{!!background}}"
                   class="icon-back"
-                  src="/assets/images/icon/icon-back.png"
+                  src="/assets/images/icon/icon-back.svg"
                 />
                 <image
                   wx:else

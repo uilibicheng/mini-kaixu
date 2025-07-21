@@ -1,0 +1,32 @@
+/* pages/jobDetail/components/schoolEvaluation/index.wxss */
+.job-block {
+  padding-right: 0 !important;
+  padding-bottom: 40rpx !important;
+
+  .evaluation-row {
+    @include global.flex(x, between, center);
+    .job-block-title {
+      @include global.flex(x, start, center);
+      .evaluation-num {
+        margin-left: 8rpx;
+        font-weight: 500;
+        font-size: 24rpx;
+        color: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .evaluation-btn {
+      padding-right: 20rpx;
+      font-weight: bold;
+      font-size: 24rpx;
+      color: global.$main-color;
+    }
+  }
+
+  .evaluation-sub-title {
+    margin-top: 16rpx;
+    font-weight: 500;
+    font-size: 24rpx;
+    color: #593100;
+  }
+}

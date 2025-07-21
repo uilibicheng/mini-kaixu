@@ -1,0 +1,39 @@
+/* pages/jobDetail/components/jobBenefits/index.wxss */
+.job-block {
+  padding: 32rpx 20rpx 40rpx !important;
+
+  .benefits-list {
+    @include global.flex(x, start, center);
+    .benefits-item {
+      padding: 0 12rpx;
+      height: 32rpx;
+      line-height: 32rpx;
+      background: #f2f2f6;
+      border-radius: 4rpx;
+      margin-right: 16rpx;
+      font-size: 20rpx;
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  .benefits-block {
+    margin-top: 48rpx;
+    .benefits-text {
+      margin-top: 20rpx;
+      font-size: 28rpx;
+      color: rgba(0, 0, 0, 0.9);
+      line-height: 40rpx;
+    }
+  }
+
+  .benefits-btn {
+    margin-top: 40rpx;
+    width: 100%;
+    height: 64rpx;
+    background-color: #f2f2f6;
+    font-weight: 500;
+    font-size: 28rpx;
+    color: #06c57c;
+    @include global.flex(x, center, center);
+  }
+}

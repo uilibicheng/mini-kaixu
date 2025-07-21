@@ -1,0 +1,23 @@
+<!--components/common/messageBox/index.wxml-->
+<!-- 弹框 -->
+<root-portal wx:if="{{showMessageBox}}">
+  <view class="message-panel">
+    <view class="mask" style="opacity: {{showModal ? 1 : 0}}" />
+    <view class="message-box {{showModal ? 'show' : ''}}">
+      <view class="message-title">{{messaegBoxInfo.title}}</view>
+      <text class="message-text">{{messaegBoxInfo.message}}</text>
+      <view class="message-btn-group">
+        <view
+          wx:if="{{messaegBoxInfo.showCancelButton}}"
+          class="active-btn cancel"
+          catchtap="handleCancelMessage"
+        >
+          {{messaegBoxInfo.cancelButtonText}}
+        </view>
+        <view class="active-btn" catchtap="handleConfirmMessage">
+          {{messaegBoxInfo.confirmButtonText}}
+        </view>
+      </view>
+    </view>
+  </view>
+</root-portal>

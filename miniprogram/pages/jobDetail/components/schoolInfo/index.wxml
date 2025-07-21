@@ -1,0 +1,31 @@
+<!-- pages/jobDetail/components/schoolInfo/index.wxml -->
+<view class="mgt24 job-block">
+  <view class="school-row">
+    <view class="job-block-title">单位信息</view>
+    <view class="school-job-num">
+      在招职位
+      <view class="job-num-text">4</view>
+      个
+      <image class="icon-right-arrow" src="/assets/images/jobDetail/icon-right-arrow.svg" />
+    </view>
+  </view>
+  <view class="mft24 school-info">
+    <image
+      class="school-avatar"
+      src=""
+      mode="scaleToFilt"
+    />
+    <view class="school-info-content">
+      <view class="school-name">杭州钱塘听涛小学</view>
+      <view class="">50-200人｜民办</view>
+      <view class="school-area">
+        <image
+          class="icon-lbs"
+          src="/assets/images/jobDetail/icon-lbs.svg"
+        />
+        杭州上城区22号大街
+      </view>
+    </view>
+  </view>
+  <view class="school-map"></view>
+</view>

@@ -1,0 +1,63 @@
+/* components/loginModal/index.wxss */
+.login-header {
+  padding-top: 40rpx;
+  padding-left: 40rpx;
+  padding-right: 24rpx;
+  @include global.flex(x, between, center);
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: bold;
+
+  .login-close {
+    width: 48rpx;
+    height: 48rpx;
+  }
+}
+.login-box {
+  padding-top: 60rpx;
+  @include global.flex(y, between, center);
+
+  .login-logo {
+    width: 150rpx;
+    height: 144rpx;
+  }
+
+  .login-text {
+    margin-top: 48rpx;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 28rpx;
+  }
+
+  .login-btn {
+    margin-top: 90rpx;
+    width: 400rpx;
+    height: 96rpx;
+    @include global.flex(x, center, center);
+    background-color: global.$main-color;
+    border-radius: 8rpx;
+    color: global.$white-color;
+    font-size: 32rpx;
+    font-weight: bold;
+  }
+
+  .login-aggrement {
+    margin-top: 100rpx;
+    @include global.flex(x, start, center);
+    font-size: 24rpx;
+
+    .icon-radio {
+      flex-shrink: 0;
+      width: 40rpx;
+      height: 40rpx;
+      margin-right: 8rpx;
+    }
+    .aggrement-text {
+      color: rgba(0, 0, 0, 0.7);
+    }
+    .agreement-title {
+      color: global.$main-color;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<!-- components/loginModal/index.wxml -->
+<ActionSheet visible="{{visible}}" title="" height="960rpx" isShowHeader="{{false}}" bounces="{{false}}" bind:close="handleCloseModal">
+  <view slot="header" class="login-header">
+    <view>登录注册</view>
+    <image class="login-close" src="/assets/images/login/login-close.svg" />
+  </view>
+  <view slot="content" class="login-box">
+    <image class="login-logo" src="/assets/images/login/login-logo.svg" />
+    <view class="login-text">开旭教师招聘</view>
+    <view class="login-btn">手机号码授权登录</view>
+
+    <view class="login-aggrement">
+      <image wx:if="{{false}}" class="icon-radio" src="/assets/images/icon/icon-radio.svg" />
+      <image wx:else class="icon-radio" src="/assets/images/icon/icon-radio-selected.svg" />
+      <view class="aggrement-text">我已阅读并同意</view>
+      <view class="agreement-title">《服务协议》</view>
+      <view class="aggrement-text">和</view>
+      <view class="agreement-title">《隐私政策》</view>
+    </view>
+    <view class=""></view>
+  </view>
+</ActionSheet>

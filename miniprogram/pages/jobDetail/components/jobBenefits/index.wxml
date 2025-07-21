@@ -1,0 +1,22 @@
+<!--pages/jobDetail/components/jobBenefits/index.wxml-->
+<view class="job-block mgt24">
+  <view class="job-block-title">职位福利</view>
+  <view class="mgt24 benefits-list">
+    <block wx:for="{{3}}">
+      <view class="benefits-item">人才补贴</view>
+    </block>
+  </view>
+  <view class="benefits-block">
+    <view class="job-block-title">职位详情</view>
+    <view class="benefits-text">招聘人数：1人</view>
+    <view class="benefits-text">到岗时间：1周以内</view>
+    <view class="benefits-text">职位要求：负责初一、初二的教学</view>
+    <view class="benefits-text">工作地址：杭州钱塘区16号大街123号</view>
+  </view>
+  <view class="benefits-block">
+    <view class="job-block-title">岗位要求</view>
+    <view class="benefits-text">学历要求：本科以上</view>
+  </view>
+  <view class="benefits-btn">直达官网报名</view>
+  <view class=""></view>
+</view>

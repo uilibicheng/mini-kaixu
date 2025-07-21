@@ -1,4 +1,4 @@
-@import '../../assets/scss/variable.scss';
+@import "../../assets/scss/variable.scss";
 
 .weui-navigation-bar {
   --weui-FG-0: rgba(0, 0, 0, 0.9);
@@ -17,8 +17,8 @@
   flex: none;
 
   .icon-back {
-    width: 64rpx;
-    height: 64rpx;
+    width: 48rpx;
+    height: 48rpx;
   }
   .icon-white-back {
     width: 40rpx;
@@ -52,7 +52,7 @@
 .weui-navigation-bar__buttons {
   width: 100%;
   height: 100%;
-  padding-left: 12rpx;
+  padding-left: 24rpx;
   display: flex;
   align-items: center;
 }

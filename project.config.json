@@ -42,11 +42,11 @@
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
-  "libVersion": "trial",
+  "libVersion": "3.8.11",
   "packOptions": {
     "ignore": [],
     "include": []
   },
-  "appid": "wx31bb4d0b908838a6",
+  "appid": "wx49aed22fc58ebe67",
   "projectname": "%E5%BC%80%E4%BA%91%E5%B0%8F%E7%A8%8B%E5%BA%8F"
 }

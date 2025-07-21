@@ -1,0 +1,11 @@
+<!-- pages/jobDetail/components/schoolEvaluation/index.wxml -->
+<view class="mgt24 job-block">
+  <view class="evaluation-row">
+    <view class="job-block-title">
+      竞争力分析
+      <view class="evaluation-num">100+</view>
+    </view>
+    <view class="evaluation-btn">查看更多点评</view>
+  </view>
+  <view class="evaluation-sub-title">快来查看学校具体情况，不走弯路</view>
+</view>
