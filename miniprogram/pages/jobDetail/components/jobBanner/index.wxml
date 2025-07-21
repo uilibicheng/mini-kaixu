@@ -1,0 +1,22 @@
+<!-- pages/jobDetail/components/jobBanner/index.wxml -->
+<view class="mgt24 job-banner">
+  <image wx:if="{{false}}" class="banner-img" src="/assets/images/jobDetail/job-banner.png" mode="widthFix" />
+  <block wx:else>
+    <swiper
+      class="banner-swiper"
+      autoplay
+      circular
+      indicator-dots
+      indicator-color="rgba(0,0,0,0.12)"
+      indicator-active-color="rgba(0,0,0,0.4)"
+      indicator-spacing="4"
+      indicator-offset="{{[0, 10]}}"
+      interval="{{4000}}"
+      current="{{currentPic}}"
+      bindchange="onSlideChange">
+      <swiper-item wx:for="{{3}}" wx:key="index">
+        <image wx:if="{{true}}" class="banner-img" src="/assets/images/jobDetail/job-banner.png" mode="widthFix" />
+      </swiper-item>
+    </swiper>
+  </block>
+</view>

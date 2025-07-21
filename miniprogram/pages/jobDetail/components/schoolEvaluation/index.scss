@@ -15,7 +15,7 @@
       }
     }
 
-    .evaluation-btn {
+    .evaluation-more-btn {
       padding-right: 20rpx;
       font-weight: bold;
       font-size: 24rpx;
@@ -28,5 +28,179 @@
     font-weight: 500;
     font-size: 24rpx;
     color: #593100;
+  }
+
+  .evaluation-filter {
+    margin-top: 16rpx;
+    width: 100%;
+    height: 48rpx;
+
+    .filter-list {
+      @include global.flex(x, start, center);
+      .filter-item {
+        background: #f2f2f6;
+        padding: 0 20rpx;
+        height: 48rpx;
+        line-height: 48rpx;
+        border-radius: 999rpx;
+        font-size: 24rpx;
+        color: rgba(0, 0, 0, 0.5);
+        margin-right: 24rpx;
+
+        &.active {
+          color: global.$main-color;
+          font-weight: 500;
+          background-color: #e5fced;
+        }
+      }
+    }
+  }
+
+  .evaluation-content {
+    padding-right: 20rpx;
+    .evaluation-list {
+      margin-bottom: 40rpx;
+      width: 662rpx;
+      .evaluation-item {
+        width: 100%;
+        height: 256rpx;
+        padding: 32rpx 24rpx 24rpx;
+        margin-top: 24rpx;
+        box-sizing: border-box;
+        background-color: #fffaf0;
+        border-radius: 8rpx;
+        position: relative;
+        .evaluation-item-top {
+          @include global.flex(x, start, center);
+          .evaluation-avatar {
+            width: 72rpx;
+            height: 72rpx;
+            border-radius: 72rpx;
+            overflow: hidden;
+            background-color: global.$main-color;
+          }
+          .evaluation-info {
+            margin-left: 8rpx;
+            @include global.flex(y, start, start);
+            .evaluation-name {
+              font-weight: 500;
+              font-size: 28rpx;
+              color: rgba(0, 0, 0, 0.9);
+            }
+            .evaluation-type {
+              margin-top: 8rpx;
+              background-color: global.$white-color;
+              border-radius: 999rpx;
+              padding: 0 16rpx;
+              height: 40rpx;
+              line-height: 40rpx;
+              font-size: 24rpx;
+              color: global.$main-color;
+            }
+          }
+        }
+
+        .evaluation-text-wrap {
+          position: relative;
+          margin-top: 32rpx;
+          .evaluation-text {
+            font-size: 24rpx;
+            color: rgba(0, 0, 0, 0.9);
+            line-height: 32rpx;
+            z-index: 1;
+          }
+          .float {
+            content: attr(data-text);
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 32rpx;
+            white-space: wrap;
+            overflow: hidden;
+            background-color: #fffaf0;
+            z-index: 2;
+          }
+          .blur {
+            filter: blur(6rpx);
+          }
+        }
+
+        .evaluation-unlock {
+          position: absolute;
+          bottom: 20rpx;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 172rpx;
+          height: 48rpx;
+          background-color: #eece9f;
+          border-radius: 999rpx;
+          @include global.flex(x, center, center);
+          font-weight: 500;
+          font-size: 24rpx;
+          color: #593100;
+          z-index: 9;
+          .icon-lock {
+            width: 32rpx;
+            height: 32rpx;
+            margin-right: 4rpx;
+          }
+        }
+      }
+    }
+
+    .evaluation-empty {
+      margin: 60rpx auto;
+      font-size: 24rpx;
+      color: rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+
+    .evaluation-btn {
+      margin: 0 auto;
+      width: 528rpx;
+      height: 64rpx;
+      @include global.flex(x, center, center);
+      background-color: global.$main-color;
+      border-radius: 8rpx;
+      font-weight: 500;
+      font-size: 28rpx;
+      color: global.$white-color;
+      position: relative;
+      .icon-edit {
+        width: 32rpx;
+        height: 32rpx;
+        margin-right: 8rpx;
+      }
+
+      .evaluation-award {
+        position: absolute;
+        right: 0rpx;
+        top: -10rpx;
+        transform: translateY(-100%);
+        padding: 0 8rpx;
+        height: 32rpx;
+        line-height: 32rpx;
+        border-radius: 999rpx;
+        background-color: #eece9f;
+        font-weight: 500;
+        font-size: 20rpx;
+        color: #593100;
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 100%);
+          width: 0;
+          height: 0;
+          border-left: 8rpx solid transparent;
+          border-right: 8rpx solid transparent;
+          border-top: 8rpx solid #eece9f;
+        }
+      }
+    }
   }
 }

@@ -13,7 +13,29 @@
       <CompetitiveAnalyse />
       <!-- 单位点评 -->
       <SchoolEvaluation />
+      <!-- 求职交流群 -->
+      <view class="mgt24 job-block wechat-group-block">
+        <image class="wechat-group-avatar" src="/assets/images/jobDetail/wechat-group-avatar.png" />
+        <view class="wechat-group-row">
+          <view class="job-block-title">教师求职交流微信群</view>
+          <view class="wechat-group-text">有岗位及时发群里，互帮互助，抱团取暖！</view>
+        </view>
+      </view>
+      <!-- 温馨提示 -->
+      <view class="mgt24 job-block">
+        <view class="job-block-title">
+          开旭温馨提示
+          <image class="icon-safe" src="/assets/images/icon/icon-safe.svg" />
+        </view>
+        <text class="tip-text">
+          欢迎关注微信公众号“浙江开旭教师招聘”，求职过程请勿缴纳费用，谨防诈骗！若信息不实请举报。<text class="complain-btn">请立即投诉</text>
+        </text>
+      </view>
+      <!-- 广告 -->
+      <JobBanner />
     </view>
+    
+    <FloatRight />
   </scroll-view>
   <!-- 底部按钮 -->
   <Footer />

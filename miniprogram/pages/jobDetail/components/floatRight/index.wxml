@@ -1,0 +1,13 @@
+<!-- pages/jobDetail/components/floatRight/index.wxml -->
+<root-portal>
+  <view class="float-right">
+    <view class="float-item">
+      <image class="float-img" src="/assets/images/jobDetail/icon-star.svg" />
+      收藏
+    </view>
+    <view class="float-item">
+      <image class="float-img" src="/assets/images/jobDetail/icon-share.svg" />
+      分享
+    </view>
+  </view>
+</root-portal>

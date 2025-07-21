@@ -5,7 +5,50 @@
       竞争力分析
       <view class="evaluation-num">100+</view>
     </view>
-    <view class="evaluation-btn">查看更多点评</view>
+    <view class="evaluation-more-btn">查看更多点评</view>
   </view>
   <view class="evaluation-sub-title">快来查看学校具体情况，不走弯路</view>
+  <scroll-view class="evaluation-filter" scroll-x="{{true}}" type="custom" enhanced="{{true}}" show-scrollbar="{{false}}">
+    <view class="filter-list">
+      <view class="filter-item active">全部</view>
+      <block wx:for="{{6}}" wx:key="index">
+        <view class="filter-item">工作压力</view>
+      </block>
+    </view>
+  </scroll-view>
+  <view class="evaluation-content">
+    <view wx:if="{{true}}" class="evaluation-list">
+      <block wx:for="{{2}}" wx:key="index">
+        <view class="evaluation-item">
+          <view class="evaluation-item-top">
+            <image class="evaluation-avatar" src="" mode="aspectFill" />
+            <view class="evaluation-info">
+              <view class="evaluation-name">会说话的猫</view>
+              <view class="evaluation-type">黑料曝光</view>
+            </view>
+          </view>
+          <view class="evaluation-text-wrap">
+            <text class="evaluation-text blur" overflow="ellipsis" max-lines="3">
+              避雷，避雷，千万别来这个学校，太抗了！避雷.....文字文字文字文字文字文字字文字文字文字文字字文字文字文字文字字
+            </text>
+            <view class="evaluation-text float">
+              避雷，避雷，千万别来这个学校，太抗了！避雷.....文字文字文字文字文字文字字文字文字文字文字字文字文字文字文字字
+            </view>
+          </view>
+          <view class="evaluation-unlock">
+            <image class="icon-lock" src="/assets/images/jobDetail/icon-lock.svg" />
+            解锁全部
+          </view>
+        </view>
+      </block>
+    </view>
+    <view wx:else class="evaluation-empty">暂无提问</view>
+    <view class="evaluation-btn">
+      <image class="icon-edit" src="/assets/images/jobDetail/icon-edit.svg" />
+      匿名点评
+
+      <view class="evaluation-award">奖励1个豆豆</view>
+    </view>
+  </view>
+  
 </view>

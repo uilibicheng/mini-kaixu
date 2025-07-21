@@ -5,6 +5,8 @@
     "SchoolInfo": "./components/schoolInfo/index",
     "CompetitiveAnalyse": "./components/competitiveAnalyse/index",
     "SchoolEvaluation": "./components/schoolEvaluation/index",
+    "JobBanner": "./components/jobBanner/index",
+    "FloatRight": "./components/floatRight/index",
     "Footer": "./components/footer/index"
   }
 }

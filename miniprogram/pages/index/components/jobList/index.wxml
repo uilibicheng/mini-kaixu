@@ -28,7 +28,7 @@
               <view>张老师</view>
               <image
                 class="icon-safe"
-                src="/assets/images/job/icon-safe.svg"
+                src="/assets/images/icon/icon-safe.svg"
               />
             </view>
             <view class="info-area">杭州市 余杭区</view>

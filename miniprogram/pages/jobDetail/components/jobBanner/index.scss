@@ -1,0 +1,28 @@
+/* pages/jobDetail/components/jobBanner/index.wxss */
+.job-banner {
+  width: 702rpx;
+  height: 160rpx;
+  margin: 24rpx auto 0;
+  position: relative;
+
+  .banner-img {
+    width: 100%;
+    height: 100%;
+  }
+  .banner-swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .indicator {
+    position: absolute;
+    bottom: 16rpx;
+    right: 16rpx;
+    @include global.flex(x, center, center);
+    padding: 4rpx 0;
+    min-width: 70rpx;
+    background: rgba(245, 245, 245, 0.95);
+    color: global.$minor-color;
+    font-size: 20rpx;
+  }
+}
