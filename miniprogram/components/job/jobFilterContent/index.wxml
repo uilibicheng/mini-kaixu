@@ -1,0 +1,13 @@
+<!--components/job/jobFilterContent/index.wxml-->
+<scroll-view class="filter-content" scroll-y type="list">
+  <block wx:for="{{7}}" wx:for-index="blockIndex" wx:key="blockIndex">
+    <view class="filter-block">
+      <view class="filter-title">薪资</view>
+      <view class="filter-list">
+        <block wx:for="{{5}}" wx:key="index">
+          <text class="filter-item {{index === 1 ? 'active-item' : ''}}" max-lines="{{1}}" overflow="ellipsis">不限</text>
+        </block>
+      </view>
+    </view>
+  </block>
+</scroll-view>

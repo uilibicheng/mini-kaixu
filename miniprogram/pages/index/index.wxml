@@ -25,7 +25,7 @@
           <view class="filter-sort-item dot">最新</view>
           <view class="filter-sort-item">提前批</view>
         </view>
-        <JobFilterBar />
+        <JobFilterBar isTabbar="{{true}}" />
       </view>
       <scroll-view class="job-scroll" scroll-y="{{true}}">
         <!-- 岗位列表 -->

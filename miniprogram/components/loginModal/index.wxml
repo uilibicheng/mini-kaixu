@@ -2,7 +2,7 @@
 <ActionSheet visible="{{visible}}" title="" height="960rpx" isShowHeader="{{false}}" bounces="{{false}}" bind:close="handleCloseModal">
   <view slot="header" class="login-header">
     <view>登录注册</view>
-    <image class="login-close" src="/assets/images/login/login-close.svg" />
+    <image class="login-close" src="/assets/images/icon/modal-close.svg" />
   </view>
   <view slot="content" class="login-box">
     <image class="login-logo" src="/assets/images/login/login-logo.svg" />
@@ -17,6 +17,5 @@
       <view class="aggrement-text">和</view>
       <view class="agreement-title">《隐私政策》</view>
     </view>
-    <view class=""></view>
   </view>
 </ActionSheet>

@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "JobFilterBar": "/components/jobFilterBar/index"
+    "JobFilterBar": "/components/job/jobFilterBar/index"
   }
 }

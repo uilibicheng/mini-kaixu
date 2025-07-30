@@ -1,0 +1,18 @@
+<!-- components/job/selectAreaContent/index.wxml -->
+<view class="area-content">
+  <scroll-view class="area-item-scroll" scroll-y type="list">
+    <block wx:for="{{12}}" wx:key="index">
+      <text class="area-item {{index === 2 ? 'active-item' : ''}}" max-lines="{{1}}" overflow="ellipsis">浙江省</text>
+    </block>
+  </scroll-view>
+  <scroll-view class="area-item-scroll" scroll-y type="list">
+    <block wx:for="{{12}}" wx:key="index">
+      <text class="area-item {{index === 2 ? 'active-item' : ''}}" max-lines="{{1}}" overflow="ellipsis">杭州市</text>
+    </block>
+  </scroll-view>
+  <scroll-view class="area-item-scroll" scroll-y type="list">
+    <block wx:for="{{12}}" wx:key="index">
+      <text class="area-item {{index === 2 ? 'active-item' : ''}}" max-lines="{{1}}" overflow="ellipsis">西湖区</text>
+    </block>
+  </scroll-view>
+</view>

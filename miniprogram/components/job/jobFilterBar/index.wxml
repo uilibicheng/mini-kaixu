@@ -1,0 +1,42 @@
+<!-- components/jobFilterBar/index.wxml -->
+<view class="filter-list">
+  <view
+    class="filter-btn"
+    style="{{background ? 'background: ' + background + ';' : ''}} {{color ? 'color: ' + color + ';' : ''}}"
+    data-type="{{0}}"
+    bindtap="handleShowFilterPanle">
+    城市
+    <image class="filter-arrow" src="/assets/images/job/filter-arrow.svg" />
+  </view>
+  <view
+    class="filter-btn"
+    style="{{background ? 'background: ' + background + ';' : ''}} {{color ? 'color: ' + color + ';' : ''}}"
+    data-type="{{1}}"
+    bindtap="handleShowFilterPanle">
+    岗位
+    <image class="filter-arrow" src="/assets/images/job/filter-arrow.svg" />
+  </view>
+  <view
+    class="filter-btn"
+    style="{{background ? 'background: ' + background + ';' : ''}} {{color ? 'color: ' + color + ';' : ''}}"
+    data-type="{{2}}"
+    bindtap="handleShowFilterPanle">
+    筛选
+    <image class="filter-arrow" src="/assets/images/job/filter-arrow.svg" />
+  </view>
+</view>
+
+<JobFilterPanel
+  visible="{{filterVisible}}"
+  title="{{panelTitle}}"
+  bottom="{{bottom}}"
+  bind:close="handleCloseFilterPanel"
+  bind:handleReset="handleReset"
+  bind:handleSubmit="handleSubmit">
+  <!-- 选择地区 -->
+  <SelectAreaContent wx:if="{{filterType === 0}}" />
+  <!-- 选择学段学科 -->
+  <SelectSubjectContent wx:if="{{filterType === 1}}" />
+  <!-- 筛选 -->
+  <JobFilterContent wx:if="{{filterType === 2}}" />
+</JobFilterPanel>

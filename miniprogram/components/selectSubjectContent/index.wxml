@@ -1,0 +1,15 @@
+<!--components/selectSubjectContent/index.wxml-->
+<view class="subject-content">
+  <scroll-view class="subject-scroll" scroll-y type="list">
+    <block wx:for="{{4}}" wx:key="index">
+      <view class="subject-item {{index === 2 ? 'active-item' : ''}}" max-lines="{{1}}" overflow="ellipsis">小学</view>
+    </block>
+  </scroll-view>
+  <scroll-view class="subject-item-scroll" scroll-y type="list">
+    <view class="sub-list">
+      <block wx:for="{{12}}" wx:key="index">
+        <view class="sub-item {{index === 2 ? 'active-item' : ''}}" max-lines="{{1}}" overflow="ellipsis">英语</view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

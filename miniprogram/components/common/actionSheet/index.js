@@ -29,9 +29,9 @@ ComponentWithComputed({
       type: String,
       value: "",
     },
-    bounces: {
-      type: Boolean,
-      value: true,
+    bottom: {
+      type: String,
+      value: '',
     },
   },
 

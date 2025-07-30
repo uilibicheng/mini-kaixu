@@ -6,7 +6,7 @@
   padding: 0 48rpx;
   overflow: hidden;
   background: global.$white-color;
-  border-top: 1rpx solid #ede9e9;
+  border-top: 1rpx solid #E2E2E2;
   .bottom-btn {
     width: 100%;
     @include global.flex(x, center, center);
@@ -16,8 +16,8 @@
     margin-right: 34rpx;
     height: 80rpx;
     @include global.flex(x, center, center);
-    background: global.$gray-color;
-    color: global.$main-color;
+    background: #F2F2F6;
+    color: rgba(0,0,0,0.7);
     font-size: 28rpx;
     font-weight: bold;
     border-radius: 8rpx;

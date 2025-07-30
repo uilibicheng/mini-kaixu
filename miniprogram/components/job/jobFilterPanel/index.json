@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "ActionSheet": "/components/common/actionSheet/index",
+    "BottomBtnGroup": "/components/common/bottomBtnGroup/index"
+  }
+}

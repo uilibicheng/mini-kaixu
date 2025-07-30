@@ -1,18 +1,11 @@
-// components/jobFilterBar/index.ts
+// components/job/jobFilterContent/index.ts
 Component({
 
   /**
    * 组件的属性列表
    */
   properties: {
-    background: {
-      type: String,
-      value: ''
-    },
-    color: {
-      type: String,
-      value: ''
-    }
+
   },
 
   /**
