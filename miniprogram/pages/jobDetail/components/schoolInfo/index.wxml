@@ -6,7 +6,7 @@
       在招职位
       <view class="job-num-text">4</view>
       个
-      <image class="icon-right-arrow" src="/assets/images/jobDetail/icon-right-arrow.svg" />
+      <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
     </view>
   </view>
   <view class="mft24 school-info">

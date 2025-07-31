@@ -1,6 +1,4 @@
-// pages/index/components/headerNav/index.ts
-import router from "@/utils/router"
-
+// pages/mine/components/bottomInfo/index.ts
 Component({
 
   /**
@@ -21,10 +19,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    jumpToSearch() {
-      router.navigateTo({
-        url: '/pages/jobSearch/jobSearch',
-      })
-    }
+
   }
 })

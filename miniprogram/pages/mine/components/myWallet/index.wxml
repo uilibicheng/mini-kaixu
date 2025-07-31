@@ -1,0 +1,20 @@
+<!--pages/mine/components/myWallet/index.wxml-->
+<view class="mine-block mgt24">
+  <view class="block-title">
+    我的钱包
+    <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+  </view>
+
+  <view class="wallet-row">
+    <view class="wallet-item">
+      <view class="wallet-num">0.00</view>
+      <view class="wallet-title">工资余额(元)</view>
+      <view class="wallet-btn">去赚钱</view>
+    </view>
+    <view class="wallet-item">
+      <view class="wallet-num">0.00</view>
+      <view class="wallet-title">豆豆余额(个)</view>
+      <view class="wallet-btn active-btn">捡豆豆</view>
+    </view>
+  </view>
+</view>

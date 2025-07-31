@@ -32,7 +32,9 @@
         </text>
       </view>
       <!-- 广告 -->
-      <JobBanner />
+      <view class="mgt24 job-banner">
+        <Banner />
+      </view>
     </view>
     
     <FloatRight />

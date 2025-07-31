@@ -1,0 +1,28 @@
+/* pages/mine/components/bottomInfo/index.wxss */
+.qualification {
+  width: 100%;
+  padding: 48rpx 0 120rpx;
+  box-sizing: border-box;
+  @include global.flex(x, start, start);
+  .qualification-item {
+    width: 25%;
+    height: 92rpx;
+    @include global.flex(y, between, center);
+    font-size: 24rpx;
+    color: rgba(0, 0, 0, 0.4);
+    line-height: 40rpx;
+    .item-icon {
+      width: 36rpx;
+      height: 0;
+    }
+    &:nth-child(2) .item-icon {
+      width: 44rpx;
+    }
+    &:nth-child(3) .item-icon {
+      width: 32rpx;
+    }
+    &:nth-child(4) .item-icon {
+      width: 40rpx;
+    }
+  }
+}

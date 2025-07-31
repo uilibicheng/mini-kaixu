@@ -1,8 +1,9 @@
-// pages/index/components/headerNav/index.ts
-import router from "@/utils/router"
-
+// pages/mine/components/myWallet/index.ts
 Component({
-
+  options: {
+    addGlobalClass: true,
+    styleIsolation: 'apply-shared'
+  },
   /**
    * 组件的属性列表
    */
@@ -21,10 +22,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    jumpToSearch() {
-      router.navigateTo({
-        url: '/pages/jobSearch/jobSearch',
-      })
-    }
+
   }
 })

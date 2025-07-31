@@ -1,7 +1,40 @@
 <!-- pages/mine/mine.wxml -->
  <view class="mine-page tabbar-page">
-   <NavigationBar title="我的" back="{{false}}" color="black" background="#fff" />
-   
-   <MessageBox id="message-box" />
-   <LoginModal visible="{{loginVisible}}" />
+  <image class="header-bg" src="/assets/images/mine/header-bg.png" mode="widthFix" />
+  <view class="page-container tabbar-page">
+    <NavigationBar title="" showNavigationLeft="{{false}}" color="black" background="transparent">
+      <view slot="center" class="header-left">
+        <image class="header-logo" src="/assets/images/mine/logo.svg"  />
+        <view class="header-nav">
+          <view class="nav-title">开旭教师，岗位超多！</view>
+          <view class="nav-sologn">每年发布超40000+个教师岗位</view>
+        </view>
+      </view>
+    </NavigationBar>
+
+    <scroll-view class="page-scroll" scroll-y type="list">
+      <view class="scroll-content">
+        <!-- 个人信息 -->
+        <UserInfo />
+        <!-- VIP模块 -->
+        <VipContent />
+        <!-- 求职服务 -->
+        <JobService />
+        <!-- 我的钱包 -->
+        <MyWallet />
+        <!-- 切换角色 -->
+        <SwitchRole />
+        <!-- 其他 -->
+        <OtherSetting />
+        <!-- 轮播 -->
+        <view class="mgt24 banner-wrap">
+          <Banner />
+        </view>
+        <Qualification />
+      </view>
+    </scroll-view>
+    
+    <MessageBox id="message-box" />
+    <LoginModal visible="{{loginVisible}}" />
+  </view>
  </view>

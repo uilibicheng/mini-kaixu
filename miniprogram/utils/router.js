@@ -1,4 +1,4 @@
-import { getStorageKaiyunInfo, getStorageUserBaseInfo, getUserBaseInfo, showToast } from './helpers'
+import { showToast } from './helpers'
 
 const pageList = [
   'pages/goodsDetail/goodsDetail',

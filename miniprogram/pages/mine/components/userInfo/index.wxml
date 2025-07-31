@@ -1,0 +1,37 @@
+<!--pages/mine/components/userInfo/index.wxml-->
+<view class="mine-block">
+  <view class="info-top">
+    <image
+      class="mine-avatar"
+      src=""
+    />
+    <view class="info-right">
+      <view class="info-name-wrap">
+        <text class="info-name" max-lines="{{1}}" overflow="ellipsis">吕铭洲</text>
+        <image
+          class="icon-edit"
+          src="/assets/images/mine/icon-edit.svg"
+        />
+      </view>
+      <view class="info-tip">祝早日找到工作～</view>
+    </view>
+  </view>
+  <view class="info-bottom">
+    <view class="info-item">
+      <view class="info-num">21</view>
+      <view class="info-text">已投递</view>
+    </view>
+    <view class="info-item">
+      <view class="info-num">21</view>
+      <view class="info-text">待面试</view>
+    </view>
+    <view class="info-item">
+      <view class="info-num">21</view>
+      <view class="info-text">收藏</view>
+    </view>
+    <view class="info-item">
+      <view class="info-num">21</view>
+      <view class="info-text">我的点评</view>
+    </view>
+  </view>
+</view>

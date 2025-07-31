@@ -1,0 +1,25 @@
+<!-- pages/mine/components/vipContent/index.wxml -->
+<view class="mine-block mgt24">
+  <view class="block-header">
+    <view class="block-title">
+      想快点找工作！快升级
+      <image class="vip-logo" src="/assets/images/mine/vip/logo.svg" />
+    </view>
+    <view class="update-vip">
+      升级会员
+      <image class="icon-arrow" src="/assets/images/mine/vip/icon-arrow.svg" />
+    </view>
+  </view>
+  <view class="vip-list">
+    <block wx:for="{{vipList}}" wx:key="index">
+      <view class="vip-item">
+        <view class="vip-itme-top">
+          <image class="vip-item-icon" src="/assets/images/mine/vip/{{item.key}}.svg" />
+          <view class="vip-red-dot" wx:if="{{item.isRedDot}}"></view>
+          <view class="vip-label" wx:elif="{{item.label}}">{{item.label}}</view>
+        </view>
+        <view class="vip-item-name">{{item.text}}</view>
+      </view>
+    </block>
+  </view>
+</view>

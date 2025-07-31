@@ -1,6 +1,6 @@
 <!-- pages/jobDetail/components/jobBanner/index.wxml -->
-<view class="mgt24 job-banner">
-  <image wx:if="{{false}}" class="banner-img" src="/assets/images/jobDetail/job-banner.png" mode="widthFix" />
+<view class="common-banner" wx:if="{{bannerList && bannerList.length}}">
+  <image wx:if="{{bannerList.length === 1}}" class="banner-img" src="{{bannerList[0]}}" mode="aspectFill" />
   <block wx:else>
     <swiper
       class="banner-swiper"
@@ -14,8 +14,8 @@
       interval="{{4000}}"
       current="{{currentPic}}"
       bindchange="onSlideChange">
-      <swiper-item wx:for="{{3}}" wx:key="index">
-        <image wx:if="{{true}}" class="banner-img" src="/assets/images/jobDetail/job-banner.png" mode="widthFix" />
+      <swiper-item wx:for="{{bannerList}}" wx:key="index">
+        <image class="banner-img" src="{{item}}" mode="aspectFill" />
       </swiper-item>
     </swiper>
   </block>

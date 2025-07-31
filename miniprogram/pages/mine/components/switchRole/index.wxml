@@ -1,0 +1,25 @@
+<!-- pages/mine/components/switchRole/index.wxml -->
+<view class="mine-block mgt24">
+  <view class="role-item">
+    <image class="role-img" src="/assets/images/mine/role/role-1.svg" />
+    <view class="role-info">
+      <view class="role-title">方式1：学校自己发布招聘</view>
+      <view class="role-sologn">大量储备老师可详细挑选，匹配度高</view>
+    </view>
+    <view class="role-item-btn">
+      <image class="role-btn-icon" src="/assets/images/mine/role/icon-switch.svg" />
+      切换角色
+    </view>
+  </view>
+  <view class="role-item">
+    <image class="role-img" src="/assets/images/mine/role/role-2.svg" />
+    <view class="role-info">
+      <view class="role-title">方式2：委托开旭代为招聘</view>
+      <view class="role-sologn">简历直接发指定邮箱，轻松便捷</view>
+    </view>
+    <view class="role-item-btn">
+      <image class="role-btn-icon" src="/assets/images/mine/role/icon-message.svg" />
+      立即联系
+    </view>
+  </view>
+</view>

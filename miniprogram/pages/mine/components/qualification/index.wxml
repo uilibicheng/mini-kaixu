@@ -1,0 +1,19 @@
+<!-- pages/mine/components/bottomInfo/index.wxml -->
+<view class="qualification">
+  <view class="qualification-item">
+    <image class="item-icon" src="/assets/images/mine/qualification/ZJAQ.svg" mode="widthFix" />
+    资金安全
+  </view>
+  <view class="qualification-item">
+    <image class="item-icon" src="/assets/images/mine/qualification/XXRZ.svg" mode="widthFix" />
+    学校认证
+  </view>
+  <view class="qualification-item">
+    <image class="item-icon" src="/assets/images/mine/qualification/YSBM.svg" mode="widthFix" />
+    隐私保密
+  </view>
+  <view class="qualification-item">
+    <image class="item-icon" src="/assets/images/mine/qualification/YYZZ.svg" mode="widthFix" />
+    营业资质
+  </view>
+</view>

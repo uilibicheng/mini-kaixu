@@ -1,0 +1,54 @@
+/* pages/mine/components/switchRole/index.wxss */
+.mine-block {
+  background: linear-gradient(180deg, #e4ffeb 15%, #ffffff 58%);
+  padding-right: 20rpx !important;
+
+  .role-item {
+    width: 100%;
+    @include global.flex(x, start, center);
+    &:last-child {
+      margin-top: 42rpx;
+    }
+
+    .role-img {
+      flex-shrink: 0;
+      width: 88rpx;
+      height: 88rpx;
+    }
+
+    .role-info {
+      flex: 1;
+      margin: 0 12rpx;
+      .role-title {
+        font-weight: 500;
+        font-size: 28rpx;
+        color: rgba(0, 0, 0, 0.9);
+        line-height: 40rpx;
+      }
+      .role-sologn {
+        margin-top: 8rpx;
+        font-size: 24rpx;
+        color: rgba(0, 0, 0, 0.6);
+        line-height: 32rpx;
+      }
+    }
+
+    .role-item-btn {
+      flex-shrink: 0;
+      width: 160rpx;
+      height: 56rpx;
+      background: global.$main-color;
+      border-radius: 8rpx;
+      @include global.flex(x, center, center);
+      font-weight: 600;
+      font-size: 24rpx;
+      line-height: 24rpx;
+      color: global.$white-color;
+      .role-btn-icon {
+        width: 32rpx;
+        height: 32rpx;
+        margin-right: 4rpx;
+      }
+    }
+  }
+}

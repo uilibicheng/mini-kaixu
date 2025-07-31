@@ -1,5 +1,13 @@
 {
   "usingComponents": {
-    "LoginModal": "/components/loginModal/index"
+    "LoginModal": "/components/loginModal/index",
+    "UserInfo": "./components/userInfo/index",
+    "VipContent": "./components/vipContent/index",
+    "JobService": "./components/jobService/index",
+    "MyWallet": "./components/myWallet/index",
+    "SwitchRole": "./components/switchRole/index",
+    "OtherSetting": "./components/otherSetting/index",
+    "Qualification": "./components/qualification/index",
+    "Banner": "/components/common/banner/index"
   }
 }

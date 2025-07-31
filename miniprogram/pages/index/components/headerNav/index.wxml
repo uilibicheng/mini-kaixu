@@ -11,7 +11,7 @@
     </NavigationBar>
     
     <view class="header-search">
-      <view class="search-box">
+      <view class="search-box" bindtap="jumpToSearch">
         <view class="search-input">
           搜索职位/单位名称
           <image class="icon-search" src="/assets/images/icon/icon-search.svg" />

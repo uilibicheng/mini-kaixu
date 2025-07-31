@@ -1,0 +1,16 @@
+<!--pages/mine/components/otherSetting/index.wxml-->
+<view class="mine-block mgt24">
+  <view class="block-title">其他</view>
+  <view class="other-list">
+    <block wx:for="{{serviceList}}" wx:key="index">
+      <view class="other-item">
+        <view class="other-itme-top">
+          <image class="other-item-icon" src="/assets/images/mine/other/{{item.key}}.svg" />
+          <view class="other-red-dot" wx:if="{{item.isRedDot}}"></view>
+          <view class="other-label" wx:elif="{{item.label}}">{{item.label}}</view>
+        </view>
+        <view class="other-item-name">{{item.text}}</view>
+      </view>
+    </block>
+  </view>
+</view>

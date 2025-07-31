@@ -1,0 +1,16 @@
+<!-- pages/mine/components/vipContent/index.wxml -->
+<view class="mine-block mgt24">
+  <view class="block-title">求职服务</view>
+  <view class="service-list">
+    <block wx:for="{{serviceList}}" wx:key="index">
+      <view class="service-item">
+        <view class="service-itme-top">
+          <image class="service-item-icon" src="/assets/images/mine/service/{{item.key}}.svg" />
+          <view class="service-red-dot" wx:if="{{item.isRedDot}}"></view>
+          <view class="service-label" wx:elif="{{item.label}}">{{item.label}}</view>
+        </view>
+        <view class="service-item-name">{{item.text}}</view>
+      </view>
+    </block>
+  </view>
+</view>
