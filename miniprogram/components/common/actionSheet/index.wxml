@@ -2,10 +2,10 @@
 <root-portal wx:if="{{display}}" enable="{{true}}">
   <view class="action-sheet" style="{{bottom ? bottom : ''}}">
     <view class="sheet-mask {{show ? 'show' : ''}}" catchtap="clickMask" />
-    <view class="sheet-box {{show ? 'popup' : ''}}" style="{{height ? 'height:' + height : ''}}">
+    <view class="sheet-box {{show ? 'popup' : ''}}" style="{{height ? 'height:' + height : ''}}; {{borderRadius ? '--borderRadius:' + borderRadius : ''}}">
       <view class="sheet-header flex-header" wx:if="{{isShowHeader}}">
         {{title}}
-        <image class="sheet-close" src="/assets/images/icon/modal-close.svg" catch:tap="close" />
+        <image wx:if="{{showCloseIcon}}" class="sheet-close" src="/assets/images/icon/modal-close.svg" catch:tap="close" />
       </view>
       <view class="flex-header" wx:else>
         <!-- prettier-ignore -->
@@ -15,6 +15,10 @@
       <view class="sheet-content">
         <!-- prettier-ignore -->
         <slot name="content" />
+      </view>
+      <view class="sheet-footer">
+        <!-- prettier-ignore -->
+        <slot name="footer" />
       </view>
     </view>
   </view>

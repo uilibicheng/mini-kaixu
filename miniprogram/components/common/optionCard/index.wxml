@@ -1,0 +1,17 @@
+<!--components/common/optionCard/index.wxml-->
+<ActionSheet
+  visible="{{visible}}"
+  height="{{(optionList.length + 1) * 136}}rpx"
+  borderRadius="16rpx"
+  isShowHeader="{{false}}"
+  bind:close="handleClose">
+  <view slot="content" class="option-box">
+    <block wx:for="{{optionList}}" wx:key="index">
+      <view class="option-btn">{{item.label}}</view>
+    </block>
+  </view>
+  <view slot="footer">
+    <view class="divider"></view>
+    <view class="option-btn footer-btn" bindtap="handleClose">取消</view>
+  </view>
+</ActionSheet>

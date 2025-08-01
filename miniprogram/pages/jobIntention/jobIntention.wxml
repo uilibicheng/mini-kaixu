@@ -1,0 +1,47 @@
+<!-- 求职意向 -->
+<view class="intention-page">
+  <NavigationBar title="求职意向" color="rgba(0,0,0,0.9)" background="#F2F2F6" />
+
+  <scroll-view class="intention-scroll" scroll-y type="list">
+    <view class="intention-content">
+      <block wx:for="{{intentCardList}}" wx:key="index">
+        <IntentionCard
+          cardIndex="{{index}}"
+          cardInfo="{{item}}"
+          bind:deleteCard="deleteCardMessage"
+          bind:selectVlue="handleSelectFromActionSheet" />
+      </block>
+
+      <view class="add-btn" bindtap="handleAddIntentionCard">
+        <image class="icon-add" src="/assets/images/jobIntention/icon-add.svg" />
+        继续添加求职意向
+      </view>
+    </view>
+  </scroll-view>
+
+  <BottomBtnGroup
+    needSafeArea="{{true}}"
+    btnArr="{{btnArr}}"
+    background="#F2F2F6"
+    height="100rpx"
+    bind:handleSave="handleSave" />
+
+  <MessageBox id="message-box" />
+
+  <!-- 学段学科 -->
+  <SelectSubjectSheet
+    visible="{{showSubjectSheet}}"
+    bind:close="handleCloseActionSheet"
+    bind:submit="handleActionSheetSubmit" />
+  <!-- 单位性质和岗位性质选项 -->
+  <OptionCard
+    visible="{{showOptionCard}}"
+    optionList="{{optionList}}"
+    bind:close="handleCloseActionSheet" />
+  <!-- 期望薪资。求职状态 -->
+  <OptionPicker
+    visible="{{showOptionPicker}}"
+    title="{{optionPickerTitle}}"
+    pickerList="{{optionList}}"
+    bind:close="handleCloseActionSheet" />
+</view>

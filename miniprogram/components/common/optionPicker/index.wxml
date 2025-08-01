@@ -1,0 +1,21 @@
+<!--components/common/optionPicker/index.wxml-->
+<ActionSheet
+  visible="{{visible}}"
+  title="{{title}}"
+  height="712rpx"
+  showCloseIcon="{{false}}"
+  bind:close="handleClose">
+  <view slot="content" class="option-box">
+    <picker-view indicator-style="height: 112rpx;" style="width: 100%; height: 400rpx;" value="{{value}}" bindchange="bindChange">
+      <block wx:for="{{pickerList}}" wx:for-item="pickerItem" wx:for-index="pickerIndex" wx:key="pickerIndex">
+        <picker-view-column>
+          <view wx:for="{{pickerItem}}" wx:key="{{index}}" class="picker-item">{{item.label}}</view>
+        </picker-view-column>
+      </block>
+    </picker-view>
+  </view>
+  <view slot="footer" class="option-footer">
+    <view class="footer-btn" bindtap="handleClose">取消</view>
+    <view class="footer-btn active-btn">完成</view>
+  </view>
+</ActionSheet> 

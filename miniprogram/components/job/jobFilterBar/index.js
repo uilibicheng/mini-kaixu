@@ -32,6 +32,19 @@ ComponentWithComputed({
   data: {
     filterVisible: false,
     filterType: 0, // 0 城市，1岗位，2筛选
+    btnArr: [
+      {
+        name: '重置',
+        method: 'handleReset',
+        width: '220rpx',
+      },
+      {
+        name: '确定',
+        method: 'handleSubmit',
+        isActive: true,
+        width: '',
+      },
+    ]
   },
 
   computed: {

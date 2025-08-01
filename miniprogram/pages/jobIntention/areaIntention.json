@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "BottomBtnGroup": "/components/common/bottomBtnGroup/index",
+    "SelectAreaContent": "/components/selectAreaContent/index"
+  }
+}

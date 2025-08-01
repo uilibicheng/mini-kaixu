@@ -5,7 +5,7 @@
     <HeaderNav />
     <view class="page-box">
       <view class="intention-job-wrap">
-        <view class="job-btn add-job-btn">
+        <view class="job-btn add-job-btn" bindtap="jumpToJobIntention">
           <image class="icon-plus" src="/assets/images/icon/icon-plus.svg" />
           意向岗位
         </view>

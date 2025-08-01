@@ -1,8 +1,7 @@
 // pages/mine/components/switchRole/index.ts
 Component({
   options: {
-    addGlobalClass: true,
-    styleIsolation: 'apply-shared'
+    addGlobalClass: true
   },
   /**
    * 组件的属性列表

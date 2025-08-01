@@ -33,6 +33,14 @@ ComponentWithComputed({
       type: String,
       value: '',
     },
+    borderRadius: {
+      type: String,
+      value: '',
+    },
+    showCloseIcon: {
+      type: Boolean,
+      value: true,
+    },
   },
 
   /**
@@ -51,9 +59,12 @@ ComponentWithComputed({
             display: true,
           },
           () => {
-            this.setData({
-              show: true,
-            });
+            let timer = setTimeout(() => {
+              this.setData({
+                show: true,
+              });
+              clearTimeout(timer);
+            }, 10);
           },
         );
       } else {

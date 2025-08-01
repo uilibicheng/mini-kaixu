@@ -2,6 +2,7 @@
   "component": true,
   "usingComponents": {
     "ActionSheet": "/components/common/actionSheet/index",
+    "SelectSubjectContent": "/components/selectSubjectContent/index",
     "BottomBtnGroup": "/components/common/bottomBtnGroup/index"
   }
 }

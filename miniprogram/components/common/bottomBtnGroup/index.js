@@ -26,6 +26,10 @@ Component({
       type: Number,
       value: undefined,
     },
+    background: {
+      type: String,
+      value: "",
+    },
   },
 
   /**

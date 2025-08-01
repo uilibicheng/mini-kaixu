@@ -3,8 +3,7 @@ import { ComponentWithComputed } from "miniprogram-computed";
 
 ComponentWithComputed({
   options: {
-    addGlobalClass: true,
-    styleIsolation: 'apply-shared'
+    addGlobalClass: true
   },
   /**
    * 组件的属性列表

@@ -1,9 +1,10 @@
 {
   "component": true,
   "usingComponents": {
-    "JobFilterPanel": "/components/job/jobFilterPanel/index",
     "JobFilterContent": "/components/job/jobFilterContent/index",
     "SelectAreaContent": "/components/selectAreaContent/index",
-    "SelectSubjectContent": "/components/selectSubjectContent/index"
+    "SelectSubjectContent": "/components/selectSubjectContent/index",
+    "ActionSheet": "/components/common/actionSheet/index",
+    "BottomBtnGroup": "/components/common/bottomBtnGroup/index"
   }
 }

@@ -4,11 +4,25 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/jobSearch/jobSearch",
-          "pathName": "pages/jobSearch/jobSearch",
+          "name": "pages/jobIntention/areaIntention",
+          "pathName": "pages/jobIntention/areaIntention",
           "query": "",
           "scene": null,
           "launchMode": "default"
+        },
+        {
+          "name": "pages/jobIntention/jobIntention",
+          "pathName": "pages/jobIntention/jobIntention",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/jobSearch/jobSearch",
+          "pathName": "pages/jobSearch/jobSearch",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "pages/jobDetail/jobDetail",

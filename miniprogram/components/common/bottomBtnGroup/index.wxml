@@ -2,7 +2,7 @@
 <view
   wx:if="{{btnArr && btnArr.length}}"
   class="fixed-bottom {{needSafeArea ? 'safe-bottom' : ''}}"
-  style="{{zIndex ? 'z-index: ' + zIndex : ''}}"
+  style="{{zIndex ? 'z-index: ' + zIndex : ''}} {{background ? 'background: ' + background : ''}}"
 >
   <view
     class="bottom-btn"

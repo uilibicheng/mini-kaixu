@@ -1,0 +1,20 @@
+<!-- pages/jobIntention/components/intentionCard/index.wxml -->
+<view class="intention-block">
+  <view class="intention-title">
+    求职意向{{cardIndex + 1}}
+    <image class="icon-trash" src="/assets/images/icon/icon-trash.svg" bindtap="handleDelete" />
+  </view>
+  <block wx:for="{{intentionList}}" wx:key="index">
+    <view class="intention-row" data-item="{{item}}" data-index="{{index}}" bindtap="handleSelect">
+      <view class="intention-row-label">
+        {{item.label}}
+        <image class="icon-require" src="/assets/images/jobIntention/icon-require.svg" />
+      </view>
+      <view class="intention-row-right">
+        <view wx:if="{{cardInfo[item.key]}}" class="intention-vale">{{cardInfo[item.key]}}</view>
+        <view wx:else class="intention-placeholder">请填写{{item.label}}</view>
+        <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+      </view>
+    </view>
+  </block>
+</view>

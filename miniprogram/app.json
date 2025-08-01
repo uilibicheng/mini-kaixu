@@ -6,7 +6,9 @@
     "pages/notice/notice",
     "pages/selectCharacter/selectCharacter",
     "pages/jobDetail/jobDetail",
-    "pages/jobSearch/jobSearch"
+    "pages/jobSearch/jobSearch",
+    "pages/jobIntention/jobIntention",
+    "pages/jobIntention/areaIntention"
   ],
   "requiredPrivateInfos": [
     "chooseAddress"

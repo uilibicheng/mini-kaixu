@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "BottomBtnGroup": "/components/common/bottomBtnGroup/index",
+    "IntentionCard": "./components/intentionCard/index",
+    "ActionSheet": "/components/common/actionSheet/index",
+    "SelectSubjectContent": "/components/selectSubjectContent/index",
+    "SelectSubjectSheet": "./components/selectSubjectSheet/index",
+    "OptionCard": "/components/common/optionCard/index",
+    "OptionPicker": "/components/common/optionPicker/index"
+  }
+}

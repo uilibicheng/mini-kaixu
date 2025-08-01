@@ -10,11 +10,15 @@
         <view
           wx:if="{{messaegBoxInfo.showCancelButton}}"
           class="active-btn cancel"
+          style="{{messaegBoxInfo.cancelColor ? 'color:' + messaegBoxInfo.cancelColor : ''}}"
           catchtap="handleCancelMessage"
         >
           {{messaegBoxInfo.cancelButtonText}}
         </view>
-        <view class="active-btn" catchtap="handleConfirmMessage">
+        <view
+          class="active-btn"
+          style="{{messaegBoxInfo.confirmColor ? 'color:' + messaegBoxInfo.confirmColor : ''}}"
+          catchtap="handleConfirmMessage">
           {{messaegBoxInfo.confirmButtonText}}
         </view>
       </view>

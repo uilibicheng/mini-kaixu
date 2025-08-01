@@ -1,0 +1,16 @@
+<!--pages/jobIntention/areaIntention.wxml-->
+<view class="area-page">
+  <NavigationBar title="意向地区" color="rgba(0,0,0,0.9)" background="#fff" />
+
+  <view class="area-content">
+    <!-- 选择地区 -->
+    <SelectAreaContent />
+  </view>
+
+  <BottomBtnGroup
+    needSafeArea="{{true}}"
+    btnArr="{{btnArr}}"
+    background="#fff"
+    height="104rpx"
+    bind:handleSave="handleSubmit" />
+</view>

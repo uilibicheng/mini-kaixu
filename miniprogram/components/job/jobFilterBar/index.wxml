@@ -26,17 +26,26 @@
   </view>
 </view>
 
-<JobFilterPanel
+<ActionSheet
   visible="{{filterVisible}}"
   title="{{panelTitle}}"
+  height="1150rpx"
   bottom="{{bottom}}"
-  bind:close="handleCloseFilterPanel"
-  bind:handleReset="handleReset"
-  bind:handleSubmit="handleSubmit">
-  <!-- 选择地区 -->
-  <SelectAreaContent wx:if="{{filterType === 0}}" />
-  <!-- 选择学段学科 -->
-  <SelectSubjectContent wx:if="{{filterType === 1}}" />
-  <!-- 筛选 -->
-  <JobFilterContent wx:if="{{filterType === 2}}" />
-</JobFilterPanel>
+  bind:close="handleCloseFilterPanel">
+  <view slot="content" class="panel-box">
+    <!-- 选择地区 -->
+    <SelectAreaContent wx:if="{{filterType === 0}}" />
+    <!-- 选择学段学科 -->
+    <SelectSubjectContent wx:if="{{filterType === 1}}" />
+    <!-- 筛选 -->
+    <JobFilterContent wx:if="{{filterType === 2}}" />
+  </view>
+  <view slot="footer">
+    <BottomBtnGroup
+      needSafeArea="{{false}}"
+      btnArr="{{btnArr}}"
+      height="112rpx"
+      bind:handleReset="handleReset"
+      bind:handleSubmit="handleSubmit" />
+  </view>
+</ActionSheet>

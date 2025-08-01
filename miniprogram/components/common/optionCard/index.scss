@@ -1,0 +1,28 @@
+/* components/common/optionCard/index.wxss */
+.option-box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.option-btn {
+  width: 100%;
+  height: 136rpx;
+  border-bottom: 1rpx solid #f2f2f6;
+  box-sizing: border-box;
+  @include global.flex(x, center, center);
+  font-size: 32rpx;
+  color: rgba(0, 0, 0, 0.9);
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+.divider {
+  width: 100%;
+  height: 16rpx;
+  background-color: #f2f2f6;
+}
+.footer-btn {
+  height: 120rpx;
+  border-bottom: 0;
+}

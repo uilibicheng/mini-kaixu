@@ -1,0 +1,32 @@
+/* components/common/optionPicker/index.wxss */
+.option-box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  
+  .picker-item {
+    line-height: 112rpx;
+    text-align: center;
+    font-size: 34rpx;
+    color: #000;
+  }
+}
+
+.option-footer {
+  width: 100%;
+  height: 208rpx;
+  @include global.flex(x, center, center);
+  .footer-btn {
+    width: 216rpx;
+    height: 80rpx;
+    background: #f7f7f7;
+    border-radius: 8rpx;
+    color: global.$main-color;
+    @include global.flex(x, center, center);
+    &.active-btn {
+      color: global.$white-color;
+      background-color: global.$main-color;
+      margin-left: 32rpx;
+    }
+  }
+}
