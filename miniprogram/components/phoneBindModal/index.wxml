@@ -1,0 +1,20 @@
+<!--components/common/phoneBindModal/index.wxml-->
+<root-portal wx:if="{{bindVisible}}">
+  <view class="bind-modal-content">
+    <view class="overlay" bindtap="onCloseMask" catchtouchmove="preventDefault" />
+    <view class="bind-modal slide-down {{needSafeBottom ? 'safe-bottom' : ''}} {{ bindVisible ? 'slide-up' : '' }}" style="{{bottom ? bottom : ''}}">
+      <view class="tips">为了您的账号安全，请绑定手机号</view>
+      <button
+        class="btn"
+        open-type="getPhoneNumber"
+        style="background: {{btnBackground ? btnBackground : '#07C160'}}"
+        loading="{{ bindLoading }}"
+        bindgetphonenumber="bindPhoneNumber"
+        bindtap="handleClickGetPhone"
+      >
+        绑定手机号
+      </button>
+      <view wx:if="{{ bindLoading }}" class="mask" />
+    </view>
+  </view>
+</root-portal>

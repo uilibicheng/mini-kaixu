@@ -41,6 +41,10 @@ ComponentWithComputed({
       type: Boolean,
       value: true,
     },
+    needSafeBottom: {
+      type: Boolean,
+      value: true,
+    },
   },
 
   /**

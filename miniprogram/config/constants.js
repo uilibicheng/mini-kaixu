@@ -1,3 +1,9 @@
+export const DEFAULT_HOST = 'http://124.221.101.120:11993'
+
+export const STORAGE = {
+  USER_TOKEN: 'userToken',
+}
+
 export const JOB_INTENTION_KEY = {
   XDXK: 'xdxk',
   YXDQ: 'yxdq',

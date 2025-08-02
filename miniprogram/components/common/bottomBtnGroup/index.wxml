@@ -11,7 +11,7 @@
     <block wx:for="{{btnArr}}" wx:key="index">
       <view
         class="btn {{item.isActive ? 'active-btn' : ''}} {{!item.width ? 'adjust-btn' : ''}}"
-        style="width: {{item.width ? item.width : ''}}; height: {{item.height ? item.height : ''}}; {{item.background ? 'background:' + item.background : ''}};{{color ? item.color : ''}}"
+        style="{{item.width ? 'width:' + item.width + ';' : ''}} {{item.height ? 'height:' + item.height + ';' : ''}} {{item.background ? 'background:' + item.background + ';' : ''}}; {{item.color ? 'color:' + item.color + ';' : ''}}"
         data-method="{{item.method}}"
         bindtap="handleClick"
       >

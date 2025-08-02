@@ -1,0 +1,4 @@
+<!--pages/myResume/myResume.wxml-->
+<view class="resume-page">
+  <NavigationBar title="我的简历" color="rgba(0,0,0,0.9)" background="#F2F2F6" />
+</view>

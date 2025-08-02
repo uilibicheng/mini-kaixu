@@ -18,7 +18,10 @@
 }
 .login-box {
   padding-top: 60rpx;
-  @include global.flex(y, between, center);
+  height: 100%;
+  box-sizing: border-box;
+  @include global.flex(y, start, center);
+  position: relative;
 
   .login-logo {
     width: 150rpx;

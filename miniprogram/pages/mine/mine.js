@@ -1,13 +1,14 @@
 // pages/mine/mine.ts
 import messageBoxBehavior from "@/behaviors/messageBoxBehavior"
+import loginBehavior from "../../behaviors/loginBehavior"
+import { isLogin } from "../../utils/helpers"
 
 Page({
-  behaviors: [messageBoxBehavior],
+  behaviors: [messageBoxBehavior, loginBehavior],
   /**
    * 页面的初始数据
    */
   data: {
-    loginVisible: false,
   },
 
   /**
@@ -17,16 +18,13 @@ Page({
     // this.showMessagebox()
   },
 
-  showMessagebox() {
-    this.$messageBox({
-      title: '温馨提示',
-      message: `请先完善一份简历\n一份完整的简历是您成功求职的良好开始！`,
-      showCancelButton: true,
-      confirmButtonText: '先逛一逛',
-      cancelButtonText: '完善简历',
-      confirm: async () => {
-        
-      },
+  onShow() {
+    this.setData({
+      isLogin: isLogin()
     })
+  },
+
+  handleLoginSuccess() {
+    this.onShow()
   }
 })

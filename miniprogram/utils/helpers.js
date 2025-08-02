@@ -53,7 +53,7 @@ export function isLogin() {
   return !!userToken
 }
 
-// 判断是否登录的回调操作, isBind是需要登陆和绑定
+// 判断是否登录的回调操作
 export function actionWithCheckLogin(option) {
   const flag = isLogin()
   if (flag) {
@@ -61,21 +61,6 @@ export function actionWithCheckLogin(option) {
   } else {
     if (option?.fail) {
       option.fail()
-    } else {
-      const userToken = wx.getStorageSync(STORAGE.USER_TOKEN)
-      if (!userToken) {
-        jumpToLogin()
-      } else {
-        // 去绑定
-        if (isDifferentCompany()) {
-          goBack()
-        } else {
-          const url = getCurrentPageUrl()
-          router.navigateTo({
-            url: `/pages/user/mailBoxBinding?url=${encodeURIComponent(url)}`,
-          })
-        }
-      }
     }
   }
 }

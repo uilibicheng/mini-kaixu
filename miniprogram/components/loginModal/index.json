@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "ActionSheet": "../common/actionSheet/index"
+    "ActionSheet": "../common/actionSheet/index",
+    "PhoneBindModal": "/components/phoneBindModal/index"
   }
 }

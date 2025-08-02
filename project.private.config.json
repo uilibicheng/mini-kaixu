@@ -4,11 +4,18 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/jobIntention/areaIntention",
-          "pathName": "pages/jobIntention/areaIntention",
+          "name": "pages/selectCharacter/selectCharacter",
+          "pathName": "pages/selectRole/selectRole",
           "query": "",
           "scene": null,
           "launchMode": "default"
+        },
+        {
+          "name": "pages/jobIntention/areaIntention",
+          "pathName": "pages/jobIntention/areaIntention",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "pages/jobIntention/jobIntention",
@@ -27,13 +34,6 @@
         {
           "name": "pages/jobDetail/jobDetail",
           "pathName": "pages/jobDetail/jobDetail",
-          "query": "",
-          "launchMode": "default",
-          "scene": null
-        },
-        {
-          "name": "pages/selectCharacter/selectCharacter",
-          "pathName": "pages/selectCharacter/selectCharacter",
           "query": "",
           "launchMode": "default",
           "scene": null

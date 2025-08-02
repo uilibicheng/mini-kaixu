@@ -15,7 +15,7 @@
     <scroll-view class="page-scroll" scroll-y type="list">
       <view class="scroll-content">
         <!-- 个人信息 -->
-        <UserInfo />
+        <UserInfo isLogin="{{isLogin}}" bind:toggleLoginModal="toggleLoginModal" />
         <!-- VIP模块 -->
         <VipContent />
         <!-- 求职服务 -->
@@ -34,7 +34,10 @@
       </view>
     </scroll-view>
     
-    <MessageBox id="message-box" />
-    <LoginModal visible="{{loginVisible}}" />
+    <LoginModal
+      visible="{{loginVisible}}"
+      isTabbar="{{true}}"
+      bind:visible="toggleLoginModal"
+      bind:handleLoginSuccess="handleLoginSuccess" />
   </view>
  </view>

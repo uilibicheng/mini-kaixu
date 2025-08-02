@@ -1,4 +1,6 @@
 // pages/mine/components/userInfo/index.ts
+import { actionWithCheckLogin } from "../../../../utils/helpers"
+
 Component({
   options: {
     addGlobalClass: true
@@ -7,7 +9,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    isLogin: {
+      type: Boolean,
+      value: false,
+    }
   },
 
   /**
@@ -21,6 +26,15 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    handleClick() {
+      actionWithCheckLogin({
+        success: () => {
+          console.log(33333);
+        },
+        fail: () => {
+          this.triggerEvent('toggleLoginModal')
+        }
+      })
+    }
   }
 })

@@ -3,7 +3,7 @@
  * 被转换的函数，该类型函数只接受一个 Object 类型参数，且必须具备 success 和 fail 回调。
  * 若参数里有success这种，就不会变成Promise
  */
-export function promisify (options) {
+export function promisify (fn) {
   return function (options) {
     return new Promise((resolve, reject) => {
       const callbacks = {

@@ -6,9 +6,10 @@
       src=""
     />
     <view class="info-right">
-      <view class="info-name-wrap">
-        <text class="info-name" max-lines="{{1}}" overflow="ellipsis">吕铭洲</text>
+      <view class="info-name-wrap" bindtap="handleClick">
+        <text class="info-name" max-lines="{{1}}" overflow="ellipsis">{{isLogin ? '吕铭洲' : '请登录'}}</text>
         <image
+          wx:if="{{isLogin}}"
           class="icon-edit"
           src="/assets/images/mine/icon-edit.svg"
         />

@@ -4,11 +4,12 @@
     "pages/mine/mine",
     "pages/message/message",
     "pages/notice/notice",
-    "pages/selectCharacter/selectCharacter",
+    "pages/selectRole/selectRole",
     "pages/jobDetail/jobDetail",
     "pages/jobSearch/jobSearch",
     "pages/jobIntention/jobIntention",
-    "pages/jobIntention/areaIntention"
+    "pages/jobIntention/areaIntention",
+    "pages/myResume/myResume"
   ],
   "requiredPrivateInfos": [
     "chooseAddress"
