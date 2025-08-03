@@ -3,7 +3,7 @@
 
 .action-sheet {
   position: absolute;
-  bottom: 0;
+  bottom: var(--bottom);
   left: 0;
   width: 100%;
   height: 100%;
@@ -25,6 +25,11 @@
     }
   }
 
+  .safe-bottom {
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
   .sheet-box {
     --borderRadius: 24rpx;
     position: absolute;
@@ -32,20 +37,15 @@
     left: 0;
     width: 100%;
     height: 70vh;
-    max-height: 1010rpx;
+    max-height: 85vh;
     display: flex;
     flex-direction: column;
-    background-color: global.$white-color;
+    background: var(--background);
     border-radius: var(--borderRadius) var(--borderRadius) 0 0;
     z-index: 999;
     transform: translateY(100%);
     transition: transform 0.25s;
     box-sizing: content-box;
-
-    &.safe-bottom {
-      padding-bottom: constant(safe-area-inset-bottom);
-      padding-bottom: env(safe-area-inset-bottom);
-    }
 
     &.popup {
       transform: translateY(0);

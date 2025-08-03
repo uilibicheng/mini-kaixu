@@ -1,0 +1,30 @@
+<!--pages/schoolDetail/components/schoolComment/index.wxml-->
+<view class="school-comment">
+  <view class="comment-btn-wrap">
+    <view class="comment-btn" bindtap="jumpToMakeComment">
+      <image class="icon-edit" src="/assets/images/icon/icon-white-edit.svg" />
+      匿名点评
+      <view class="comment-award">奖励1个豆豆</view>
+    </view>
+  </view>
+
+  <scroll-view class="comment-scroll safe-bottom" scroll-y type="list">
+    <view class="comment-content">
+      <view class="comment-empty" wx:if="{{!(commentList && commentList.length)}}">
+        <ErrorOrEmpty />
+      </view>
+
+      <view class="comment-list" wx:else>
+        <view class="comment-item-wrap" wx:for="{{commentList}}" wx:key="index">
+          <SchoolCommentItem lock="{{lockComment}}" />
+        </view>
+        <view class="loding-tip">已经到底了</view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="comment-unlock" wx:if="{{lockComment && commentList.length}}" catchtap="handleUnlock">
+    <image class="icon-lock" src="/assets/images/jobDetail/icon-lock.svg" />
+    解锁全部点评
+  </view>
+</view>

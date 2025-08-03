@@ -30,7 +30,7 @@
   visible="{{filterVisible}}"
   title="{{panelTitle}}"
   height="1150rpx"
-  bottom="{{bottom}}"
+  bottom="{{isTabbar ? '100rpx' : ''}}"
   bind:close="handleCloseFilterPanel">
   <view slot="content" class="panel-box">
     <!-- 选择地区 -->

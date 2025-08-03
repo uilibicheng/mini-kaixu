@@ -37,6 +37,8 @@ ComponentWithComputed({
         name: '重置',
         method: 'handleReset',
         width: '220rpx',
+        color: 'rgba(0,0,0,0.7)',
+        background: '#F2F2F6',
       },
       {
         name: '确定',
@@ -56,13 +58,6 @@ ComponentWithComputed({
         2: '筛选',
       }[filterType]
     },
-    bottom(data) {
-      const {isTabbar} = data
-      if (isTabbar) {
-        return `bottom: 100rpx;`
-      }
-      return ''
-    }
   },
 
   /**

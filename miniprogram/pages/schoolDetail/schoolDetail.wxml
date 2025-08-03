@@ -1,0 +1,33 @@
+<!--pages/schoolDetail/schoolDetail.wxml-->
+<view class="school-page">
+  <image class="page-bg" src="/assets/images/schoolDetail/page-bg.svg" mode="widthFix" />
+  <view class="school-detail">
+    <NavigationBar title="单位详情" color="#FFFFFF" background="" />
+    <!-- 单位详情 -->
+    <view class="school-content">
+      <view class="school-desc-box">
+        <image class="school-logo" src="" mode="" />
+        <view class="school-desc">
+          <view class="school-desc-name">杭州启明实验学校</view>
+          <view class="school-desc-condition">公办｜小学｜4000-5000人</view>
+        </view>
+      </view>
+      <!-- tab栏 -->
+      <view class="school-tab-wrap">
+        <view class="school-tab {{tabIndex === 1 ? 'active-tab' : ''}}" data-index="{{1}}" bindtap="handleSwitchTab">单位信息</view>
+        <view class="school-tab {{tabIndex === 2 ? 'active-tab' : ''}}" data-index="{{2}}" bindtap="handleSwitchTab">在招职位·12</view>
+        <view class="school-tab {{tabIndex === 3 ? 'active-tab' : ''}}" data-index="{{3}}" bindtap="handleSwitchTab">单位点评·59</view>
+      </view>
+
+      <view class="tab-panel" wx:if="{{tabIndex === 1}}">
+        <SchoolInfo bind:switchTab="handleSwitchTab" />
+      </view>
+      <view class="tab-panel" wx:if="{{tabIndex === 2}}">
+        <SchoolJobList />
+      </view>
+      <view class="tab-panel" wx:if="{{tabIndex === 3}}">
+        <SchoolComment />
+      </view>
+    </view>
+  </view>
+</view>

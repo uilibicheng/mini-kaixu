@@ -2,6 +2,6 @@
   "usingComponents": {
     "HeaderNav": "./components/headerNav/index",
     "JobFilterBar": "/components/job/jobFilterBar/index",
-    "JobList": "./components/jobList/index"
+    "JobItem": "./components/jobItem/index"
   }
 }

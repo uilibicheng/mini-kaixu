@@ -8,7 +8,7 @@
     <view class="intention-row" data-item="{{item}}" data-index="{{index}}" bindtap="handleSelect">
       <view class="intention-row-label">
         {{item.label}}
-        <image class="icon-require" src="/assets/images/jobIntention/icon-require.svg" />
+        <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
       </view>
       <view class="intention-row-right">
         <view wx:if="{{cardInfo[item.key]}}" class="intention-vale">{{cardInfo[item.key]}}</view>

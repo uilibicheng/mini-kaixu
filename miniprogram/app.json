@@ -9,10 +9,23 @@
     "pages/jobSearch/jobSearch",
     "pages/jobIntention/jobIntention",
     "pages/jobIntention/areaIntention",
-    "pages/myResume/myResume"
+    "pages/myResume/myResume",
+    "pages/schoolDetail/schoolDetail",
+    "pages/schoolDetail/unlockAllComment",
+    "pages/rechargeDoudou/rechargeDoudou",
+    "pages/schoolDetail/makeComment/makeComment"
   ],
   "requiredPrivateInfos": [
     "chooseAddress"
+  ],
+  "subpackages": [
+    {
+      "root": "subpackages/job",
+      "name": "job",
+      "pages": [
+        "pages/complaintJob/complaintJob"
+      ]
+    }
   ],
   "window": {
     "navigationBarTextStyle": "black",

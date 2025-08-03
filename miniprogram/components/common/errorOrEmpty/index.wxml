@@ -1,0 +1,6 @@
+<!--components/common/errorOrEmpty/index.wxml-->
+<view class="error-content">
+  <image class="empty-default" src="{{emptyImage}}" mode="widthFix" />
+  <text class="empty-text" max-lines="{{8}}">{{ emptyText }}</text>
+  <view wx:if="{{showNavToHome}}" class="refresh-btn" bindtap="navToHome"> {{showBtnText}} </view>
+</view>

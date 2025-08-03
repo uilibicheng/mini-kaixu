@@ -1,0 +1,115 @@
+/* pages/schoolDetail/components/schoolComment/index.wxss */
+.school-comment {
+  width: 100%;
+  height: 100%;
+  @include global.flex(y, start, start);
+  position: relative;
+
+  .comment-btn-wrap {
+    flex-shrink: 0;
+    width: 100%;
+    @include global.flex(x, end, start);
+    margin-top: 16rpx;
+    padding-right: 24rpx;
+    box-sizing: border-box;
+    .comment-btn {
+      width: 172rpx;
+      height: 56rpx;
+      background: global.$main-color;
+      border-radius: 8rpx;
+      @include global.flex(x, center, center);
+      font-weight: 500;
+      font-size: 24rpx;
+      color: #ffffff;
+      position: relative;
+      .icon-edit {
+        width: 32rpx;
+        height: 32rpx;
+        margin-right: 8rpx;
+      }
+      .comment-award {
+        position: absolute;
+        right: 0rpx;
+        top: -10rpx;
+        transform: translateY(-100%);
+        padding: 0 8rpx;
+        height: 32rpx;
+        line-height: 32rpx;
+        border-radius: 999rpx;
+        background-color: #eece9f;
+        font-weight: 500;
+        font-size: 20rpx;
+        color: #593100;
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, 100%);
+          width: 0;
+          height: 0;
+          border-left: 8rpx solid transparent;
+          border-right: 8rpx solid transparent;
+          border-top: 8rpx solid #eece9f;
+        }
+      }
+    }
+  }
+
+  .comment-scroll {
+    margin-top: 32rpx;
+    flex: 1;
+    width: 100%;
+
+    .comment-content {
+      width: 100%;
+      padding: 0 24rpx;
+      box-sizing: border-box;
+
+      .comment-empty {
+        margin-top: 170rpx;
+      }
+
+      .comment-list {
+        width: 100%;
+        padding-bottom: 24rpx;
+        .comment-item-wrap {
+          width: 100%;
+          margin-bottom: 20rpx;
+        }
+        .loding-tip {
+          margin-top: 12rpx;
+          padding-bottom: 50rpx;
+          font-size: 24rpx;
+          color: rgba(0, 0, 0, 0.3);
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .comment-unlock {
+    position: absolute;
+    bottom: calc(120rpx + constant(safe-area-inset-bottom));
+    bottom: calc(120rpx + env(safe-area-inset-bottom));
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600rpx;
+    height: 78rpx;
+    background: linear-gradient(#FA9D3B, #EECE9F);
+    background: #EECE9F;
+    box-shadow: 0rpx 0rpx 20rpx 0rpx rgba(0, 0, 0, 0.08);
+    border-radius: 8rpx;
+    @include global.flex(x, center, center);
+    font-weight: 500;
+    color: #593100;
+    font-size: 28rpx;
+    z-index: 99;
+    .icon-lock {
+      width: 40rpx;
+      height: 40rpx;
+      margin-right: 8rpx;
+    }
+  }
+}

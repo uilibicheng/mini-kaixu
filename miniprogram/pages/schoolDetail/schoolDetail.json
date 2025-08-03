@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "SchoolInfo": "./components/schoolInfo/index",
+    "SchoolJobList": "./components/schoolJobList/index",
+    "SchoolComment": "./components/schoolComment/index"
+  }
+}

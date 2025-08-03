@@ -25,54 +25,58 @@
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0) scale(0.8);
-    width: 698rpx;
-    padding: 40rpx 28rpx 60rpx;
-    box-sizing: border-box;
-    background-color: global.$white-color;
-    border-radius: 16rpx;
     z-index: 99;
     transition: 0.3s;
     opacity: 0;
     transition-property: transform, opacity;
 
-    .message-title {
-      color: rgba(0, 0, 0, 0.9);
-      font-size: 36rpx;
-      line-height: 40rpx;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    .message-text {
-      margin-top: 32rpx;
-      color: rgba(0, 0, 0, 0.9);
-      font-size: 28rpx;
-      line-height: 40rpx;
-      text-align: center;
-    }
-
-    .message-btn-group {
-      width: 100%;
-      @include global.flex(x, center, center);
-      margin-top: 68rpx;
-      .active-btn {
-        background-color: global.$main-color;
-        width: 260rpx;
-        height: 88rpx;
-        @include global.flex(x, center, center);
-        color: global.$white-color;
-        font-size: 28rpx;
+    .message-content {
+      width: 698rpx;
+      padding: 40rpx 28rpx 60rpx;
+      box-sizing: border-box;
+      border-radius: 16rpx;
+      background-color: global.$white-color;
+      
+      .message-title {
+        color: rgba(0, 0, 0, 0.9);
+        font-size: 36rpx;
+        line-height: 40rpx;
+        text-align: center;
         font-weight: bold;
-        pointer-events: auto;
-        border-radius: 8rpx;
       }
-
-      .cancel {
-        background-color: #f4f4f4;
-        margin-right: 60rpx;
-        color: global.$main-color;
+  
+      .message-text {
+        margin-top: 32rpx;
+        color: rgba(0, 0, 0, 0.9);
+        font-size: 28rpx;
+        line-height: 40rpx;
+        text-align: center;
+      }
+  
+      .message-btn-group {
+        width: 100%;
+        @include global.flex(x, center, center);
+        margin-top: 68rpx;
+        .active-btn {
+          background-color: global.$main-color;
+          width: 260rpx;
+          height: 88rpx;
+          @include global.flex(x, center, center);
+          color: global.$white-color;
+          font-size: 28rpx;
+          font-weight: bold;
+          pointer-events: auto;
+          border-radius: 8rpx;
+        }
+  
+        .cancel {
+          background-color: #f4f4f4;
+          margin-right: 60rpx;
+          color: rgba(0,0,0,0.3);
+        }
       }
     }
+
   }
 
   .show {

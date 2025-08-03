@@ -4,11 +4,39 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/selectCharacter/selectCharacter",
-          "pathName": "pages/selectRole/selectRole",
+          "name": "pages/schoolDetail/makeComment/makeComment",
+          "pathName": "pages/schoolDetail/makeComment/makeComment",
           "query": "",
           "scene": null,
           "launchMode": "default"
+        },
+        {
+          "name": "pages/schoolDetail/unlockAllComment",
+          "pathName": "pages/schoolDetail/unlockAllComment",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/schoolDetail/schoolDetail",
+          "pathName": "pages/schoolDetail/schoolDetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "subpackages/job/pages/complaintJob/complaintJob",
+          "pathName": "subpackages/job/pages/complaintJob/complaintJob",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/selectCharacter/selectCharacter",
+          "pathName": "pages/selectRole/selectRole",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "pages/jobIntention/areaIntention",

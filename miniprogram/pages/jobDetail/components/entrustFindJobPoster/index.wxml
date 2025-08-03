@@ -1,0 +1,24 @@
+<!--pages/jobDetail/components/sharePoster/index.wxml-->
+<root-portal>
+  <view class="poster-panel">
+    <view class="poster-mask" catch:tap="close" />
+
+    <view class="poster-box" catch:tap="close">
+      <snapshot id="target">
+        <view class="poster-target" catchtap="prevent">
+          <image class="share-poster-img" src="" />
+        </view>
+      </snapshot>
+
+      <view class="btn-group">
+        <view class="btn" catchtap="close">
+          取消
+        </view>
+        <view class="btn save-btn" catchtap="handleSavePoster">
+          <image class="icon-save" src="/assets/images/share/icon-save.svg" />
+          保存到相册
+        </view>
+      </view>
+    </view>
+  </view>
+</root-portal>

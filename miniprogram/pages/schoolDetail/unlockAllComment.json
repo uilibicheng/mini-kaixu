@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "PaymenPanel": "/components/paymenPanel/index"
+  }
+}

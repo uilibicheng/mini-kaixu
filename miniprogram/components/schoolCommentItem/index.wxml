@@ -1,0 +1,23 @@
+<!--components/schoolCommentItem/index.wxml-->
+<view class="evaluation-item" style="--comment-bg: {{background ? background : '#fff'}}">
+  <view class="evaluation-item-top">
+    <image class="evaluation-avatar" src="" mode="aspectFill" />
+    <view class="evaluation-info">
+      <view class="evaluation-name">会说话的猫</view>
+      <view class="evaluation-type">黑料曝光</view>
+    </view>
+  </view>
+  <view class="evaluation-text-wrap" wx:if="{{lock}}">
+    <text class="evaluation-text blur" overflow="ellipsis" max-lines="3">
+      避雷，避雷，千万别来这个学校，太抗了！避雷.....文字文字文字文字文字文字字文字文字文字文字字文字文字文字文字字
+    </text>
+    <view class="evaluation-text float">
+      避雷，避雷，千万别来这个学校，太抗了！避雷.....文字文字文字文字文字文字字文字文字文字文字字文字文字文字文字字
+    </view>
+  </view>
+  <view class="evaluation-text-wrap" wx:else>
+    <view class="evaluation-text">
+      避雷，避雷，千万别来这个学校，太抗了！避雷.....文字文字文字文字文字文字字文字文字文字文字字文字文字文字文字字
+    </view>
+  </view>
+</view>

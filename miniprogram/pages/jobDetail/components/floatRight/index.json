@@ -1,4 +1,7 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "ShareModal": "/components/common/shareModal/index",
+    "SharePoster": "../sharePoster/index"
+  }
 }

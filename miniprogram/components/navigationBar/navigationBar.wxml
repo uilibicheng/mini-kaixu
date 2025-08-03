@@ -27,8 +27,8 @@
                 />
                 <image
                   wx:else
-                  class="icon-white-back"
-                  src="/assets/images/icon/icon-white-back.png"
+                  class="icon-back"
+                  src="/assets/images/icon/icon-white-back.svg"
                 />
               </view>
             </view>

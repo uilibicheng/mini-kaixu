@@ -1,0 +1,12 @@
+/* pages/schoolDetail/unlockAllComment.wxss */
+.unlock-page {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  @include global.flex(y, start, start);
+
+  .unlock-scroll {
+    flex: 1;
+    width: 100%;
+  }
+}

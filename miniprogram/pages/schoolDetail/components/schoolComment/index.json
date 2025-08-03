@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "styleIsolation": "apply-shared",
+  "usingComponents": {
+    "ErrorOrEmpty": "/components/common/errorOrEmpty/index",
+    "SchoolCommentItem": "/components/schoolCommentItem/index"
+  }
+}

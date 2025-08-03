@@ -4,8 +4,7 @@
   title=""
   height="860rpx"
   isShowHeader="{{false}}"
-  bottom="{{isTabbar ? 'bottom:100rpx' : ''}}"
-  needSafeBottom="{{!isTabbar}}"
+  bottom="{{isTabbar ? '100rpx' : ''}}"
   bind:close="onClose">
   <view slot="header" class="login-header">
     <view>登录注册</view>
@@ -29,7 +28,7 @@
 
 <PhoneBindModal
   id="phone-bind-modal"
-  bottom="{{isTabbar ? 'bottom:100rpx' : ''}}"
+  bottom="{{isTabbar ? '100rpx' : ''}}"
   loginCode="{{loginCode}}"
   needSafeBottom="{{!isTabbar}}"
   bind:bindPhone="getphonedata"

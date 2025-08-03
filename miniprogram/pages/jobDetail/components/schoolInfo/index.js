@@ -1,3 +1,5 @@
+import router from "../../../../utils/router"
+
 // pages/jobDetail/components/schoolInfo/index.ts
 Component({
   options: {
@@ -21,6 +23,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    jumpToSchoolDetail() {
+      router.navigateTo({
+        url: '/pages/schoolDetail/schoolDetail'
+      })
+    }
   }
 })

@@ -1,4 +1,3 @@
-import { IRMiniShareParams } from '../config/interface/share'
 import { showToast } from './helpers'
 import { formatHttps } from './util'
 
@@ -120,33 +119,6 @@ const base64src = (base64data, cb) => {
     },
   })
   return true
-}
-
-export const setTabbarLanguage = () => {
-  const tabbarArr = [
-    {
-      index: 0,
-      text: '首页',
-      // iconPath: '/assets/images/icon/tabbar-homepage.png',
-      // selectedIconPath: '/assets/images/icon/tabbar-homepage-active.png',
-    },
-    {
-      index: 1,
-      text: '购物袋',
-      // iconPath: '/assets/images/icon/tabbar-cart.png',
-      // selectedIconPath: '/assets/images/icon/tabbar-cart-active.png',
-    },
-    {
-      index: 2,
-      text: '我的',
-      // iconPath: '/assets/images/icon/tabbar-mine.png',
-      // selectedIconPath: '/assets/images/icon/tabbar-mine-active.png',
-    },
-  ]
-
-  tabbarArr.forEach(item => {
-    wx.setTabBarItem(item)
-  })
 }
 
 export const refreshTabBar = async () => {

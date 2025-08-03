@@ -18,29 +18,13 @@
   </scroll-view>
   <view class="evaluation-content">
     <view wx:if="{{true}}" class="evaluation-list">
-      <block wx:for="{{2}}" wx:key="index">
-        <view class="evaluation-item">
-          <view class="evaluation-item-top">
-            <image class="evaluation-avatar" src="" mode="aspectFill" />
-            <view class="evaluation-info">
-              <view class="evaluation-name">会说话的猫</view>
-              <view class="evaluation-type">黑料曝光</view>
-            </view>
-          </view>
-          <view class="evaluation-text-wrap">
-            <text class="evaluation-text blur" overflow="ellipsis" max-lines="3">
-              避雷，避雷，千万别来这个学校，太抗了！避雷.....文字文字文字文字文字文字字文字文字文字文字字文字文字文字文字字
-            </text>
-            <view class="evaluation-text float">
-              避雷，避雷，千万别来这个学校，太抗了！避雷.....文字文字文字文字文字文字字文字文字文字文字字文字文字文字文字字
-            </view>
-          </view>
-          <view class="evaluation-unlock">
-            <image class="icon-lock" src="/assets/images/jobDetail/icon-lock.svg" />
-            解锁全部
-          </view>
+      <view class="evaluation-item-block" wx:for="{{2}}" wx:key="index">
+        <SchoolCommentItem lock="{{lockComment}}" background="#fffaf0" />
+        <view class="evaluation-unlock">
+          <image class="icon-lock" src="/assets/images/jobDetail/icon-lock.svg" />
+          解锁全部
         </view>
-      </block>
+      </view>
     </view>
     <view wx:else class="evaluation-empty">暂无提问</view>
     <view class="evaluation-btn">

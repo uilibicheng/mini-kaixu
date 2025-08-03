@@ -2,7 +2,7 @@
 <view class="page-footer safe-bottom">
   <view class="footer-row">
     <view class="row-left">
-      <view class="row-item">
+      <view class="row-item" bindtap="handleShowConcatMessage">
         <image class="row-item-icon" src="/assets/images/icon/icon-phone.svg" />
         电话
       </view>
@@ -11,9 +11,36 @@
         在线聊
       </view>
     </view>
-    <view class="row-right">
+    <view class="row-right" bindtap="handleToggleShowFindJobPoster">
       <view class="row-btn">委托找工作</view>
-      <view class="row-btn row-active-btn">投递简历</view>
+      <view
+        class="row-btn row-active-btn {{false ? 'row-disabled-btn' : ''}}"
+        bindtap="handleSendResume">
+        {{false ? '已投递' : '投递简历'}}
+      </view>
     </view>
   </view>
 </view>
+
+<MessageBox id="message-box" isShowMessage="{{!showConcatMessage}}">
+  <view slot="content" wx:if="{{showConcatMessage}}" class="concat-message-box">
+    <view class="message-box-title">
+      联系方式
+      <image class="icon-close" src="/assets/images/icon/icon-close.svg" catchtap="handleCloseConcatMessage" />
+    </view>
+    <view class="message-box-text">
+      联系人：陈老师
+    </view>
+    <view class="message-row">
+      <view class="message-box-text">15177377437</view>
+      <view class="message-btn" data-phone="15177377437" catchtap="hanlePhoneCall">
+        <image class="icon-phone" src="/assets/images/jobDetail/icon-phone.svg" />
+        拨打电话
+      </view>
+    </view>
+    <view class="message-box-tip">联系我时，请说是在“开旭教师招聘”上看到的，谢谢！</view>
+  </view>
+</MessageBox>
+
+<!-- 委托找工作分享 -->
+<EntrustFindJobPoster wx:if="{{showFindJobPoster}}" bind:close="handleToggleShowFindJobPoster" />

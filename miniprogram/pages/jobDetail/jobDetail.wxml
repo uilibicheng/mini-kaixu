@@ -28,7 +28,7 @@
           <image class="icon-safe" src="/assets/images/icon/icon-safe.svg" />
         </view>
         <text class="tip-text">
-          欢迎关注微信公众号“浙江开旭教师招聘”，求职过程请勿缴纳费用，谨防诈骗！若信息不实请举报。<text class="complain-btn">请立即投诉</text>
+          欢迎关注微信公众号“浙江开旭教师招聘”，求职过程请勿缴纳费用，谨防诈骗！若信息不实请举报。<text class="complain-btn" bindtap="handleComplaint">请立即投诉</text>
         </text>
       </view>
       <!-- 广告 -->

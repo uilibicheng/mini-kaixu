@@ -4,24 +4,27 @@
   <view class="message-panel">
     <view class="mask" style="opacity: {{showModal ? 1 : 0}}" />
     <view class="message-box {{showModal ? 'show' : ''}}">
-      <view class="message-title">{{messaegBoxInfo.title}}</view>
-      <text class="message-text">{{messaegBoxInfo.message}}</text>
-      <view class="message-btn-group">
-        <view
-          wx:if="{{messaegBoxInfo.showCancelButton}}"
-          class="active-btn cancel"
-          style="{{messaegBoxInfo.cancelColor ? 'color:' + messaegBoxInfo.cancelColor : ''}}"
-          catchtap="handleCancelMessage"
-        >
-          {{messaegBoxInfo.cancelButtonText}}
-        </view>
-        <view
-          class="active-btn"
-          style="{{messaegBoxInfo.confirmColor ? 'color:' + messaegBoxInfo.confirmColor : ''}}"
-          catchtap="handleConfirmMessage">
-          {{messaegBoxInfo.confirmButtonText}}
+      <view class="message-content" wx:if="{{isShowMessage}}">
+        <view class="message-title">{{messaegBoxInfo.title}}</view>
+        <rich-text class="message-text" nodes="{{messaegBoxInfo.message}}" />
+        <view class="message-btn-group">
+          <view
+            wx:if="{{messaegBoxInfo.showCancelButton}}"
+            class="active-btn cancel"
+            style="{{messaegBoxInfo.cancelColor ? 'color:' + messaegBoxInfo.cancelColor : ''}}"
+            catchtap="handleCancelMessage"
+          >
+            {{messaegBoxInfo.cancelButtonText}}
+          </view>
+          <view
+            class="active-btn"
+            style="{{messaegBoxInfo.confirmColor ? 'color:' + messaegBoxInfo.confirmColor : ''}}"
+            catchtap="handleConfirmMessage">
+            {{messaegBoxInfo.confirmButtonText}}
+          </view>
         </view>
       </view>
+      <slot wx:else name="content"></slot>
     </view>
   </view>
 </root-portal>

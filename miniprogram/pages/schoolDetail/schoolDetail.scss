@@ -1,0 +1,101 @@
+/* pages/schoolDetail/schoolDetail.wxss */
+.school-page {
+  width: 100%;
+  height: 100%;
+  background: #f2f2f6;
+  position: relative;
+
+  .page-bg {
+    width: 100%;
+    height: 0;
+  }
+
+  .school-detail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include global.flex(y, start, start);
+
+    .school-content {
+      flex: 1;
+      width: 100%;
+      @include global.flex(y, start, start);
+
+      .school-desc-box {
+        flex-shrink: 0;
+        margin: 20rpx auto 0;
+        padding: 0 24rpx;
+        width: 702rpx;
+        height: 160rpx;
+        background: #ffffff;
+        border-radius: 16rpx;
+        @include global.flex(x, start, center);
+        .school-logo {
+          flex-shrink: 0;
+          width: 80rpx;
+          height: 80rpx;
+          border-radius: 80rpx;
+          overflow: hidden;
+          background-color: antiquewhite;
+        }
+        .school-desc {
+          margin-left: 18rpx;
+          flex: 1;
+          width: 100%;
+          @include global.flex(y, center, start);
+          .school-desc-name {
+            font-weight: 600;
+            font-size: 32rpx;
+            color: rgba(0, 0, 0, 0.9);
+            line-height: 48rpx;
+          }
+          .school-desc-condition {
+            margin-top: 12rpx;
+            font-size: 24rpx;
+            color: rgba(0, 0, 0, 0.3);
+            line-height: 32rpx;
+          }
+        }
+      }
+
+      .school-tab-wrap {
+        flex-shrink: 0;
+        @include global.flex(x, start, center);
+        width: 100%;
+        padding: 0 24rpx;
+        box-sizing: border-box;
+
+        .school-tab {
+          padding-top: 40rpx;
+          padding-right: 40rpx;
+          padding-bottom: 20rpx;
+          font-size: 28rpx;
+          color: rgba(0, 0, 0, 0.7);
+          line-height: 40rpx;
+          &.active-tab {
+            color: rgba(0, 0, 0, 0.9);
+            font-weight: bold;
+            position: relative;
+            &::after {
+              display: block;
+              content: '';
+              position: absolute;
+              bottom: 12rpx;
+              left: calc(50% - 20rpx);
+              transform: translateX(-50%);
+              width: 32rpx;
+              height: 6rpx;
+              background: global.$main-color;
+              border-radius: 20rpx;
+            }
+          }
+        }
+      }
+
+      .tab-panel {
+        width: 100%;
+        flex: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<!--components/common/shareModal/index.wxml-->
+<ActionSheet
+  visible="{{visible}}"
+  height="450rpx"
+  title="分享"
+  background="#F2F2F6"
+  showCloseIcon="{{false}}"
+  bind:close="handleClose">
+  <view slot="content" class="share-box">
+    <view class="share-list">
+      <view class="share-item">
+        <view class="share-item-img">
+          <image class="share-item-icon" src="/assets/images/share/icon-wechat.svg" />
+        </view>
+        分享好友
+      </view>
+      <view class="share-item" catchtap="handleCreatePoster">
+        <view class="share-item-img">
+          <image class="share-item-icon" src="/assets/images/share/icon-poster.svg" />
+        </view>
+        生成海报
+      </view>
+      <view class="share-item">
+        <view class="share-item-img">
+          <image class="share-item-icon" src="/assets/images/share/icon-link.svg" />
+        </view>
+        复制链接
+      </view>
+    </view>
+
+    <view class="cancel-btn" catchtap="handleClose">取消</view>
+  </view>
+</ActionSheet>

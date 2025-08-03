@@ -29,7 +29,11 @@
       </view>
       <scroll-view class="job-scroll" scroll-y="{{true}}">
         <!-- 岗位列表 -->
-        <JobList />
+        <view class="job-list">
+          <block wx:for="{{6}}" wx:key="index">
+            <JobItem />
+          </block>
+        </view>
       </scroll-view>
 
       <image

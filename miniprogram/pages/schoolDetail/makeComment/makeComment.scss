@@ -1,0 +1,110 @@
+/* pages/schoolDetail/makeComment/makeComment.wxss */
+.make-page {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  @include global.flex(y, start, start);
+
+  .make-comment {
+    width: 100%;
+    padding: 24rpx;
+    box-sizing: border-box;
+    @include global.flex(y, start, start);
+
+    .make-comment-title {
+      font-weight: 600;
+      font-size: 32rpx;
+      color: rgba(0, 0, 0, 0.9);
+      line-height: 48rpx;
+    }
+
+    .make-comment-tip {
+      margin-top: 16rpx;
+      font-size: 24rpx;
+      color: #fa9e3b;
+      line-height: 32rpx;
+    }
+    .comment-subject-title {
+      margin-top: 48rpx;
+      font-weight: 600;
+      font-size: 28rpx;
+      color: rgba(0, 0, 0, 0.9);
+      line-height: 40rpx;
+      position: relative;
+      margin-bottom: 4rpx;
+      .icon-require {
+        width: 16rpx;
+        height: 16rpx;
+        position: absolute;
+        top: 0;
+        right: -16rpx;
+      }
+    }
+
+    .comment-subject {
+      width: 100%;
+      @include global.flex(x, start, start);
+      flex-wrap: wrap;
+      .comment-subject-item {
+        margin-right: 32rpx;
+        margin-top: 24rpx;
+        width: 136rpx;
+        height: 48rpx;
+        border-radius: 200rpx;
+        font-size: 24rpx;
+        color: rgba(0, 0, 0, 0.5);
+        background: #f2f2f6;
+        @include global.flex(x, center, center);
+        &.active-subject {
+          background: #e5fcf4;
+          color: global.$main-color;
+        }
+      }
+    }
+
+    .comment-input-wrap {
+      margin-top: 40rpx;
+      width: 100%;
+      height: 280rpx;
+      background: #f2f2f6;
+      padding: 20rpx;
+      box-sizing: border-box;
+      border-radius: 8rpx;
+      overflow: hidden;
+      .comment-input {
+        width: 100%;
+        height: 100%;
+        font-size: 24rpx;
+        color: rgba(0, 0, 0, 0.9);
+        line-height: 32rpx;
+      }
+      .textarea-placeholder {
+        color: rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .comment-input-tip {
+      margin-top: 24rpx;
+      width: 100%;
+      @include global.flex(x, end, start);
+      font-size: 24rpx;
+      color: rgba(0, 0, 0, 0.3);
+      line-height: 32rpx;
+    }
+
+    .comment-submit {
+      margin-top: 80rpx;
+      width: 100%;
+      height: 80rpx;
+      background: #d2d5e2;
+      border-radius: 8rpx;
+      font-weight: 500;
+      font-size: 28rpx;
+      color: #ffffff;
+      @include global.flex(x, center, center);
+      &.active-submit {
+        background: global.$main-color;
+      }
+    }
+  }
+}

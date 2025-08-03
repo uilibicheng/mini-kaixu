@@ -61,91 +61,28 @@
     .evaluation-list {
       margin-bottom: 40rpx;
       width: 662rpx;
-      .evaluation-item {
-        width: 100%;
-        height: 256rpx;
-        padding: 32rpx 24rpx 24rpx;
-        margin-top: 24rpx;
-        box-sizing: border-box;
-        background-color: #fffaf0;
-        border-radius: 8rpx;
+      .evaluation-item-block {
         position: relative;
-        .evaluation-item-top {
-          @include global.flex(x, start, center);
-          .evaluation-avatar {
-            width: 72rpx;
-            height: 72rpx;
-            border-radius: 72rpx;
-            overflow: hidden;
-            background-color: global.$main-color;
-          }
-          .evaluation-info {
-            margin-left: 8rpx;
-            @include global.flex(y, start, start);
-            .evaluation-name {
-              font-weight: 500;
-              font-size: 28rpx;
-              color: rgba(0, 0, 0, 0.9);
-            }
-            .evaluation-type {
-              margin-top: 8rpx;
-              background-color: global.$white-color;
-              border-radius: 999rpx;
-              padding: 0 16rpx;
-              height: 40rpx;
-              line-height: 40rpx;
-              font-size: 24rpx;
-              color: global.$main-color;
-            }
-          }
-        }
-
-        .evaluation-text-wrap {
-          position: relative;
-          margin-top: 32rpx;
-          .evaluation-text {
-            font-size: 24rpx;
-            color: rgba(0, 0, 0, 0.9);
-            line-height: 32rpx;
-            z-index: 1;
-          }
-          .float {
-            content: attr(data-text);
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 32rpx;
-            white-space: wrap;
-            overflow: hidden;
-            background-color: #fffaf0;
-            z-index: 2;
-          }
-          .blur {
-            filter: blur(6rpx);
-          }
-        }
-
-        .evaluation-unlock {
-          position: absolute;
-          bottom: 20rpx;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 172rpx;
-          height: 48rpx;
-          background-color: #eece9f;
-          border-radius: 999rpx;
-          @include global.flex(x, center, center);
-          font-weight: 500;
-          font-size: 24rpx;
-          color: #593100;
-          z-index: 9;
-          .icon-lock {
-            width: 32rpx;
-            height: 32rpx;
-            margin-right: 4rpx;
-          }
+        margin-top: 24rpx;
+      }
+      .evaluation-unlock {
+        position: absolute;
+        bottom: 20rpx;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 172rpx;
+        height: 48rpx;
+        background-color: #eece9f;
+        border-radius: 999rpx;
+        @include global.flex(x, center, center);
+        font-weight: 500;
+        font-size: 24rpx;
+        color: #593100;
+        z-index: 9;
+        .icon-lock {
+          width: 32rpx;
+          height: 32rpx;
+          margin-right: 4rpx;
         }
       }
     }

@@ -1,0 +1,36 @@
+<!--components/paymenPanel/index.wxml-->
+<view class="payment-panel">
+  <view class="payment-num">¥2.00</view>
+  <!-- 支付方式 -->
+  <view class="payment-type">
+    <view class="payment-type-title">支付方式</view>
+    <view class="payment-type-item" data-type="{{1}}" bindtap="handleSwitchType">
+      <view class="payment-type-left">
+        <image  class="payment-icon" src="/assets/images/icon/icon-pay-wechat.svg" />
+        微信支付
+      </view>
+      <view class="payment-type-right">
+        <image wx:if="{{paymentType === 1}}"  class="payment-icon" src="/assets/images/icon/icon-radio-selected.svg" />
+        <image wx:else  class="payment-icon" src="/assets/images/icon/icon-radio.svg" />
+      </view>
+    </view>
+    <view class="payment-type-item" data-type="{{2}}" bindtap="handleSwitchType">
+      <view class="payment-type-left">
+        <image  class="payment-icon" src="/assets/images/icon/icon-pay-dou.svg" />
+        开旭豆豆
+      </view>
+      <view class="payment-type-right">
+        余额：200个，1豆豆=¥1
+        <image wx:if="{{paymentType === 2}}"  class="payment-icon" src="/assets/images/icon/icon-radio-selected.svg" />
+        <image wx:else  class="payment-icon" src="/assets/images/icon/icon-radio.svg" />
+      </view>
+    </view>
+  </view>
+  <!-- 支付按钮 -->
+  <view class="payment-btn-group">
+    <view class="payment-btn payment-active-btn">立即支付</view>
+    <view class="payment-btn" bindtap="jumpToRecharge">去充值豆豆</view>
+  </view>
+</view>
+
+<MessageBox id="message-box" />

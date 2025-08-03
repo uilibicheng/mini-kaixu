@@ -1,5 +1,5 @@
 <!-- pages/jobDetail/components/schoolInfo/index.wxml -->
-<view class="mgt24 job-block">
+<view class="mgt24 job-block" bindtap="jumpToSchoolDetail">
   <view class="school-row">
     <view class="job-block-title">单位信息</view>
     <view class="school-job-num">

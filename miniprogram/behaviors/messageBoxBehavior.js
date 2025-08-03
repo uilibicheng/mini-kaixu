@@ -43,5 +43,19 @@ export default Behavior({
         });
       }
     },
+
+    $showMessageBox() {
+      const ele = this.selectComponent("#message-box");
+      if (ele && ele.$messageBox) {
+        ele.$showMessageBox();
+      }
+    },
+
+    $closeMessageBox() {
+      const ele = this.selectComponent("#message-box");
+      if (ele && ele.$messageBox) {
+        ele.$closeMessageBox();
+      }
+    }
   },
 });

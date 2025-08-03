@@ -1,0 +1,59 @@
+<!--pages/jobDetail/components/sharePoster/index.wxml-->
+<root-portal>
+  <view class="poster-panel">
+    <view class="poster-mask" catch:tap="close" />
+
+    <view class="poster-box" catch:tap="close">
+      <snapshot id="target">
+        <view class="poster-target" catchtap="prevent">
+          <image class="share-poster-bg" src="/assets/images/jobDetail/share-poster-bg.png" />
+          <view class="poster-content">
+            <view class="poster-top">
+              <view class="poster-title">【杭州·公办·代课】初中语文</view>
+              <view class="poster-salary">10k-12K/年</view>
+              <view class="poster-require">
+                <view class="require-item">
+                  <image class="require-icon" src="/assets/images/jobDetail/icon-lbs.svg" />
+                  杭州·上城区
+                </view>
+                <view class="require-item">
+                  <image class="require-icon" src="/assets/images/jobDetail/icon-lbs.svg" />
+                  本科学历
+                </view>
+                <view class="require-item">
+                  <image class="require-icon" src="/assets/images/jobDetail/icon-lbs.svg" />
+                  1年以上经验
+                </view>
+              </view>
+              <view class="job-info">
+                <view class="job-info-title">职位详情</view>
+                <view class="job-info-text">招聘人数：1人</view>
+                <view class="job-info-text">到岗时间：1周以内</view>
+                <view class="job-info-text">职位要求：负责初一、初二的教学</view>
+                <view class="job-info-text">工作地址：杭州钱塘区16号大街123号</view>
+              </view>
+              <view class="job-scan-btn">
+                扫码查看更多职位详情
+                <image class="icon-down-arrow" src="/assets/images/jobDetail/icon-down-arrow.svg" />
+              </view>
+            </view>
+            <view class="poster-footer">
+              <view class="footer-left">
+                <image class="school-logo" src="" />
+                <view class="footer-info">
+                  <text class="school-name" max-lines="{{3}}" overflow="ellipsis">杭州钱塘听涛小学</text>
+                  <view class="school-scale">公办｜50-200人</view>
+                </view>
+              </view>
+              <image class="mini-code" src="" />
+            </view>
+          </view>
+        </view>
+      </snapshot>
+      <view class="save-wrap" catchtap="handleSavePoster">
+        <image class="icon-save" src="/assets/images/share/icon-save.svg" />
+        保存到相册
+      </view>
+    </view>
+  </view>
+</root-portal>

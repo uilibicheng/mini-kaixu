@@ -1,0 +1,65 @@
+/* pages/jobDetail/components/sharePoster/index.wxss */
+.poster-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .poster-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .poster-box {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    width: 698rpx;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+
+    .poster-target {
+      width: 100%;
+      
+      .share-poster-img {
+        width: 100%;
+        height: 1000rpx;
+        background-color: #ffffff;
+        border-radius: 16rpx;
+        overflow: hidden;
+      }
+    }
+
+    .btn-group {
+      margin-top: 44rpx;
+      @include global.flex(x, center, center);
+      .btn {
+        width: 260rpx;
+        height: 88rpx;
+        border-radius: 8rpx;
+        @include global.flex(x, center, center);
+        background: #f4f4f4;
+        font-size: 28rpx;
+        color: rgba(0, 0, 0, 0.3);
+        font-weight: bold;
+      }
+      .save-btn {
+        margin-left: 60rpx;
+        background: global.$main-color;
+        color: #ffffff;
+
+        .icon-save {
+          width: 40rpx;
+          height: 40rpx;
+          margin-right: 8rpx;
+        }
+      }
+    }
+  }
+}

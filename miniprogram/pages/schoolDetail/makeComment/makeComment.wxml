@@ -1,0 +1,28 @@
+<!--pages/schoolDetail/makeComment/makeComment.wxml-->
+<view class="make-page">
+  <NavigationBar title="我要点评" color="rgba(0,0,0,0.9)" background="#fff" />
+
+  <view class="make-comment">
+    <view class="make-comment-title">匿名点评，奖励1个豆豆</view>
+    <view class="make-comment-tip">您的点评审核通过后展示，并豆豆奖励会直接充值到账户</view>
+    <view class="comment-subject-title">
+      选择话题
+      <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
+    </view>
+    <view class="comment-subject">
+      <block wx:for="{{6}}" wx:key="index">
+        <view class="comment-subject-item {{index === selectIndex ? 'active-subject' : ''}}" data-index="{{index}}" bindtap="handleSelectSubject">工作压力</view>
+      </block>
+    </view>
+    <view class="comment-input-wrap">
+      <textarea
+        class="comment-input"
+        model:value="{{commentText}}"
+        placeholder="请输入你的点评"
+        placeholder-class="textarea-placeholder"
+      />
+    </view>
+    <view class="comment-input-tip">默认为匿名提问</view>
+    <view class="comment-submit {{isActive ? 'active-submit' : ''}}" bindtap="handleSubmit">提交</view>
+  </view>
+</view>

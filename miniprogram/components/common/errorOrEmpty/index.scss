@@ -1,0 +1,30 @@
+/* components/common/errorOrEmpty/index.wxss */
+.error-content {
+  @include global.flex(y, center, center);
+  overflow: hidden;
+  width: 100%;
+
+  .empty-default {
+    width: 300rpx;
+    height: 300rpx;
+    margin-bottom: 32rpx;
+  }
+  .empty-text {
+    width: 100%;
+    font-weight: bold;
+    font-size: 24rpx;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+  }
+  .refresh-btn {
+    margin-top: 56rpx;
+    width: 350rpx;
+    height: 80rpx;
+    @include global.flex(x, center, center);
+    background: global.$active-color;
+
+    color: #fff;
+    font-size: 30rpx;
+    font-weight: 500;
+  }
+}

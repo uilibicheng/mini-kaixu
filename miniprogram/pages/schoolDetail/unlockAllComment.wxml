@@ -1,0 +1,8 @@
+<!--pages/schoolDetail/unlockAllComment.wxml-->
+<view class="unlock-page">
+  <NavigationBar title="解锁全部点评" color="rgba(0,0,0,0.9)" background="#fff" />
+
+  <scroll-view class="unlock-scroll" scroll-y type="list">
+    <PaymenPanel />
+  </scroll-view>
+</view>

@@ -16,8 +16,8 @@
     margin-right: 34rpx;
     height: 80rpx;
     @include global.flex(x, center, center);
-    background: #F2F2F6;
-    color: rgba(0,0,0,0.7);
+    background: #D2D5E2;
+    color: global.$white-color;
     font-size: 28rpx;
     font-weight: bold;
     border-radius: 8rpx;

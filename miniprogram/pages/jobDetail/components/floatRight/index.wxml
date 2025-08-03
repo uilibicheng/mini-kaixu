@@ -2,13 +2,17 @@
 <root-portal>
   <view class="float-right">
     <view class="float-item">
-      <image wx:if="{{false}}" class="float-img" src="/assets/images/jobDetail/icon-star.svg" />
-      <image wx:else class="float-img" src="/assets/images/jobDetail/icon-star-active.svg" />
+      <image wx:if="{{false}}" class="float-img" src="/assets/images/icon/icon-star.svg" />
+      <image wx:else class="float-img" src="/assets/images/icon/icon-star-active.svg" />
       收藏
     </view>
-    <view class="float-item">
-      <image class="float-img" src="/assets/images/jobDetail/icon-share.svg" />
+    <view class="float-item" catchtap="handleToggleShowShareModal">
+      <image class="float-img" src="/assets/images/icon/icon-share.svg" />
       分享
     </view>
   </view>
 </root-portal>
+
+<ShareModal visible="{{showShareModal}}" bind:close="handleToggleShowShareModal" bind:createPoster="handleToggleShowPoster" />
+
+<SharePoster wx:if="{{showPoster}}" bind:close="handleToggleShowPoster" />

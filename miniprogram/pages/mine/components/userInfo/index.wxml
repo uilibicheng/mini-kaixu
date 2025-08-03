@@ -11,7 +11,7 @@
         <image
           wx:if="{{isLogin}}"
           class="icon-edit"
-          src="/assets/images/mine/icon-edit.svg"
+          src="/assets/images/icon/icon-edit.svg"
         />
       </view>
       <view class="info-tip">祝早日找到工作～</view>

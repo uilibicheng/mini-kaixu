@@ -1,8 +1,10 @@
 <!--components/common/actionSheet/index.wxml-->
 <root-portal wx:if="{{display}}" enable="{{true}}">
-  <view class="action-sheet" style="{{bottom ? bottom : ''}}">
-    <view class="sheet-mask {{needSafeBottom ? 'safe-bottom' : ''}} {{show ? 'show' : ''}}" catchtap="clickMask" />
-    <view class="sheet-box {{show ? 'popup' : ''}}" style="{{height ? 'height:' + height : ''}}; {{borderRadius ? '--borderRadius:' + borderRadius : ''}}">
+  <view class="action-sheet" style="--bottom:{{bottom ? bottom : '0'}};">
+    <view class="sheet-mask {{show ? 'show' : ''}}" catchtap="clickMask" />
+    <view
+      class="sheet-box {{needSafeBottom ? 'safe-bottom' : ''}} {{show ? 'popup' : ''}}"
+      style="--background: {{background ? background : '#fff'}}; {{height ? 'height:' + height : ''}}; {{borderRadius ? '--borderRadius:' + borderRadius : ''}}">
       <view class="sheet-header flex-header" wx:if="{{isShowHeader}}">
         {{title}}
         <image wx:if="{{showCloseIcon}}" class="sheet-close" src="/assets/images/icon/modal-close.svg" catch:tap="close" />

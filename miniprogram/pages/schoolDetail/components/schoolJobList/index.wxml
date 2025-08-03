@@ -1,0 +1,17 @@
+<!--pages/schoolDetail/components/schoolJobList/index.wxml-->
+<view class="school-job">
+  <scroll-view class="job-scroll safe-bottom" scroll-y type="list">
+    <view class="job-content">
+      <view class="job-empty" wx:if="{{!(jobList && jobList.length)}}">
+        <ErrorOrEmpty />
+      </view>
+
+      <view class="job-list" wx:else>
+        <view class="job-item-wrap" wx:for="{{jobList}}" wx:key="index">
+          <JobItem />
+        </view>
+        <view class="loding-tip">已经到底了</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,74 @@
+<!--pages/schoolDetail/components/schoolInfo/index.wxml-->
+<view class="school-info">
+  <scroll-view class="school-info-scroll" scroll-y type="list">
+    <view class="school-info-content">
+      <view class="info-box school-area-box">
+        <view class="info-title">单位地址</view>
+        <view class="school-area">
+          <image class="icon-lbs" src="/assets/images/jobDetail/icon-lbs.svg" />
+          杭州市临平区南苑街道鑫业路1-1号
+        </view>
+      </view>
+
+      <view class="info-box">
+        <view class="info-title">单位简介</view>
+        <view class="school-desc">
+          学校位于临平区南苑街道，是一所九年一贯制公办学校，也是省、市、区级民生实事项目之一。校园建筑面积约5.2万平方米，不仅建有教学楼、综合楼、阶梯教室、玻璃花房、行政图书楼等，还配备了300米跑道、1700多平方米风雨操场，以及一个能同时容纳2100余人的学生餐厅，计划开设9个小学一年级班级。
+        </view>
+      </view>
+
+      <view class="info-box">
+        <view class="info-title">单位相册</view>
+        <scroll-view class="school-photo-list" scroll-x type="list">
+          <view wx:for="{{6}}" wx:key="index" class="school-photo-wrap">
+            <image
+              class="school-photo"
+              src=""
+              mode="scaleToFill"
+            />
+          </view>
+        </scroll-view>
+      </view>
+
+      <view class="info-box">
+        <view class="info-title">单位视频</view>
+        <scroll-view class="school-photo-list" scroll-x type="list">
+          <view wx:for="{{3}}" wx:key="index" class="school-photo-wrap">
+            <image
+              class="school-photo"
+              src=""
+              mode="scaleToFill"
+            />
+            <image
+              class="icon-play"
+              src="/assets/images/schoolDetail/icon-play.svg"
+            />
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="school-info-footer safe-bottom">
+    <view class="footer-row">
+      <view class="row-left">
+        <view class="row-item" bindtap="jumpToHome">
+          <image class="row-item-icon" src="/assets/images/icon/icon-home.svg" />
+          首页
+        </view>
+        <view class="row-item" bindtap="handleShowConcatMessage">
+          <image wx:if="{{false}}" class="row-item-icon" src="/assets/images/icon/icon-star.svg" />
+          <image wx:else class="row-item-icon" src="/assets/images/icon/icon-star-active.svg" />
+          收藏
+        </view>
+        <view class="row-item">
+          <image class="row-item-icon" src="/assets/images/icon/icon-share.svg" />
+          分享
+        </view>
+      </view>
+      <view class="row-right" bindtap="handleToggleShowFindJobPoster">
+        <view class="row-btn" bindtap="handleSwitchTab">在招职位（12）</view>
+      </view>
+    </view>
+  </view>
+</view>

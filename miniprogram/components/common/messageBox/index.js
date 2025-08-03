@@ -11,6 +11,12 @@ const DEFAULT_MESSAGE_BOX_INFO = () => {
 };
 
 Component({
+  properties: {
+    isShowMessage: {
+      type: Boolean,
+      value: true
+    }
+  },
   /**
    * 组件的初始数据
    */
@@ -22,7 +28,7 @@ Component({
 
   pageLifetimes: {
     hide() {
-      this.closeMessageBox();
+      this.$closeMessageBox();
     },
   },
 
@@ -31,15 +37,23 @@ Component({
    */
   methods: {
     $messageBox(data) {
-      this.setData(
-        {
-          showMessageBox: true,
+      this.$showMessageBox(() => {
+        this.setData({
           messaegBoxInfo: {
             ...DEFAULT_MESSAGE_BOX_INFO(),
             ...data,
           },
+        })
+      })
+    },
+
+    $showMessageBox(fn) {
+      this.setData(
+        {
+          showMessageBox: true,
         },
         () => {
+          fn && fn()
           setTimeout(() => {
             this.setData({
               showModal: true,
@@ -49,7 +63,7 @@ Component({
       );
     },
 
-    closeMessageBox() {
+    $closeMessageBox() {
       this.setData(
         {
           showModal: false,
@@ -67,13 +81,13 @@ Component({
     handleConfirmMessage() {
       const { messaegBoxInfo } = this.data;
       messaegBoxInfo.confirm && messaegBoxInfo.confirm();
-      this.closeMessageBox();
+      this.$closeMessageBox();
     },
 
     handleCancelMessage() {
       const { messaegBoxInfo } = this.data;
       messaegBoxInfo.cancel && messaegBoxInfo.cancel();
-      this.closeMessageBox();
+      this.$closeMessageBox();
     },
   },
 });
