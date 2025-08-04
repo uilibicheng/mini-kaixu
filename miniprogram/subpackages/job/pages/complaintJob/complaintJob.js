@@ -5,11 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    btnInfo: {
-      name: '提交',
-      method: 'handleSubmit',
-      isActive: false,
-    }
   },
 
   /**

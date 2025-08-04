@@ -21,15 +21,16 @@
         <!-- 求职服务 -->
         <JobService />
         <!-- 我的钱包 -->
-        <MyWallet />
+        <MyWalletPanel />
         <!-- 切换角色 -->
-        <SwitchRole />
+        <SwitchRolePanel />
         <!-- 其他 -->
         <OtherSetting />
         <!-- 轮播 -->
         <view class="mgt24 banner-wrap">
           <Banner />
         </view>
+        <!-- 营业资质与安全 -->
         <Qualification />
       </view>
     </scroll-view>

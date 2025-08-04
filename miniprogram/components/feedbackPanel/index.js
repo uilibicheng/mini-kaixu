@@ -1,8 +1,6 @@
-// pages/mine/components/switchRole/index.ts
+// components/feedbackPanel/index.ts
 Component({
-  options: {
-    addGlobalClass: true
-  },
+
   /**
    * 组件的属性列表
    */
@@ -14,7 +12,11 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    btnInfo: {
+      name: '提交',
+      method: 'handleSubmit',
+      isActive: false,
+    }
   },
 
   /**

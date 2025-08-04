@@ -13,7 +13,9 @@
     "pages/schoolDetail/schoolDetail",
     "pages/schoolDetail/unlockAllComment",
     "pages/rechargeDoudou/rechargeDoudou",
-    "pages/schoolDetail/makeComment/makeComment"
+    "pages/schoolDetail/makeComment/makeComment",
+    "pages/myWallet/myDoudou/myDoudou",
+    "pages/myWallet/rechargeDoudou/rechargeDoudou"
   ],
   "requiredPrivateInfos": [
     "chooseAddress"
@@ -24,6 +26,22 @@
       "name": "job",
       "pages": [
         "pages/complaintJob/complaintJob"
+      ]
+    },
+    {
+      "root": "subpackages/mine",
+      "name": "mine",
+      "pages": [
+        "pages/fundSecurity/fundSecurity",
+        "pages/schoolCertification/schoolCertification",
+        "pages/businessLicense/businessLicense",
+        "pages/privacySecrecy/privacySecrecy",
+        "pages/accountSetting/accountSetting",
+        "pages/wechatNotification/wechatNotification",
+        "pages/privacySetting/privacySetting",
+        "pages/feedback/feedback",
+        "pages/entrustInvite/entrustInvite",
+        "pages/switchRole/switchRole"
       ]
     }
   ],

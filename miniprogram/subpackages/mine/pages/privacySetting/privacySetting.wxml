@@ -1,0 +1,40 @@
+<!--subpackages/mine/pages/privacySetting/privacySetting.wxml-->
+<view class="common-page">
+  <NavigationBar title="隐私设置" background="#FFF" />
+
+  <view class="privacy-setting">
+    <view class="setting-row" bindtap="handleToggleShowResumeModal">
+      <view>公开我的简历</view>
+      <image class="icon-arrow" src="/assets/images/icon/icon-back.svg" />
+    </view>
+    <view class="setting-row">
+      <view>公开简历头像</view>
+      <switch class="setting-switch" color="#07C160" checked="{{avatarSwitch}}" bindchange=""/>
+    </view>
+    <view class="setting-row">
+      <view>公开我的昵称</view>
+      <switch class="setting-switch" color="#07C160" checked="{{nickNameSwitch}}" bindchange=""/>
+    </view>
+  </view>
+</view>
+
+<ActionSheet
+  visible="{{resumeSelectVisible}}"
+  height="476rpx"
+  isShowHeader="{{false}}"
+  bind:close="handleToggleShowResumeModal">
+  <view slot="content" class="option-box">
+    <view class="option-row" data-type="{{1}}" catchtap="handleSelectResumeType">
+      公开
+      <image wx:if="{{resumeSelectType === 1}}" class="icon-right" src="/assets/images/icon/icon-right.svg" />
+    </view>
+    <view class="option-row" data-type="{{2}}" catchtap="handleSelectResumeType">
+      仅投递单位可见
+      <image wx:if="{{resumeSelectType === 2}}" class="icon-right" src="/assets/images/icon/icon-right.svg" />
+    </view>
+    <view class="option-row" data-type="{{3}}" catchtap="handleSelectResumeType">
+      未公开
+      <image wx:if="{{resumeSelectType === 3}}" class="icon-right" src="/assets/images/icon/icon-right.svg" />
+    </view>
+  </view>
+</ActionSheet>

@@ -4,11 +4,67 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/schoolDetail/makeComment/makeComment",
-          "pathName": "pages/schoolDetail/makeComment/makeComment",
+          "name": "pages/myWallet/rechargeDoudou/rechargeDoudou",
+          "pathName": "pages/myWallet/rechargeDoudou/rechargeDoudou",
           "query": "",
           "scene": null,
           "launchMode": "default"
+        },
+        {
+          "name": "pages/myWallet/myDoudou/myDoudou",
+          "pathName": "pages/myWallet/myDoudou/myDoudou",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "subpackages/mine/pages/switchRole/switchRole",
+          "pathName": "subpackages/mine/pages/switchRole/switchRole",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "subpackages/mine/pages/entrustInvite/entrustInvite",
+          "pathName": "subpackages/mine/pages/entrustInvite/entrustInvite",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "subpackages/mine/pages/feedback/feedback",
+          "pathName": "subpackages/mine/pages/feedback/feedback",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "subpackages/mine/pages/privacySetting/privacySetting",
+          "pathName": "subpackages/mine/pages/privacySetting/privacySetting",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "subpackages/mine/pages/wechatNotification/wechatNotification",
+          "pathName": "subpackages/mine/pages/wechatNotification/wechatNotification",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "subpackages/mine/pages/accountSetting/accountSetting",
+          "pathName": "subpackages/mine/pages/accountSetting/accountSetting",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/schoolDetail/makeComment/makeComment",
+          "pathName": "pages/schoolDetail/makeComment/makeComment",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "pages/schoolDetail/unlockAllComment",

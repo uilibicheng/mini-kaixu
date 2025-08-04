@@ -1,0 +1,97 @@
+/* pages/myWallet/rechargeDoudou/rechargeDoudou.wxss */
+.recharge-scroll {
+  flex: 1;
+  width: 100%;
+
+  .recharge-content {
+    width: 100%;
+    padding-left: 24rpx;
+    box-sizing: border-box;
+
+    .recharge-list {
+      width: 100%;
+      @include global.flex(x, start, start);
+      flex-wrap: wrap;
+      .recharge-item {
+        width: 220rpx;
+        height: 140rpx;
+        background: #f2f2f6;
+        color: rgba(0, 0, 0, 0.9);
+        border-radius: 16rpx;
+        font-weight: bold;
+        font-size: 48rpx;
+        margin-top: 32rpx;
+        margin-right: 22rpx;
+        @include global.flex(y, center, center);
+
+        .recharge-item-text {
+          margin-top: 8rpx;
+          font-size: 24rpx;
+          color: rgba(0, 0, 0, 0.4);
+        }
+
+        &.active-item {
+          background: global.$main-color;
+          color: #ffffff;
+
+          .recharge-item-text {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    .pay-type {
+      margin-top: 60rpx;
+      width: 100%;
+      padding: 0 24rpx;
+      box-sizing: border-box;
+
+      .pay-type-title {
+        margin-bottom: 18rpx;
+        font-weight: bold;
+        font-size: 28rpx;
+        color: rgba(0, 0, 0, 0.9);
+        line-height: 40rpx;
+      }
+
+      .pay-type-row {
+        margin-top: 60rpx;
+        width: 100%;
+        @include global.flex(x, between, center);
+        .row-label {
+          @include global.flex(x, start, center);
+          font-size: 28rpx;
+          color: rgba(0, 0, 0, 0.9);
+          line-height: 40rpx;
+          .icon-pay-wechat {
+            width: 40rpx;
+            height: 40rpx;
+            margin-right: 20rpx;
+          }
+        }
+        .icon-radio {
+          width: 40rpx;
+          height: 40rpx;
+        }
+        .row-type-price {
+          font-size: 32rpx;
+          font-weight: bold;
+          color: global.$main-color;
+        }
+      }
+    }
+
+    .pay-btn {
+      margin-top: 120rpx;
+      width: 702rpx;
+      height: 80rpx;
+      background: global.$main-color;
+      border-radius: 8rpx;
+      font-weight: bold;
+      font-size: 28rpx;
+      color: #ffffff;
+      @include global.flex(x, center, center);
+    }
+  }
+}

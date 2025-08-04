@@ -9,16 +9,23 @@ export function showToast({
   duration = 3000,
   icon = 'none',
   mask = false,
+  image = '',
   callback,
 }) {
   if (title) {
-    wx.showToast({ title, duration, icon, mask })
+    wx.showToast({ title, duration, icon, mask, image })
     const timer = setTimeout(() => {
       callback && callback()
       clearTimeout(timer)
       wx.hideToast()
     }, duration)
   }
+}
+
+export function unfinishFunctionToast() {
+  showToast({
+    title: '火速开发中，敬请期待...'
+  })
 }
 
 export function param2Obj(url) {
@@ -182,6 +189,11 @@ function goToLogin(url) {
   wx.navigateTo({
     url: `/pages/login/login?url=${encodeURIComponent(url)}`,
   })
+}
+
+export function removeLoginStorage() {
+  wx.removeStorageSync(STORAGE.USER_TOKEN)
+  wx.removeStorageSync(STORAGE.CURRENT_ROLE_TYPE)
 }
 
 export const getUrlParams = (url) => {

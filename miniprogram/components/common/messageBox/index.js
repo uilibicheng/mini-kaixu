@@ -1,21 +1,26 @@
 const DEFAULT_MESSAGE_BOX_INFO = () => {
   return {
-    title: "提示",
-    message: "",
-    messageAlign: "center",
+    title: '提示',
+    message: '',
+    messageColor: 'rgba(0, 0, 0, 0.9)',
+    messageAlign: 'center',
     showConfirmButton: true,
     showCancelButton: false,
-    confirmButtonText: "确定",
-    cancelButtonText: "取消",
-  };
-};
+    confirmButtonText: '确定',
+    confirmColor: '#fff',
+    confirmBackground: '#07C160',
+    cancelButtonText: '取消',
+    cancelColor: 'rgba(0,0,0,0.3)',
+    cancelBackground: '#f4f4f4',
+  }
+}
 
 Component({
   properties: {
     isShowMessage: {
       type: Boolean,
-      value: true
-    }
+      value: true,
+    },
   },
   /**
    * 组件的初始数据
@@ -28,7 +33,7 @@ Component({
 
   pageLifetimes: {
     hide() {
-      this.$closeMessageBox();
+      this.$closeMessageBox()
     },
   },
 
@@ -57,10 +62,10 @@ Component({
           setTimeout(() => {
             this.setData({
               showModal: true,
-            });
-          }, 10);
-        },
-      );
+            })
+          }, 10)
+        }
+      )
     },
 
     $closeMessageBox() {
@@ -72,22 +77,22 @@ Component({
           setTimeout(() => {
             this.setData({
               showMessageBox: false,
-            });
-          });
-        },
-      );
+            })
+          })
+        }
+      )
     },
 
     handleConfirmMessage() {
-      const { messaegBoxInfo } = this.data;
-      messaegBoxInfo.confirm && messaegBoxInfo.confirm();
-      this.$closeMessageBox();
+      const { messaegBoxInfo } = this.data
+      messaegBoxInfo.confirm && messaegBoxInfo.confirm()
+      this.$closeMessageBox()
     },
 
     handleCancelMessage() {
-      const { messaegBoxInfo } = this.data;
-      messaegBoxInfo.cancel && messaegBoxInfo.cancel();
-      this.$closeMessageBox();
+      const { messaegBoxInfo } = this.data
+      messaegBoxInfo.cancel && messaegBoxInfo.cancel()
+      this.$closeMessageBox()
     },
   },
-});
+})

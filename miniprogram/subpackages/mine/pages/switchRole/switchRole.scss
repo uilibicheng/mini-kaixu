@@ -1,0 +1,59 @@
+/* subpackages/mine/pages/switchRole/switchRole.wxss */
+.common-page {
+  .switch-scroll {
+    width: 100%;
+    flex: 1;
+
+    .switch-content {
+      width: 100%;
+      padding-top: 146rpx;
+      @include global.flex(y, start, center);
+
+      .switch-role-img {
+        width: 220rpx;
+        height: 220rpx;
+        image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .role-name {
+        margin-top: 90rpx;
+        font-weight: bold;
+        font-size: 48rpx;
+        color: rgba(0, 0, 0, 0.9);
+        line-height: 72rpx;
+      }
+
+      .switch-btn {
+        margin-top: 260rpx;
+        width: 612rpx;
+        height: 84rpx;
+        background: global.$main-color;
+        border-radius: 12rpx;
+        font-weight: bold;
+        font-size: 32rpx;
+        color: #ffffff;
+        @include global.flex(x, center, center);
+        &.invite-btn {
+          background-color: global.$invite-color;
+        }
+      }
+
+      .switch-footer {
+        margin-top: 70rpx;
+        @include global.flex(x, center, center);
+        .icon-kaixu-logo {
+          width: 42rpx;
+          height: 42rpx;
+          margin-right: 10rpx;
+        }
+        .icon-kaixu-name {
+          width: 188rpx;
+          height: 28rpx;
+        }
+      }
+    }
+  }
+}

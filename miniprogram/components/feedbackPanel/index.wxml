@@ -1,0 +1,61 @@
+<!--components/feedbackPanel/index.wxml-->
+<view class="feedback-panel">
+  <scroll-view class="feedback-scroll" scroll-y type="list">
+    <view class="feedback-content">
+      <view class="feedback-block">
+        <view class="feedback-title">岗位问题反馈</view>
+        <view class="feedback-label-list">
+          <block wx:for="{{7}}" wx:key="index">
+            <view class="feedback-label-item {{index === 1 ? 'active-label' : ''}}">电话空号</view>
+          </block>
+        </view>
+      </view>
+
+      <view class="feedback-block">
+        <view class="feedback-title">备注说明</view>
+        <view class="remark-input-wrap">
+          <textarea
+            class="remark-input"
+            placeholder="请输入反馈内容"
+            placeholder-class="remark-placeholder"
+          />
+        </view>
+      </view>
+
+      <view class="feedback-input-row">
+        <view class="feedback-input-label">您的名字</view>
+        <view class="feedback-input-right">
+          <input
+            class="feedback-input"
+            placeholder="请输入名字"
+            placeholder-class="input-placeholder"
+          />
+          <image
+            class="icon-edit"
+            src="/assets/images/icon/icon-edit.svg"
+          />
+        </view>
+      </view>
+      <view class="feedback-input-row">
+        <view class="feedback-input-label">联系方式</view>
+        <view class="feedback-input-right">
+          <input
+            class="feedback-input"
+            placeholder="请输入联系方式"
+            placeholder-class="input-placeholder"
+          />
+          <image
+            class="icon-edit"
+            src="/assets/images/icon/icon-edit.svg"
+          />
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <BottomBtnGroup
+    needSafeArea="{{true}}"
+    btnArr="{{[btnInfo]}}"
+    height="100rpx"
+    bind:handleSubmit="handleSubmit" />
+</view>

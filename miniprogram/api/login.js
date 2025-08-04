@@ -19,9 +19,9 @@ export default {
   },
 
   
-  tryLogout(data) {
+  loginOut(data) {
     return Request({
-      url: "/mini/user/try_log_out/v1",
+      url: "/applet/auth/loginOut",
       method: "POST",
       data,
     });

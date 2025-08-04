@@ -1,0 +1,8 @@
+<!--subpackages/mine/pages/feedback/feedback.wxml-->
+<view class="common-page">
+  <NavigationBar title="意见反馈" background="#fff" />
+
+  <view class="feedback-content">
+    <FeedbackPanel />
+  </view>
+</view>

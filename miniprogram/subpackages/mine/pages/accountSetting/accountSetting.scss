@@ -1,0 +1,45 @@
+/* subpackages/mine/pages/accountSetting/accountSetting.wxss */
+.setting-content {
+  flex: 1;
+  width: 100%;
+
+  .setting-row {
+    width: 100%;
+    height: 112rpx;
+    padding: 0 32rpx;
+    box-sizing: border-box;
+    font-size: 34rpx;
+    color: rgba(0, 0, 0, 0.9);
+    line-height: 48rpx;
+    @include global.flex(x, between, center);
+
+    .icon-arrow {
+      width: 40rpx;
+      height: 40rpx;
+      transform: rotate(180deg);
+    }
+
+    .setting-clean {
+      color: global.$main-color;
+    }
+  }
+
+  .setting-divider {
+    width: 100%;
+    height: 20rpx;
+    background: #f2f2f6;
+  }
+
+  .logout-btn {
+    margin: 240rpx auto 0;
+    width: 654rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    background: #f2f2f6;
+    border-radius: 8rpx;
+    font-weight: 500;
+    font-size: 28rpx;
+    color: rgba(0, 0, 0, 0.9);
+  }
+}

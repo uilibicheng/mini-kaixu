@@ -1,0 +1,39 @@
+<!--pages/myWallet/rechargeDoudou/rechargeDoudou.wxml-->
+<view class="common-page">
+  <NavigationBar title="充值豆豆" background="#FFF" />
+
+  <scroll-view class="recharge-scroll" scroll-y type="list">
+    <view class="recharge-content">
+      <view class="recharge-list">
+        <block wx:for="{{rechargeList}}" wx:key="index">
+          <view
+            class="recharge-item {{selectIndex === index ? 'active-item' : ''}}"
+            data-index="{{index}}"
+            bindtap="handleSelect">
+            <view>{{item}}</view>
+            <view class="recharge-item-text">豆豆</view>
+          </view>
+        </block>
+      </view>
+
+      <view class="pay-type">
+        <view class="pay-type-title">支付方式</view>
+        <view class="pay-type-row">
+          <view class="row-label">
+            <image class="icon-pay-wechat" src="/assets/images/icon/icon-pay-wechat.svg"/>
+            微信支付
+          </view>
+          <image class="icon-radio" src="/assets/images/icon/icon-radio-selected.svg"/>
+        </view>
+        <view class="pay-type-row">
+          <view class="row-label">
+            应付金额
+          </view>
+          <view class="row-type-price">¥30.00</view>
+        </view>
+      </view>
+
+      <view class="pay-btn">立即支付</view>
+    </view>
+  </scroll-view>
+</view>

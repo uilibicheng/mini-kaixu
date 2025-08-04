@@ -1,0 +1,28 @@
+<!--subpackages/mine/pages/wechatNotification/wechatNotification.wxml-->
+<view class="common-page safe-bottom">
+  <NavigationBar title="微信通知" background="#FFF" />
+
+  <scroll-view class="notification-scroll" scroll-y type="lilst">
+    <view class="notification-content">
+      <view class="notification-img-row">
+        <image class="icon-logo" src="../../assets/images/icon-logo.svg"/>
+        <image class="icon-link" src="../../assets/images/icon-link.svg"/>
+        <image class="icon-logo" src="../../assets/images/icon-wechat.svg"/>
+      </view>
+      <view class="notification-title">免费开启微信通知</view>
+      <view class="notification-tip">不再错过求职最新消息</view>
+      <view class="qrcode-box">
+        <image class="qrcode" src="../../assets/images/qr-code.png" />
+        <view class="qrcode-tip">
+          <image class="icon-scan" src="../../assets/images/icon-scan.svg"/>
+          长按识别上方二维码
+        </view>
+      </view>
+
+      <view class="notification-footer">
+        <image class="icon-kaixu-logo" src="../../assets/images/icon-kaixu-logo.svg"/>
+        <image class="icon-kaixu-name" src="../../assets/images/icon-kaixu-name.svg"/>
+      </view>
+    </view>
+  </scroll-view>
+</view>

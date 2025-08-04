@@ -1,63 +1,8 @@
 <!--subpackages/job/pages/complaintJob/complaintJob.wxml-->
-<view class="complaint-page">
-  <NavigationBar title="投诉岗位" back="{{true}}" color="rgba(0,0,0,0.9)" background="#fff" />
+<view class="common-page">
+  <NavigationBar title="投诉岗位" background="#fff" />
 
-  <scroll-view class="complaint-scroll" scroll-y type="list">
-    <view class="complaint-content">
-      <view class="complaint-block">
-        <view class="complaint-title">岗位问题反馈</view>
-        <view class="complaint-label-list">
-          <block wx:for="{{7}}" wx:key="index">
-            <view class="complaint-label-item {{index === 1 ? 'active-label' : ''}}">电话空号</view>
-          </block>
-        </view>
-      </view>
-
-      <view class="complaint-block">
-        <view class="complaint-title">备注说明</view>
-        <view class="remark-input-wrap">
-          <textarea
-            class="remark-input"
-            placeholder="请输入反馈内容"
-            placeholder-class="remark-placeholder"
-          />
-        </view>
-      </view>
-
-      <view class="complaint-input-row">
-        <view class="complaint-input-label">您的名字</view>
-        <view class="complaint-input-right">
-          <input
-            class="complaint-input"
-            placeholder="请输入名字"
-            placeholder-class="input-placeholder"
-          />
-          <image
-            class="icon-edit"
-            src="/assets/images/icon/icon-edit.svg"
-          />
-        </view>
-      </view>
-      <view class="complaint-input-row">
-        <view class="complaint-input-label">联系方式</view>
-        <view class="complaint-input-right">
-          <input
-            class="complaint-input"
-            placeholder="请输入联系方式"
-            placeholder-class="input-placeholder"
-          />
-          <image
-            class="icon-edit"
-            src="/assets/images/icon/icon-edit.svg"
-          />
-        </view>
-      </view>
-    </view>
-  </scroll-view>
-
-  <BottomBtnGroup
-    needSafeArea="{{true}}"
-    btnArr="{{[btnInfo]}}"
-    height="100rpx"
-    bind:handleSubmit="handleSubmit" />
+  <view class="complaint-content">
+    <FeedbackPanel />
+  </view>
 </view>

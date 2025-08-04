@@ -1,0 +1,19 @@
+<!--pages/myWallet/myDoudou/myDoudou.wxml-->
+<view class="common-page">
+  <NavigationBar title="我的豆豆" background="#FFF" />
+
+  <view class="doudou-content">
+    <image class="icon-doudou" src="/assets/images/icon/icon-doudou.svg" />
+
+    <view class="doudou-title">豆豆余额</view>
+    <view class="doudou-num">201.00</view>
+
+    <view class="doudou-btn active-btn" bindtap="jumpToRecharge">去充值</view>
+    <view class="doudou-btn">捡豆豆</view>
+
+    <view class="douduo-detail">
+      收支明细
+      <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+    </view>
+  </view>
+</view>

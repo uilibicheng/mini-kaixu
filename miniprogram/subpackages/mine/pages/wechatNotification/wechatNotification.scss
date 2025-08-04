@@ -1,0 +1,82 @@
+/* subpackages/mine/pages/wechatNotification/wechatNotification.wxss */
+.notification-scroll {
+  flex: 1;
+  width: 100%;
+
+  .notification-content {
+    width: 100%;
+    padding: 110rpx 74rpx 20rpx;
+    box-sizing: border-box;
+    @include global.flex(y, start, center);
+
+    .notification-img-row {
+      @include global.flex(x, center, center);
+      .icon-logo {
+        width: 96rpx;
+        height: 96rpx;
+      }
+      .icon-link {
+        margin: 0 40rpx;
+        width: 60rpx;
+        height: 56rpx;
+      }
+    }
+
+    .notification-title {
+      margin-top: 48rpx;
+      font-weight: bold;
+      font-size: 48rpx;
+      color: rgba(0, 0, 0, 0.9);
+      line-height: 72rpx;
+    }
+    .notification-tip {
+      margin-top: 16rpx;
+      font-size: 28rpx;
+      color: rgba(0, 0, 0, 0.5);
+      line-height: 40rpx;
+    }
+
+    .qrcode-box {
+      margin-top: 80rpx;
+      padding-top: 80rpx;
+      width: 600rpx;
+      height: 680rpx;
+      background: #ffffff;
+      box-shadow: 0rpx 0rpx 24rpx 0rpx rgba(0, 0, 0, 0.08);
+      border-radius: 16rpx;
+      @include global.flex(y, start, center);
+      box-sizing: border-box;
+      .qrcode {
+        width: 380rpx;
+        height: 380rpx;
+        background-color: antiquewhite;
+      }
+      .qrcode-tip {
+        margin-top: 24rpx;
+        font-size: 32rpx;
+        color: rgba(0, 0, 0, 0.9);
+        line-height: 48rpx;
+        @include global.flex(x, center, center);
+        .icon-scan {
+          width: 40rpx;
+          height: 40rpx;
+          margin-right: 8rpx;
+        }
+      }
+    }
+
+    .notification-footer {
+      margin-top: 96rpx;
+      @include global.flex(x, center, center);
+      .icon-kaixu-logo {
+        width: 40rpx;
+        height: 40rpx;
+        margin-right: 10rpx;
+      }
+      .icon-kaixu-name {
+        width: 188rpx;
+        height: 28rpx;
+      }
+    }
+  }
+}

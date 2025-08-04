@@ -1,0 +1,4 @@
+<!--subpackages/mine/pages/privacySecrecy/privacySecrecy.wxml-->
+<view class="common-page">
+  <NavigationBar title="隐私保密" background="#FFF" />
+</view>

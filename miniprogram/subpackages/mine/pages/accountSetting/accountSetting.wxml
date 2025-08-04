@@ -1,0 +1,36 @@
+<!-- subpackages/mine/pages/accountSetting/accountSetting.wxml -->
+<view class="common-page">
+  <NavigationBar title="账户设置" background="#FFF" />
+  <view class="setting-content">
+    <view class="setting-row" bindtap="jumpToNotification">
+      <view>通知设置</view>
+      <image class="icon-arrow" src="/assets/images/icon/icon-back.svg" />
+    </view>
+    <view class="setting-divider"></view>
+    <view class="setting-row" bindtap="handleRemoveStorage">
+      <view>清除缓存</view>
+      <view class="setting-clean">清除</view>
+    </view>
+    <view class="setting-row">
+      <view>用户协议</view>
+      <image class="icon-arrow" src="/assets/images/icon/icon-back.svg" />
+    </view>
+    <view class="setting-row">
+      <view>隐私政策</view>
+      <image class="icon-arrow" src="/assets/images/icon/icon-back.svg" />
+    </view>
+    <view class="setting-row">
+      <view>关于我们</view>
+      <image class="icon-arrow" src="/assets/images/icon/icon-back.svg" />
+    </view>
+    <view class="setting-divider"></view>
+    <view class="setting-row" bindtap="handleDeleteUser">
+      <view>注销账户</view>
+      <image class="icon-arrow" src="/assets/images/icon/icon-back.svg" />
+    </view>
+
+    <view class="logout-btn" bindtap="handleLogout">退出登录</view>
+  </view>
+</view>
+
+<MessageBox id="message-box" />

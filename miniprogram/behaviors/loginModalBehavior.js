@@ -102,6 +102,8 @@ export default Behavior({
         wx.navigateTo({
           url: '/pages/selectRole/selectRole',
         })
+      } else {
+        wx.setStorageSync(STORAGE.CURRENT_ROLE_TYPE, res.roleType)
       }
     }
   }

@@ -1,0 +1,23 @@
+<!--subpackages/mine/pages/switchRole/switchRole.wxml-->
+<view class="common-page">
+  <NavigationBar title="切换角色" background="#FFF" />
+
+  <scroll-view wx:if="{{roleType}}" class="switch-scroll" scroll-y type="list">
+    <view class="switch-content">
+      <view class="switch-role-img">
+        <image src="../../assets/images/role-type-{{roleType}}.svg"/>
+      </view>
+
+      <view class="role-name">你当前的身份是{{currentTypeName}}</view>
+
+      <view class="switch-btn {{roleType === 2 ? 'invite-btn' : ''}}" bindtap="switchRoleType">切换至{{switchTypeName}}角色</view>
+
+      <view class="switch-footer">
+        <image class="icon-kaixu-logo" src="../../assets/images/icon-white-kaixu-logo.svg"/>
+        <image class="icon-kaixu-name" src="../../assets/images/icon-kaixu-name.svg"/>
+      </view>
+    </view>
+  </scroll-view>
+
+  <MessageBox id="message-box" />
+</view>

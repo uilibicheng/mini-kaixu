@@ -3,7 +3,7 @@
   <view class="block-title">其他</view>
   <view class="other-list">
     <block wx:for="{{serviceList}}" wx:key="index">
-      <view class="other-item">
+      <view class="other-item" data-item="{{item}}" bindtap="handleClick">
         <view class="other-itme-top">
           <image class="other-item-icon" src="/assets/images/mine/other/{{item.key}}.svg" />
           <view class="other-red-dot" wx:if="{{item.isRedDot}}"></view>

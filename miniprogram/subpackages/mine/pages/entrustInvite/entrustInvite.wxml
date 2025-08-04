@@ -1,0 +1,17 @@
+<!--subpackages/mine/pages/entrustInvite/entrustInvite.wxml-->
+<view class="common-page">
+  <NavigationBar title="委托开旭代为招聘" background="#FFF" />
+
+  <view class="entrust-content">
+    <snapshot id="target" class="entrust-target">
+      <image class="share-poster-img" src="/assets/images/jobDetail/share-poster-bg.png" mode="aspectFit" />
+    </snapshot>
+  </view>
+
+  <view class="entrust-footer safe-bottom">
+    <view class="entrust-btn" catchtap="handleSavePoster">
+      <image class="icon-save" src="/assets/images/share/icon-save.svg"/>
+      保存到相册
+    </view>
+  </view>
+</view>

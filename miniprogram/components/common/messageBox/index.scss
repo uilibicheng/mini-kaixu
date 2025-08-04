@@ -32,13 +32,13 @@
 
     .message-content {
       width: 698rpx;
-      padding: 40rpx 28rpx 60rpx;
+      padding: 40rpx 32rpx 60rpx;
       box-sizing: border-box;
       border-radius: 16rpx;
       background-color: global.$white-color;
       
       .message-title {
-        color: rgba(0, 0, 0, 0.9);
+        color: var(--text-color, rgba(0, 0, 0, 0.9));
         font-size: 36rpx;
         line-height: 40rpx;
         text-align: center;
@@ -57,22 +57,21 @@
         width: 100%;
         @include global.flex(x, center, center);
         margin-top: 68rpx;
-        .active-btn {
-          background-color: global.$main-color;
+        .message-btn {
+          background-color: var(--btn-background, #07C160);
+          color: var(--btn-color, #fff);
           width: 260rpx;
           height: 88rpx;
           @include global.flex(x, center, center);
-          color: global.$white-color;
           font-size: 28rpx;
           font-weight: bold;
           pointer-events: auto;
           border-radius: 8rpx;
         }
   
-        .cancel {
-          background-color: #f4f4f4;
+        .cancel-btn {
+          background-color: var(--btn-background, #f4f4f4);
           margin-right: 60rpx;
-          color: rgba(0,0,0,0.3);
         }
       }
     }

@@ -1,5 +1,6 @@
 // pages/mine/components/otherSetting/index.ts
 import { ComponentWithComputed } from "miniprogram-computed";
+import router from "../../../../utils/router";
 
 ComponentWithComputed({
   options: {
@@ -21,16 +22,19 @@ ComponentWithComputed({
         text: '账户设置',
         isRedDot: false,
         label: '',
+        url: '/subpackages/mine/pages/accountSetting/accountSetting'
       },
       YJFK: {
         text: '意见反馈',
         isRedDot: false,
         label: '',
+        url: '/subpackages/mine/pages/feedback/feedback'
       },
       YSSZ: {
         text: '隐私设置',
         isRedDot: false,
         label: '',
+        url: '/subpackages/mine/pages/privacySetting/privacySetting'
       },
     }
   },
@@ -51,6 +55,13 @@ ComponentWithComputed({
    * 组件的方法列表
    */
   methods: {
-
+    handleClick(e) {
+      const {item} = e.currentTarget.dataset
+      if (item.url) {
+        router.navigateTo({
+          url: item.url
+        })
+      }
+    }
   }
 })

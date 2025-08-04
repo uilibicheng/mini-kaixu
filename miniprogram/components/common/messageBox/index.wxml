@@ -6,19 +6,22 @@
     <view class="message-box {{showModal ? 'show' : ''}}">
       <view class="message-content" wx:if="{{isShowMessage}}">
         <view class="message-title">{{messaegBoxInfo.title}}</view>
-        <rich-text class="message-text" nodes="{{messaegBoxInfo.message}}" />
+        <rich-text
+          class="message-text"
+          style="--text-color: {{messaegBoxInfo.messageColor}}"
+          nodes="{{messaegBoxInfo.message}}" />
         <view class="message-btn-group">
           <view
             wx:if="{{messaegBoxInfo.showCancelButton}}"
-            class="active-btn cancel"
-            style="{{messaegBoxInfo.cancelColor ? 'color:' + messaegBoxInfo.cancelColor : ''}}"
+            class="message-btn cancel-btn"
+            style="--btn-color: {{messaegBoxInfo.cancelColor}};--btn-background: {{messaegBoxInfo.cancelBackground}}"
             catchtap="handleCancelMessage"
           >
             {{messaegBoxInfo.cancelButtonText}}
           </view>
           <view
-            class="active-btn"
-            style="{{messaegBoxInfo.confirmColor ? 'color:' + messaegBoxInfo.confirmColor : ''}}"
+            class="message-btn"
+            style="--btn-color: {{messaegBoxInfo.confirmColor}};--btn-background: {{messaegBoxInfo.confirmBackground}}"
             catchtap="handleConfirmMessage">
             {{messaegBoxInfo.confirmButtonText}}
           </view>

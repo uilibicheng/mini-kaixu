@@ -1,0 +1,4 @@
+<!--subpackages/mine/pages/businessLicense/businessLicense.wxml-->
+<view class="common-page">
+  <NavigationBar title="营业资质" background="#FFF" />
+</view>

@@ -1,0 +1,57 @@
+/* pages/myWallet/myDoudou/myDoudou.wxss */
+.doudou-content {
+  width: 100%;
+  flex: 1;
+  @include global.flex(y, start, center);
+  padding-top: 90rpx;
+  box-sizing: border-box;
+
+  .icon-doudou {
+    width: 120rpx;
+    height: 120rpx;
+  }
+
+  .doudou-title {
+    margin-top: 60rpx;
+    font-size: 28rpx;
+    color: rgba(0, 0, 0, 0.9);
+    line-height: 40rpx;
+  }
+  .doudou-num {
+    margin-top: 16rpx;
+    margin-bottom: 76rpx;
+    font-weight: bold;
+    font-size: 64rpx;
+    color: rgba(0, 0, 0, 0.9);
+    line-height: 96rpx;
+  }
+
+  .doudou-btn {
+    margin-bottom: 40rpx;
+    width: 360rpx;
+    height: 80rpx;
+    background: #f2f2f6;
+    border-radius: 8rpx;
+    font-weight: bold;
+    font-size: 28rpx;
+    color: rgba(0, 0, 0, 0.9);
+    @include global.flex(x, center, center);
+    &.active-btn {
+      color: #fff;
+      background: global.$main-color;
+    }
+  }
+
+  .douduo-detail {
+    margin-top: 8rpx;
+    @include global.flex(x, center, center);
+    font-weight: bold;
+    font-size: 24rpx;
+    color: #465677;
+    line-height: 40rpx;
+    .icon-right-arrow {
+      width: 32rpx;
+      height: 32rpx;
+    }
+  }
+}
