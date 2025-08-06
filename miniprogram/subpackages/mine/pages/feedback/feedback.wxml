@@ -3,6 +3,6 @@
   <NavigationBar title="意见反馈" background="#fff" />
 
   <view class="feedback-content">
-    <FeedbackPanel />
+    <FeedbackPanel optionsList="{{optionsList}}" bind:handleSubmit="handleSubmit" />
   </view>
 </view>

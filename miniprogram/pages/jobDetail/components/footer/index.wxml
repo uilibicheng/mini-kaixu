@@ -11,8 +11,8 @@
         在线聊
       </view>
     </view>
-    <view class="row-right" bindtap="handleToggleShowFindJobPoster">
-      <view class="row-btn">委托找工作</view>
+    <view class="row-right">
+      <view class="row-btn" bindtap="handleToggleShowFindJobPoster">委托找工作</view>
       <view
         class="row-btn row-active-btn {{false ? 'row-disabled-btn' : ''}}"
         bindtap="handleSendResume">
@@ -43,4 +43,4 @@
 </MessageBox>
 
 <!-- 委托找工作分享 -->
-<EntrustFindJobPoster wx:if="{{showFindJobPoster}}" bind:close="handleToggleShowFindJobPoster" />
+<ImgSharePosterModal wx:if="{{showFindJobPoster}}" imgSrc="" bind:close="handleToggleShowFindJobPoster" />

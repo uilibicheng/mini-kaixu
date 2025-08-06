@@ -1,4 +1,6 @@
 <!--subpackages/mine/pages/privacySecrecy/privacySecrecy.wxml-->
 <view class="common-page">
   <NavigationBar title="学校认证" background="#FFF" />
+
+  <CertificateImge src="{{img}}" />
 </view>

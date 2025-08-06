@@ -1,13 +1,13 @@
-// pages/jobDetail/components/sharePoster/index.ts
-import posterBehavior from '@/behaviors/posterBehavior'
-
+// pages/myWallet/pickDoudou/components/dailyTask/index.ts
 Component({
-  behaviors: [posterBehavior],
+  options: {
+    addGlobalClass: true,
+  },
   /**
    * 组件的属性列表
    */
   properties: {
-    posterName: 'finJobPoster',
+
   },
 
   /**
@@ -21,5 +21,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
+
   }
 })

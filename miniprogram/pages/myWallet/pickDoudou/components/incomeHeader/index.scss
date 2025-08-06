@@ -1,0 +1,84 @@
+/* pages/myWallet/pickDoudou/components/incomeHeader/index.wxss */
+.income-header {
+  position: relative;
+  width: 100%;
+  height: 498rpx;
+  overflow: hidden;
+  flex-shrink: 0;
+  image {
+    width: 100%;
+    height: 100%;
+  }
+  .income-header-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include global.flex(y, start, start);
+
+    .income-header-box {
+      width: 100%;
+      flex: 1;
+      position: relative;
+      @include global.flex(y, between, start);
+
+      .income-header-top {
+        margin-top: 24rpx;
+        padding-left: 48rpx;
+        @include global.flex(y, start, start);
+        .income-header-num {
+          font-weight: bold;
+          font-size: 48rpx;
+          color: #ffffff;
+          line-height: 72rpx;
+          min-width: 142rpx;
+          text-align: center;
+          @include global.flex(x, center, center);
+        }
+        .income-header-text {
+          margin-top: 4rpx;
+          margin-left: 20rpx;
+          font-weight: bold;
+          font-size: 24rpx;
+          color: rgba(255, 255, 255, 0.7);
+          line-height: 32rpx;
+        }
+      }
+
+      .income-header-bottom {
+        width: 100%;
+        height: 166rpx;
+        padding-top: 10rpx;
+        padding-right: 84rpx;
+        padding-left: 70rpx;
+        box-sizing: border-box;
+        @include global.flex(x, between, center);
+
+        .income-get {
+          font-weight: baold;
+          font-size: 32rpx;
+          color: #ffffff;
+          line-height: 48rpx;
+          @include global.flex(x, start, center);
+          .income-get-text {
+            color: #eaff00;
+          }
+        }
+        .income-header-btn {
+          width: 200rpx;
+          height: 80rpx;
+          background: #ffffff;
+          border-radius: 8rpx;
+          font-weight: bold;
+          font-size: 32rpx;
+          color: global.$main-color;
+          @include global.flex(x, center, center);
+          &.signed-in-btn {
+            color: rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
+    }
+  }
+}

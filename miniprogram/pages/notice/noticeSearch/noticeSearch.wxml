@@ -1,0 +1,33 @@
+<!--pages/notice/noticeSearch/index.wxml-->
+<view class="common-page">
+  <NavigationBar title="搜索" background="#FFF" />
+  <view class="notice-search-panel">
+    <SearchPanel
+      isSearch="{{isSearch}}"
+      placeholder="搜索公告｜找到自己心仪的岗位"
+      historyKey="articleHistorySearch"
+      bind:hideSearchResult="hideSearchResult"
+      bind:handleSearch="handleSearch" />
+  </view>
+  
+  <!-- 搜索结果 -->
+  <view class="search-result" wx:if="{{isSearch}}">
+    <scroll-view
+      wx:if="{{articleList && articleList.length}}"
+      class="notice-scroll"
+      scroll-y
+      type="list"
+      bindscrolltolower="loadMore">
+      <view class="notice-list">
+        <view wx:for="{{articleList}}" wx:key="index" class="notice-item">
+          <ArticleItem item="{{item}}" />
+        </view>
+        <view class="loading-tip">{{end ? '已经到底了' : '加载中...'}}</view>
+      </view>
+  
+    </scroll-view>
+    <view class="empty-article" wx:else>
+      <ErrorOrEmpty />
+    </view>
+  </view>
+</view>

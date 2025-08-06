@@ -9,9 +9,9 @@
     <view class="doudou-num">201.00</view>
 
     <view class="doudou-btn active-btn" bindtap="jumpToRecharge">去充值</view>
-    <view class="doudou-btn">捡豆豆</view>
+    <view class="doudou-btn" bindtap="jumpToPickDoudou">捡豆豆</view>
 
-    <view class="douduo-detail">
+    <view class="douduo-detail" bindtap="jumpToIncomeDetail">
       收支明细
       <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
     </view>

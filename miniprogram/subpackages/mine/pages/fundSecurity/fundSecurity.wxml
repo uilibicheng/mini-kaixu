@@ -1,4 +1,6 @@
 <!--subpackages/mine/pages/privacySecrecy/privacySecrecy.wxml-->
 <view class="common-page">
   <NavigationBar title="资金安全" background="#FFF" />
+
+  <CertificateImge src="{{img}}" />
 </view>

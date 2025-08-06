@@ -15,7 +15,11 @@
     "pages/rechargeDoudou/rechargeDoudou",
     "pages/schoolDetail/makeComment/makeComment",
     "pages/myWallet/myDoudou/myDoudou",
-    "pages/myWallet/rechargeDoudou/rechargeDoudou"
+    "pages/myWallet/rechargeDoudou/rechargeDoudou",
+    "pages/notice/noticeSearch/noticeSearch",
+    "pages/webView/webView",
+    "pages/myWallet/incomeDetail/incomeDetail",
+    "pages/myWallet/pickDoudou/pickDoudou"
   ],
   "requiredPrivateInfos": [
     "chooseAddress"

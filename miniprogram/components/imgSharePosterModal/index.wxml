@@ -6,7 +6,7 @@
     <view class="poster-box" catch:tap="close">
       <snapshot id="target">
         <view class="poster-target" catchtap="prevent">
-          <image class="share-poster-img" src="" />
+          <image class="share-poster-img" src="{{imgSrc}}" show-menu-by-longpress="{{showMenuByLongpress}}" mode="widthFix" />
         </view>
       </snapshot>
 

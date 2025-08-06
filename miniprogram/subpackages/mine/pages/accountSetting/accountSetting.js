@@ -51,7 +51,13 @@ Page({
         await userApi.deleteUser()
         showToast({
           title: '注销成功',
-          image: '/assets/images/icon/icon-toast-success.png'
+          image: '/assets/images/icon/icon-toast-success.png',
+          callback: () => {
+            removeLoginStorage()
+            wx.reLaunch({
+              url: '/pages/index/index',
+            })
+          }
         })
       },
     })

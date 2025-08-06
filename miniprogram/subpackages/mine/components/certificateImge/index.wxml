@@ -1,0 +1,7 @@
+<!--subpackages/mine/components/certificateImge/index.wxml-->
+<image
+  style="width: 100vw;"
+  src="{{src}}"
+  mode="widthFix"
+  bindtap="previewImage"
+/>

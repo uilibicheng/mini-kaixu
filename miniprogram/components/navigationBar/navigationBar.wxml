@@ -21,14 +21,14 @@
                 aria-label="返回"
               >
                 <image
-                  wx:if="{{!!background}}"
+                  wx:if="{{isWhiteBack || !background}}"
                   class="icon-back"
-                  src="/assets/images/icon/icon-back.svg"
+                  src="/assets/images/icon/icon-white-back.svg"
                 />
                 <image
                   wx:else
                   class="icon-back"
-                  src="/assets/images/icon/icon-white-back.svg"
+                  src="/assets/images/icon/icon-back.svg"
                 />
               </view>
             </view>

@@ -4,11 +4,53 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/myWallet/rechargeDoudou/rechargeDoudou",
-          "pathName": "pages/myWallet/rechargeDoudou/rechargeDoudou",
+          "name": "pages/myWallet/pickDoudou/pickDoudou",
+          "pathName": "pages/myWallet/pickDoudou/pickDoudou",
           "query": "",
           "scene": null,
           "launchMode": "default"
+        },
+        {
+          "name": "pages/myWallet/incomeDetail/incomeDetail",
+          "pathName": "pages/myWallet/incomeDetail/incomeDetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/notice/noticeSearch/noticeSearch",
+          "pathName": "pages/notice/noticeSearch/noticeSearch",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "subpackages/mine/pages/businessLicense/businessLicense",
+          "pathName": "subpackages/mine/pages/businessLicense/businessLicense",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/notice/noticeSearch/noticeSearch",
+          "pathName": "pages/notice/noticeSearch/noticeSearch",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/notice/notice",
+          "pathName": "pages/notice/notice",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/myWallet/rechargeDoudou/rechargeDoudou",
+          "pathName": "pages/myWallet/rechargeDoudou/rechargeDoudou",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "pages/myWallet/myDoudou/myDoudou",

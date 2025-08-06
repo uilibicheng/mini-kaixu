@@ -1,0 +1,10 @@
+<!--components/defaultNavigationBar/index.wxml-->
+<NavigationBar title="" showNavigationLeft="{{false}}" color="black" background="transparent">
+  <view slot="center" class="header-nav-content">
+    <image class="header-logo" src="/assets/images/icon/{{hasBackground ? 'white-' : ''}}nav-logo.svg"  />
+    <view class="header-nav">
+      <view class="nav-title {{hasBackground ? 'white-nav-title' : ''}}">{{title}}</view>
+      <view class="nav-sologn {{hasBackground ? 'white-nav-sologn' : ''}}">{{sologn}}</view>
+    </view>
+  </view>
+</NavigationBar>

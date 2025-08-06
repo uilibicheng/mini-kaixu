@@ -1,6 +1,7 @@
 // pages/mine/components/otherSetting/index.ts
 import { ComponentWithComputed } from "miniprogram-computed";
 import router from "../../../../utils/router";
+import { actionWithCheckLogin, isLogin } from "../../../../utils/helpers";
 
 ComponentWithComputed({
   options: {
@@ -28,7 +29,8 @@ ComponentWithComputed({
         text: '意见反馈',
         isRedDot: false,
         label: '',
-        url: '/subpackages/mine/pages/feedback/feedback'
+        url: '/subpackages/mine/pages/feedback/feedback',
+        checkLogin: true,
       },
       YSSZ: {
         text: '隐私设置',
@@ -57,6 +59,11 @@ ComponentWithComputed({
   methods: {
     handleClick(e) {
       const {item} = e.currentTarget.dataset
+      console.log('item', item);
+      if (item.checkLogin && !isLogin()) {
+        this.triggerEvent('toggleLoginModal')
+        return
+      }
       if (item.url) {
         router.navigateTo({
           url: item.url

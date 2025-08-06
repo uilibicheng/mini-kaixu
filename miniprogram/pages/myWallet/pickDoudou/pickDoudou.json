@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "IncomeHeader": "./components/incomeHeader/index",
+    "DailyTask": "./components/dailyTask/index",
+    "GrowthTask": "./components/growthTask/index"
+  }
+}

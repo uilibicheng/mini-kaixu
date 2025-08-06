@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "DefaultNavigationBar": "/components/defaultNavigationBar/index",
+    "OfficalAccountInfo": "./components/officalAccountInfo/index",
+    "ArticleItem": "./components/articleItem/index",
+    "ErrorOrEmpty": "/components/common/errorOrEmpty/index"
+  }
 }

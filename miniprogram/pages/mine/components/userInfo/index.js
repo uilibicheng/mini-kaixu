@@ -29,7 +29,6 @@ Component({
     handleClick() {
       actionWithCheckLogin({
         success: () => {
-          console.log(33333);
         },
         fail: () => {
           this.triggerEvent('toggleLoginModal')

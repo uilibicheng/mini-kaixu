@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "JobFilterBar": "/components/job/jobFilterBar/index"
+    "JobFilterBar": "/components/job/jobFilterBar/index",
+    "SearchPanel": "/components/searchPanel/index",
+    "ErrorOrEmpty": "/components/common/errorOrEmpty/index"
   }
 }

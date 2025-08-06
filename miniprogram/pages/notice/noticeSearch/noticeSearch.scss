@@ -1,0 +1,42 @@
+/* pages/notice/noticeSearch/index.wxss */
+.common-page {
+  
+  .notice-search-panel {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .search-result {
+    flex: 1;
+    @include global.flex(y, start, start);
+    width: 100%;
+    background: #F2F2F6;
+    .notice-scroll {
+      width: 100%;
+      flex: 1;
+
+      .notice-list {
+        width: 100%;
+        padding: 24rpx 24rpx 0;
+        box-sizing: border-box;
+
+        .notice-item {
+          width: 100%;
+          margin-bottom: 20rpx;
+        }
+      }
+
+      .loading-tip {
+        margin: 0 auto;
+        padding: 20rpx 0 90rpx;
+        text-align: center;
+        font-size: 24rpx;
+        color: rgba(0, 0, 0, 0.3);
+        line-height: 32rpx;
+      }
+    }
+    .empty-article {
+      margin: 90rpx auto 0;
+    }
+  }
+}

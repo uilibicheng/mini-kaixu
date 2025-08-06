@@ -1,0 +1,35 @@
+<!--components/searchPanel/index.wxml-->
+<view class="search-panel">
+  <view class="search-header">
+    <view class="search-input-wrap" bindtap="handleClickSearch">
+      <image class="icon-search" src="/assets/images/icon/icon-search.svg" />
+      <input
+        class="search-input"
+        confirm-type="search"
+        model:value="{{searchValue}}"
+        placeholder="{{placeholder}}"
+        placeholder-class="input-placeholder"
+        bindconfirm="confirmSearch" />
+    </view>
+    <view class="search-btn" bindtap="confirmSearch">搜索</view>
+  </view>
+  <!-- 历史搜索 -->
+  <view class="history-search-block" hidden="{{isSearch || !(historyList && historyList.length)}}">
+    <view class="history-search-title">
+      历史搜索
+      <image class="icon-trash" src="/assets/images/icon/icon-trash.svg" bindtap="handleDeleteHistory" />
+    </view>
+    <view class="history-search-list">
+      <block wx:for="{{historyList}}" wx:key="index">
+        <text
+          class="history-search-item"
+          overflow="ellipsis"
+          max-lines="1"
+          data-value="{{item}}"
+          bindtap="handleSearchHistory">{{item}}</text>
+      </block>
+    </view>
+  </view>
+</view>
+
+<MessageBox id="message-box" />

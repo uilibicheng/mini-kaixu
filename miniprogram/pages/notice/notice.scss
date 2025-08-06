@@ -1,1 +1,101 @@
 /* pages/notice/notice.wxss */
+.common-page {
+  background: #f2f2f6;
+  .notice-header {
+    flex-shrink: 0;
+    width: 100%;
+    background: global.$white-color;
+    .header-nav-content {
+      .nav-title {
+        font-size: 32rpx !important;
+      }
+      .nav-sologn {
+        color: rgba(0, 0, 0, 0.4) !important;
+      }
+    }
+
+    .notice-tab {
+      width: 100%;
+      height: 80rpx;
+      padding: 0 24rpx;
+      box-sizing: border-box;
+      @include global.flex(x, start, center);
+      .notice-tab-item {
+        margin-right: 32rpx;
+        height: 100%;
+        padding-top: 18rpx;
+        font-weight: bold;
+        font-size: 28rpx;
+        color: rgba(0, 0, 0, 0.9);
+        line-height: 48rpx;
+        position: relative;
+        &.active-tab-item::after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 8rpx;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 40rpx;
+          height: 6rpx;
+          background: global.$main-color;
+          border-radius: 44rpx;
+        }
+      }
+    }
+  }
+
+  .notice-content {
+    flex-shrink: 0;
+    width: 100%;
+    padding: 20rpx 24rpx 24rpx;
+    box-sizing: border-box;
+
+    .notice-search {
+      margin-top: 24rpx;
+      width: 100%;
+      height: 80rpx;
+      background: #ffffff;
+      border-radius: 8rpx;
+      @include global.flex(x, start, center);
+      padding: 0 24rpx;
+      box-sizing: border-box;
+      font-size: 28rpx;
+      color: rgba(0, 0, 0, 0.3);
+      .icon-green-search {
+        margin-right: 16rpx;
+        width: 32rpx;
+        height: 32rpx;
+      }
+    }
+  }
+
+  .notice-scroll {
+    width: 100%;
+    flex: 1;
+
+    .notice-list {
+      width: 100%;
+      padding: 0 24rpx;
+      box-sizing: border-box;
+
+      .notice-item {
+        width: 100%;
+        margin-bottom: 20rpx;
+      }
+    }
+
+    .loading-tip {
+      margin: 0 auto;
+      padding: 20rpx 0 90rpx;
+      text-align: center;
+      font-size: 24rpx;
+      color: rgba(0, 0, 0, 0.3);
+      line-height: 32rpx;
+    }
+
+  }
+  .empty-article {
+    margin: 90rpx auto 0;
+  }
+}

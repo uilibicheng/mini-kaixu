@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "SearchPanel": "/components/searchPanel/index",
+    "ErrorOrEmpty": "/components/common/errorOrEmpty/index",
+    "ArticleItem": "../components/articleItem/index"
+  }
+}

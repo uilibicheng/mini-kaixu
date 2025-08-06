@@ -1,4 +1,6 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "DefaultNavigationBar": "/components/defaultNavigationBar/index"
+  }
 }

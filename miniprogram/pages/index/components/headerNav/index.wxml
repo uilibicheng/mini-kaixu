@@ -1,21 +1,13 @@
 <!--pages/index/components/headerNav/index.wxml-->
 <view class="header-title">
-    <NavigationBar title="" showNavigationLeft="{{false}}" color="black" background="transparent">
-      <view slot="center" class="header-left">
-        <image class="header-logo" src="/assets/images/job/logo.svg"  />
-        <view class="header-nav">
-          <view class="nav-title">开旭教师招聘</view>
-          <view class="nav-sologn">教师找工作，学校直接聊</view>
-        </view>
-      </view>
-    </NavigationBar>
-    
-    <view class="header-search">
-      <view class="search-box" bindtap="jumpToSearch">
-        <view class="search-input">
-          搜索职位/单位名称
-          <image class="icon-search" src="/assets/images/icon/icon-search.svg" />
-        </view>
+  <DefaultNavigationBar title="开旭教师招聘" sologn="教师找工作，学校直接聊" hasBackground="{{true}}" />
+  
+  <view class="header-search">
+    <view class="search-box" bindtap="jumpToSearch">
+      <view class="search-input">
+        搜索职位/单位名称
+        <image class="icon-search" src="/assets/images/icon/icon-search.svg" />
       </view>
     </view>
   </view>
+</view>

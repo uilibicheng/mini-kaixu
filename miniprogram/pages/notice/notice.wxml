@@ -1,2 +1,46 @@
 <!--pages/notice/notice.wxml-->
-<text>pages/notice/notice.wxml</text>
+<view class="common-page tabbar-page">
+  <view class="notice-header">
+    <DefaultNavigationBar title="开旭教师招聘" sologn="教师找工作，学校直接聊" />
+
+    <scroll-view class="notice-tab" scroll-x type="list" wx:if="{{tabList && tabList.length}}">
+      <block wx:for="{{tabList}}" wx:key="index">
+        <view
+          class="notice-tab-item {{tabIndex === index ? 'active-tab-item' : ''}}"
+          data-index="{{index}}"
+          bindtap="handleSelectTab">
+          {{item.name}}
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <block wx:if="{{!isLoading}}">
+    <view class="notice-content">
+      <OfficalAccountInfo officalInfo="{{currentOfficalInfo}}" />
+  
+      <view class="notice-search" bindtap="jumpToSearch">
+        <image class="icon-green-search" src="/assets/images/icon/icon-green-search.svg" />
+        搜索公告｜找到自己心仪的岗位
+      </view>
+    </view>
+  
+    <scroll-view
+      wx:if="{{articleList && articleList.length}}"
+      class="notice-scroll"
+      scroll-y
+      type="list"
+      bindscrolltolower="loadMore">
+      <view class="notice-list">
+        <view wx:for="{{articleList}}" wx:key="index" class="notice-item">
+          <ArticleItem item="{{item}}" />
+        </view>
+        <view class="loading-tip">{{end ? '已经到底了' : '加载中...'}}</view>
+      </view>
+  
+    </scroll-view>
+    <view class="empty-article" wx:else>
+      <ErrorOrEmpty />
+    </view>
+  </block>
+</view>

@@ -18,7 +18,7 @@
 
   .poster-box {
     position: absolute;
-    top: 52%;
+    top: 51%;
     left: 50%;
     width: 698rpx;
     transform: translate(-50%, -50%);
@@ -29,7 +29,7 @@
       
       .share-poster-img {
         width: 100%;
-        height: 1000rpx;
+        max-height: 1000rpx;
         background-color: #ffffff;
         border-radius: 16rpx;
         overflow: hidden;

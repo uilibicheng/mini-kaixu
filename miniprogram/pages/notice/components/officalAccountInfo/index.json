@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "ImgSharePosterModal": "/components/imgSharePosterModal/index"
+  }
+}

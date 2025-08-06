@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "DefaultNavigationBar": "/components/defaultNavigationBar/index",
     "LoginModal": "/components/loginModal/index",
     "UserInfo": "./components/userInfo/index",
     "VipContent": "./components/vipContent/index",

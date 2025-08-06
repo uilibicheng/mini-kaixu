@@ -1,0 +1,10 @@
+<!--pages/notice/components/articleItem/index.wxml-->
+<view class="article-box" catchtap="jumpToWebView">
+  <view class="article-info">
+    <view class="article-title-wrap">
+      <text class="article-title" max-lines="{{2}}" overflow="ellipsis">{{item.title}}</text>
+    </view>
+    <view class="article-time">{{showTime}}</view>
+  </view>
+  <image class="article-img" src="{{item.thumb_url}}" mode="aspectFit" />
+</view>

@@ -1,0 +1,94 @@
+/* pages/myWallet/incomeDetail/incomeDetail.wxss */
+.common-page {
+  background: #f2f2f6;
+
+  .income-header {
+    width: 100%;
+    height: 184rpx;
+    padding: 24rpx;
+    box-sizing: border-box;
+    @include global.flex(y, between, start);
+
+    .iconme-tab {
+      width: 100%;
+      @include global.flex(x, start, center);
+      .income-tab-item {
+        width: 96rpx;
+        height: 56rpx;
+        background: #e3e4ed;
+        border-radius: 8rpx;
+        font-weight: bold;
+        font-size: 28rpx;
+        color: rgba(0, 0, 0, 0.7);
+        margin-right: 24rpx;
+        @include global.flex(x, center, center);
+        &.active-tab-item {
+          background: global.$main-color;
+          color: global.$white-color;
+        }
+      }
+    }
+    .income-info {
+      width: 100%;
+      @include global.flex(x, between, center);
+      font-size: 28rpx;
+      color: rgba(0, 0, 0, 0.3);
+      line-height: 48rpx;
+    }
+  }
+
+  .income-content {
+    flex: 1;
+    width: 100%;
+    background: global.$white-color;
+    .income-scroll {
+      width: 100%;
+      height: 100%;
+      .income-list {
+        width: 100%;
+        padding: 0 24rpx;
+        box-sizing: border-box;
+  
+        .income-item {
+          width: 100%;
+          height: 168rpx;
+          border-bottom: 1rpx solid #f2f2f6;
+          box-sizing: border-box;
+          @include global.flex(x, between, center);
+          .income-item-left {
+            flex: 1;
+            margin-right: 24rpx;
+            .income-item-text {
+              font-size: 28rpx;
+              color: rgba(0, 0, 0, 0.9);
+              line-height: 40rpx;
+            }
+            .income-item-time {
+              margin-top: 16rpx;
+              font-size: 24rpx;
+              color: rgba(0, 0, 0, 0.4);
+              line-height: 32rpx;
+            }
+          }
+          .income-item-num {
+            font-weight: 500;
+            font-size: 32rpx;
+            &.reduce {
+              color: #fa5151;
+            }
+            &.increase {
+              color: global.$main-color;
+            }
+          }
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+    .income-empty {
+      margin-top: 240rpx;
+      width: 100%;
+    }
+  }
+}

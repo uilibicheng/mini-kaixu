@@ -12,7 +12,7 @@
       <view class="notification-title">免费开启微信通知</view>
       <view class="notification-tip">不再错过求职最新消息</view>
       <view class="qrcode-box">
-        <image class="qrcode" src="../../assets/images/qr-code.png" />
+        <image class="qrcode" show-menu-by-longpress="{{true}}" src="../../assets/images/qr-code.png" />
         <view class="qrcode-tip">
           <image class="icon-scan" src="../../assets/images/icon-scan.svg"/>
           长按识别上方二维码

@@ -21,5 +21,17 @@ Page({
     router.navigateTo({
       url: '/pages/myWallet/rechargeDoudou/rechargeDoudou'
     })
+  },
+
+  jumpToPickDoudou() {
+    router.navigateTo({
+      url: '/pages/myWallet/pickDoudou/pickDoudou'
+    })
+  },
+
+  jumpToIncomeDetail() {
+    router.navigateTo({
+      url: `/pages/myWallet/incomeDetail/incomeDetail`
+    })
   }
 })

@@ -1,0 +1,57 @@
+/* pages/myWallet/pickDoudou/components/growthTask/index.wxss */
+.growth-task {
+  width: 100%;
+  padding: 24rpx 24rpx 150rpx;
+  box-sizing: border-box;
+
+  .growth-title {
+    font-weight: 500;
+    font-size: 32rpx;
+    color: rgba(0, 0, 0, 0.9);
+    line-height: 48rpx;
+  }
+  
+  .growth-item {
+    margin-top: 24rpx;
+    width: 100%;
+    height: 140rpx;
+    background: #f2f2f6;
+    border-radius: 16rpx;
+    padding: 8rpx 32rpx 0 24rpx;
+    box-sizing: border-box;
+    @include global.flex(x, between, center);
+    .growth-item-left {
+      flex: 1;
+      @include global.flex(x, start, center);
+      .growth-item-icon-wrap {
+        flex-shrink: 0;
+        width: 80rpx;
+        height: 80rpx;
+        background: #ffffff;
+        border-radius: 200rpx;
+        @include global.flex(x, center, center);
+        .growth-item-icon {
+          width: 48rpx;
+          height: 48rpx;
+        }
+      }
+      .growth-item-info {
+        flex: 1;
+        margin-left: 16rpx;
+        .growth-item-name {
+          font-weight: 500;
+          font-size: 28rpx;
+          color: rgba(0, 0, 0, 0.9);
+          line-height: 40rpx;
+        }
+        .growth-item-num {
+           margin-top: 8rpx;
+          font-weight: 500;
+          font-size: 24rpx;
+          color: #088644;
+          line-height: 32rpx;
+        }
+      }
+    }
+  }
+}

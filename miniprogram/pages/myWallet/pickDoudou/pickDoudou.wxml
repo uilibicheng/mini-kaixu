@@ -1,0 +1,20 @@
+<!--pages/myWallet/pickDoudou/pickDoudou.wxml-->
+<view class="common-page safe-bottom">
+  <root-portal>
+    <NavigationBar title="捡豆豆" color="#fff" isWhiteBack="{{true}}" background="{{isScroll ? '#07C160' : 'transparent'}}" />
+  </root-portal>
+
+  <scroll-view
+    class="income-scroll"
+    scroll-y
+    type="list"
+    enhanced="{{true}}"
+    bounces="{{false}}"
+    bindscroll="handleScroll">
+    <IncomeHeader />
+    <!-- 每日任务 -->
+    <DailyTask />
+    <!-- 成长任务 -->
+    <GrowthTask />
+  </scroll-view>
+</view>

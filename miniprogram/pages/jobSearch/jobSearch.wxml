@@ -1,25 +1,12 @@
 <!-- pages/jobSearch/jobSearch.wxml -->
 <view class="job-search-page">
   <NavigationBar title="搜索" color="black" background="#FFFFFF" />
-  <view class="search-header">
-    <view class="search-input-wrap">
-      <image class="icon-search" src="/assets/images/icon/icon-search.svg" />
-      <input class="search-input" placeholder="搜索职位/单位名称" placeholder-class="input-placeholder" />
-    </view>
-    <view class="search-btn">搜索</view>
-  </view>
-  <!-- 历史搜索 -->
-  <view class="history-search-block" hidden="{{isSearch}}">
-    <view class="history-search-title">
-      历史搜索
-      <image class="icon-trash" src="/assets/images/icon/icon-trash.svg" />
-    </view>
-    <view class="history-search-list">
-      <text class="history-search-item" overflow="ellipsis" max-lines="1">小学语文小学语文小学语文小学语文小学语文文字文字文字文字</text>
-      <block wx:for="{{5}}" wx:key="index">
-        <text class="history-search-item" overflow="ellipsis" max-lines="1">小学语文</text>
-      </block>
-    </view>
+  <view class="job-search-panel">
+    <SearchPanel
+      isSearch="{{isSearch}}"
+      historyKey="jobHistorySearch"
+      bind:hideSearchResult="hideSearchResult"
+      bind:handleSearch="handleSearch" />
   </view>
   <!-- 搜索结果 -->
   <view class="search-result" wx:if="{{isSearch}}">
@@ -29,11 +16,7 @@
     </view>
     <!-- 搜索无结果 -->
     <view class="empty-list">
-      <image
-        class="empty-img"
-        src="/assets/images/job/empty.png"
-      />
-      暂无岗位
+      <ErrorOrEmpty text="暂无岗位" />
     </view>
     <!-- 搜索有结果 -->
     <scroll-view class="search-scroll" scroll-y type="list">

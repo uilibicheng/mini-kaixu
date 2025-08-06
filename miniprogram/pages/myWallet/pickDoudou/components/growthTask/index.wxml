@@ -1,0 +1,18 @@
+<!--pages/myWallet/pickDoudou/components/growthTask/index.wxml-->
+<view class="growth-task">
+  <view class="growth-title">成长捡豆</view>
+  <block wx:for="{{8}}" wx:key="index">
+    <view class="growth-item">
+      <view class="growth-item-left">
+        <view class="growth-item-icon-wrap">
+          <image class="growth-item-icon" src="" />
+        </view>
+        <view class="growth-item-info">
+          <view class="growth-item-name">上传简历附件</view>
+          <view class="growth-item-num">+2.0豆豆</view>
+        </view>
+      </view>
+      <view class="task-btn {{index === 1 ? 'task-disabled-btn' : ''}}">{{index === 1 ? '已领取' : '去完成'}}</view>
+    </view>
+  </block>
+</view>

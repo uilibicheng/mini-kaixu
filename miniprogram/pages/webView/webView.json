@@ -1,0 +1,6 @@
+{
+  "navigationBarBackgroundColor": "#fff",
+  "navigationStyle": "custom",
+  "renderer": "webview",
+  "usingComponents": {}
+}

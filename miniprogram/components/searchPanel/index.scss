@@ -1,0 +1,86 @@
+/* components/searchPanel/index.wxss */
+.search-panel {
+  width: 100%;
+  background: #fff;
+  @include global.flex(y, start, start);
+  .search-header {
+    flex-shrink: 0;
+    width: 100%;
+    padding: 16rpx 24rpx;
+    box-sizing: border-box;
+    @include global.flex(x, between, center);
+    .search-input-wrap {
+      width: 550rpx;
+      height: 64rpx;
+      background-color: #f2f2f6;
+      border-radius: 16rpx;
+      padding: 0 24rpx;
+      box-sizing: border-box;
+      @include global.flex(x, start, center);
+      .icon-search {
+        flex-shrink: 0;
+        width: 32rpx;
+        height: 32rpx;
+        margin-right: 20rpx;
+      }
+      .search-input {
+        flex: 1;
+        height: 64rpx;
+        line-height: 64rpx;
+        font-size: 28rpx;
+        color: rgba(0, 0, 0, 0.9);
+      }
+    }
+
+    .search-btn {
+      width: 120rpx;
+      height: 64rpx;
+      background-color: global.$main-color;
+      border-radius: 16rpx;
+      font-size: 28rpx;
+      @include global.flex(x, center, center);
+      color: global.$white-color;
+    }
+  }
+
+  .history-search-block {
+    flex: 1;
+    margin-top: 56rpx;
+    width: 100%;
+    .history-search-title {
+      width: 100%;
+      padding: 0 24rpx;
+      box-sizing: border-box;
+      @include global.flex(x, between, center);
+      font-weight: bold;
+      font-size: 28rpx;
+      color: rgba(0, 0, 0, 0.9);
+      .icon-trash {
+        width: 40rpx;
+        height: 40rpx;
+      }
+    }
+
+    .history-search-list {
+      width: 100%;
+      @include global.flex(x, start, start);
+      flex-wrap: wrap;
+      .history-search-item {
+        max-width: 702rpx;
+        min-width: 100rpx;
+        margin-left: 24rpx;
+        margin-top: 24rpx;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 0 16rpx;
+        height: 56rpx;
+        line-height: 56rpx;
+        font-size: 28rpx;
+        color: rgba(0, 0, 0, 0.7);
+        background-color: #f2f2f6;
+        border-radius: 8rpx;
+        text-align: center;
+      }
+    }
+  }
+}

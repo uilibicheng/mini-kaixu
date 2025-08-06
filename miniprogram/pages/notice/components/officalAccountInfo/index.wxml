@@ -1,0 +1,23 @@
+<!--pages/notice/components/officalAccountInfo/index.wxml-->
+<view class="offical-box">
+  <view class="offical-header">
+    <image class="offical-avatar" src="{{officalInfo.avatarUrl}}" mode="aspectFit" />
+    <view class="offical-info">
+      <view class="offical-name">{{officalInfo.name}}</view>
+      <view class="offical-area">{{officalInfo.province}}</view>
+    </view>
+  </view>
+
+  <view class="offical-desc">{{officalInfo.description}}</view>
+
+  <view class="offical-btn-group">
+    <view class="offical-btn disabled-btn {{!isFollow ? 'active-btn' : '' }}">{{isFollow ? '已注公众号' : '关注公众号'}}</view>
+    <view class="offical-btn" bindtap="handleToggleShowImgPosterModal">添加老师微信</view>
+  </view>
+</view>
+
+<ImgSharePosterModal
+  wx:if="{{showImgPosterModal}}"
+  imgSrc="{{officalInfo.shareUrl}}"
+  showMenuByLongpress="{{true}}"
+  bind:close="handleToggleShowImgPosterModal" />

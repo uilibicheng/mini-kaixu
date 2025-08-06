@@ -1,0 +1,32 @@
+<!--pages/myWallet/pickDoudou/components/dailyTask/index.wxml-->
+<view class="daily-task">
+  <view class="daily-title">每日捡豆</view>
+  <scroll-view class="daily-list" scroll-x type="list">
+    <view class="daily-item">
+      <view class="daily-item-top">
+        <view class="daily-item-name">每日签到</view>
+          <view class="daily-item-num">
+            <view class="icon-dou-wrap">
+              <image class="icon-dou" src="/assets/images/mine/wallet/icon-dou.png" />
+            </view>
+            +0.5
+          </view>
+      </view>
+      <view class="task-btn sign-in-btn {{true ? 'signed-in-btn' : ''}}">已签到</view>
+    </view>
+    <block wx:for="{{5}}" wx:key="index">
+      <view class="daily-item">
+        <view class="daily-item-top">
+          <view class="daily-item-name">分享岗位</view>
+            <view class="daily-item-num">
+              <view class="icon-dou-wrap">
+                <image class="icon-dou" src="/assets/images/mine/wallet/icon-dou.png" />
+              </view>
+              +1.0
+            </view>
+        </view>
+        <view class="task-btn {{index === 1 ? 'task-disabled-btn' : ''}}">{{index === 1 ? '已领取' : '去完成'}}</view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

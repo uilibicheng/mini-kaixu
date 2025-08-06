@@ -1,15 +1,13 @@
+import userApi from "../../../../api/user";
+import { goBack, showToast } from "../../../../utils/helpers";
+
 // subpackages/mine/pages/feedback/feedback.ts
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    btnInfo: {
-      name: '提交',
-      method: 'handleSubmit',
-      isActive: false,
-    }
+    optionsList: ['电话空号', '无人接听', '工资虚假', '非法收费', '职介冒充']
   },
 
   /**
@@ -19,52 +17,15 @@ Page({
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  async handleSubmit(e) {
+    const {feedbackInfo} = e.detail
+    const res = await userApi.submitFeedback(feedbackInfo)
+    showToast({
+      title: '意见反馈提交成功',
+      duration: 1500,
+      callback: () => {
+        goBack()
+      }
+    })
   }
 })

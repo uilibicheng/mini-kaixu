@@ -32,6 +32,10 @@ Component({
       type: Boolean,
       value: true,
     },
+    isWhiteBack: {
+      type: Boolean,
+      value: false,
+    },
     loading: {
       type: Boolean,
       value: false,
