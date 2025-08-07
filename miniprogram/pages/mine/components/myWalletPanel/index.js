@@ -1,6 +1,5 @@
 import loginBehavior from "@/behaviors/loginBehavior";
 import { unfinishFunctionToast } from "../../../../utils/helpers"
-import router from "../../../../utils/router"
 
 // pages/mine/components/myWallet/index.ts
 Component({
@@ -31,21 +30,11 @@ Component({
     },
 
     jumpToMyDoudou() {
-      this.jump('/pages/myWallet/myDoudou/myDoudou')
+      this.checkLoginJumpToUrl('/pages/myWallet/myDoudou/myDoudou')
     },
 
     jumpToPickDoudou() {
-      this.jump('/pages/myWallet/pickDoudou/pickDoudou')
+      this.checkLoginJumpToUrl('/pages/myWallet/pickDoudou/pickDoudou')
     },
-
-    jump(url) {
-      this.actionWithCheckLogin({
-        success: () => {
-          router.navigateTo({
-            url
-          })
-        }
-      })
-    }
   }
 })

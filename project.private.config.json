@@ -4,11 +4,25 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/myWallet/pickDoudou/pickDoudou",
-          "pathName": "pages/myWallet/pickDoudou/pickDoudou",
+          "name": "pages/personalInfo/personalInfo",
+          "pathName": "pages/personalInfo/personalInfo",
           "query": "",
           "scene": null,
           "launchMode": "default"
+        },
+        {
+          "name": "pages/myResume/myResume",
+          "pathName": "pages/myResume/myResume",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/myWallet/pickDoudou/pickDoudou",
+          "pathName": "pages/myWallet/pickDoudou/pickDoudou",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "pages/myWallet/incomeDetail/incomeDetail",

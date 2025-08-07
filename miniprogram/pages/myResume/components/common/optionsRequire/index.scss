@@ -1,0 +1,16 @@
+/* pages/myResume/components/uploadBtn/index.wxss */
+.item-block-require {
+  flex-shrink: 0;
+  margin-left: 8rpx;
+  width: 64rpx;
+  height: 32rpx;
+  background: global.$main-color;
+  border-radius: 48rpx;
+  font-size: 20rpx;
+  color: #ffffff;
+  @include global.flex(x, center, center);
+}
+.item-block-optional {
+  background: #f2f2f6;
+  color: rgba(0, 0, 0, 0.3);
+}

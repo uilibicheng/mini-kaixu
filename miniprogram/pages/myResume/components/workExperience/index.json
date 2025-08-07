@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "styleIsolation": "apply-shared",
+  "usingComponents": {
+    "AddBtn": "../common/addBtn/index",
+    "UploadBtn": "../common/uploadBtn/index",
+    "EditBtn": "../common/editBtn/index",
+    "OptionsRequire": "../common/optionsRequire/index"
+  }
+}

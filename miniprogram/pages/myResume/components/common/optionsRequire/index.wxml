@@ -1,0 +1,3 @@
+<!--pages/myResume/components/uploadBtn/index.wxml-->
+<view class="item-block-require" wx:if="{{isRequire}}">必填</view>
+<view class="item-block-require item-block-optional" wx:else>选填</view>

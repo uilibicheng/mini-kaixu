@@ -1,0 +1,31 @@
+/* pages/myResume/components/resumeItem/index.wxss */
+.resume-item-block {
+  height: 160rpx;
+  @include global.flex(x, between, start);
+  .resume-item-left {
+    flex: 1;
+    height: 100%;
+    @include global.flex(x, start, center);
+
+    .personal-avatar {
+      width: 88rpx;
+      height: 88rpx;
+      border-radius: 8rpx;
+      overflow: hidden;
+    }
+
+    .personal-info {
+      margin-left: 14rpx;
+
+      .personal-desc {
+        margin-top: 16rpx;
+        padding-bottom: 0 !important;
+      }
+    }
+  }
+
+  .personal-btn {
+    flex-shrink: 0;
+    margin-top: 28rpx;
+  }
+}

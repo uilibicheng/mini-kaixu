@@ -123,4 +123,14 @@ export default {
       hideLoading,
     });
   },
+
+  // 我的-招人模块-获取海报
+  getPoster(data, hideLoading = false) {
+    return Request({
+      url: "/applet/person/getPoster",
+      method: "GET",
+      data,
+      hideLoading,
+    });
+  },
 };

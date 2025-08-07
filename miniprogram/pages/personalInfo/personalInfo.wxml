@@ -1,0 +1,4 @@
+<!--pages/personalInfo/personalInfo.wxml-->
+<view class="common-page">
+  <NavigationBar title="个人信息" background="#F2F2F6" />
+</view>

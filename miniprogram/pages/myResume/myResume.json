@@ -1,3 +1,15 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "BottomBtnGroup": "/components/common/bottomBtnGroup/index",
+    "PersonalInfo": "./components/personalInfoBlock/index",
+    "JobIntentionBlock": "./components/jobIntentionBlock/index",
+    "ResumeAttachment": "./components/resumeAttachment/index",
+    "WorkExperience": "./components/workExperience/index",
+    "SelfEvaluation": "./components/selfEvaluation/index",
+    "EducationExperience": "./components/educationExperience/index",
+    "QualificationCertificate": "./components/qualificationCertificate/index",
+    "AwardedHonor": "./components/awardedHonor/index",
+    "TrialLectureVideo": "./components/trialLectureVideo/index",
+    "WorksShow": "./components/worksShow/index"
+  }
 }

@@ -1,0 +1,11 @@
+/* pages/myResume/components/uploadBtn/index.wxss */
+.item-edit-btn {
+  flex-shrink: 0;
+  width: 96rpx;
+  height: 56rpx;
+  background: #f2f2f6;
+  border-radius: 48rpx;
+  font-size: 24rpx;
+  color: rgba(0, 0, 0, 0.7);
+  @include global.flex(x, center, center);
+}

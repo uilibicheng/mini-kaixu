@@ -1,4 +1,5 @@
 import { isLogin } from "../utils/helpers"
+import router from "../utils/router"
 
 export default Behavior({
   data: {
@@ -22,6 +23,16 @@ export default Behavior({
         }
       }
     },
+
+    checkLoginJumpToUrl(url) {
+      this.actionWithCheckLogin({
+        success: () => {
+          router.navigateTo({
+            url
+          })
+        }
+      })
+    }
 
     // toggleLoginModal: function () {
     //   this.setData({

@@ -1,0 +1,2 @@
+<!--pages/myResume/components/uploadBtn/index.wxml-->
+<view class="item-edit-btn" catchtap="handleEdit">编辑</view>

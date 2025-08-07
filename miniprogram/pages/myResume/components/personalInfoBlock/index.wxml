@@ -1,0 +1,16 @@
+<!--pages/myResume/components/resumeItem/index.wxml-->
+<view class="resume-item-block">
+  <view class="resume-item-left">
+    <image class="personal-avatar" src="/assets/images/mine/resume/default-avatar.svg" mode="aspectFill" />
+    <view class="personal-info">
+      <view class="item-block-title">
+        ***
+        <OptionsRequire isRequire="{{true}}" />
+      </view>
+      <view class="item-block-desc personal-desc">填写个人信息</view>
+    </view>
+  </view>
+  <view class="personal-btn">
+    <EditBtn bind:click="jumpToPersonalInfo" />
+  </view>
+</view>

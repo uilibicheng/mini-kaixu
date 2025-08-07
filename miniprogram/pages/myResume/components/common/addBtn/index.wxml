@@ -1,0 +1,5 @@
+<!--pages/myResume/components/addBtn/index.wxml-->
+<view class="item-add-btn" catchtap="handleAdd">
+  <image class="icon-add" src="/assets/images/mine/resume/icon-add.svg" />
+  添加
+</view>

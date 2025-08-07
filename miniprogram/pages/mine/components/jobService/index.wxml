@@ -3,7 +3,7 @@
   <view class="block-title">求职服务</view>
   <view class="service-list">
     <block wx:for="{{serviceList}}" wx:key="index">
-      <view class="service-item">
+      <view class="service-item" data-item="{{item}}" bindtap="handleClick">
         <view class="service-itme-top">
           <image class="service-item-icon" src="/assets/images/mine/service/{{item.key}}.svg" />
           <view class="service-red-dot" wx:if="{{item.isRedDot}}"></view>

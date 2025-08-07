@@ -1,10 +1,11 @@
-import router from "../../../../utils/router"
+import loginBehavior from "@/behaviors/loginBehavior";
 
 // pages/mine/components/switchRole/index.ts
 Component({
   options: {
     addGlobalClass: true
   },
+  behaviors: [loginBehavior],
   /**
    * 组件的属性列表
    */
@@ -24,15 +25,11 @@ Component({
    */
   methods: {
     jumpToSwitchRole() {
-      router.navigateTo({
-        url: '/subpackages/mine/pages/switchRole/switchRole'
-      })
+      this.checkLoginJumpToUrl('/subpackages/mine/pages/switchRole/switchRole')
     },
 
     jumpToEntrustInvite() {
-      router.navigateTo({
-        url: '/subpackages/mine/pages/entrustInvite/entrustInvite'
-      })
-    }
+      this.checkLoginJumpToUrl('/subpackages/mine/pages/entrustInvite/entrustInvite')
+    },
   }
 })

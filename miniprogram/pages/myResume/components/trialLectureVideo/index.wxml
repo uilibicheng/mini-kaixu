@@ -1,0 +1,13 @@
+<!--pages/myResume/components/resumeItem/index.wxml-->
+<view class="resume-item-block">
+  <view class="item-block-header">
+    <view class="item-block-title">
+      试讲视频
+      <OptionsRequire isRequire="{{false}}" />
+    </view>
+    <AddBtn />
+  </view>
+  <view class="item-block-desc">
+    上传你的试讲视频，帮助hr老师快速评估！
+  </view>
+</view>

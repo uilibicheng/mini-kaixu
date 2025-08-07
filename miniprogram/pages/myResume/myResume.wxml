@@ -1,4 +1,36 @@
 <!--pages/myResume/myResume.wxml-->
 <view class="resume-page">
   <NavigationBar title="我的简历" color="rgba(0,0,0,0.9)" background="#F2F2F6" />
+
+  <scroll-view class="resume-scroll" scroll-y type="list">
+    <view class="resume-content">
+      <!-- 个人信息 -->
+      <PersonalInfo />
+      <!-- 求职意向 -->
+      <JobIntentionBlock />
+      <!-- 简历附件 -->
+      <ResumeAttachment />
+      <!-- 工作经历 -->
+      <WorkExperience />
+      <!-- 自我评价 -->
+      <SelfEvaluation />
+      <!-- 教育经历 -->
+      <EducationExperience />
+      <!-- 资格证书 -->
+      <QualificationCertificate />
+      <!-- 所获荣誉 -->
+      <AwardedHonor />
+      <!-- 试讲视频 -->
+      <TrialLectureVideo />
+      <!-- 作品集 -->
+      <WorksShow />
+
+    </view>
+  </scroll-view>
+
+  <BottomBtnGroup
+    needSafeArea="{{true}}"
+    btnArr="{{[btnInfo]}}"
+    height="100rpx"
+    bind:handlePreview="handlePreview" />
 </view>

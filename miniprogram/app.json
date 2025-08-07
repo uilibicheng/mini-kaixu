@@ -19,7 +19,8 @@
     "pages/notice/noticeSearch/noticeSearch",
     "pages/webView/webView",
     "pages/myWallet/incomeDetail/incomeDetail",
-    "pages/myWallet/pickDoudou/pickDoudou"
+    "pages/myWallet/pickDoudou/pickDoudou",
+    "pages/personalInfo/personalInfo"
   ],
   "requiredPrivateInfos": [
     "chooseAddress"

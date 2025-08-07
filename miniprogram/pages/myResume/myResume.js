@@ -1,17 +1,29 @@
 // pages/myResume/myResume.ts
-Page({
+import { ComponentWithComputed } from "miniprogram-computed";
+
+ComponentWithComputed({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    btnInfo: {
+      name: '预览简历',
+      method: 'handlePreview',
+      isActive: true,
+    },
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad() {
-
-  },
+  methods: {
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad() {
+  
+    },
+  
+    handlePreview() {
+  
+    },
+  }
 })

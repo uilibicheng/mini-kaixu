@@ -4,7 +4,7 @@
 
   <view class="entrust-content">
     <snapshot id="target" class="entrust-target">
-      <image class="share-poster-img" src="/assets/images/jobDetail/share-poster-bg.png" mode="aspectFit" />
+      <image class="share-poster-img" src="{{shareImg}}" mode="widthFix" />
     </snapshot>
   </view>
 

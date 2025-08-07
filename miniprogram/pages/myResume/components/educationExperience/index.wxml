@@ -1,0 +1,13 @@
+<!--pages/myResume/components/resumeItem/index.wxml-->
+<view class="resume-item-block">
+  <view class="item-block-header">
+    <view class="item-block-title">
+      教育经历
+      <OptionsRequire isRequire="{{false}}" />
+    </view>
+    <AddBtn />
+  </view>
+  <view class="item-block-desc">
+    完善你的教育经历，精准匹配优质岗位！
+  </view>
+</view>
