@@ -1,10 +1,9 @@
 // pages/mine/mine.ts
 import messageBoxBehavior from "@/behaviors/messageBoxBehavior"
-import loginBehavior from "../../behaviors/loginBehavior"
 import { isLogin } from "../../utils/helpers"
 
 Page({
-  behaviors: [messageBoxBehavior, loginBehavior],
+  behaviors: [messageBoxBehavior],
   /**
    * 页面的初始数据
    */

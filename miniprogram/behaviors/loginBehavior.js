@@ -2,26 +2,34 @@ import { isLogin } from "../utils/helpers"
 
 export default Behavior({
   data: {
-    loginVisible: false,
-    isLogin: isLogin()
+    // loginVisible: false,
+    // isLogin: isLogin()
   },
 
   methods: {
-    actionWithCheckLogin: function ({ success }) {
-      if (isLogin()) {
-        success && success()
+    actionWithCheckLogin: function (option) {
+      const flag = isLogin()
+      if (flag) {
+        option?.success && option.success()
       } else {
-        this.toggleLoginModal()
+        if (option?.fail) {
+          option.fail()
+        } else {
+          if (typeof this.getAppBar === 'function' ) {
+            const appBarComp = this.getAppBar()
+            appBarComp.toggleLoginModal()
+          }
+        }
       }
     },
 
-    toggleLoginModal: function () {
-      this.setData({
-        loginVisible: !this.data.loginVisible,
-      })
-    },
+    // toggleLoginModal: function () {
+    //   this.setData({
+    //     loginVisible: !this.data.loginVisible,
+    //   })
+    // },
 
-    handleLoginSuccess: function () {
-    },
+    // handleLoginSuccess: function () {
+    // },
   }
 })

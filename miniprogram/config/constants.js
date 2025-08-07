@@ -1,5 +1,12 @@
 export const DEFAULT_HOST = 'http://124.221.101.120:11993'
 
+export const TABBAR_ROUTE = [
+  '/pages/index/index.js',
+  '/pages/notice/notice',
+  '/pages/message/message',
+  '/pages/mine/mine'
+]
+
 export const STORAGE = {
   USER_TOKEN: 'userToken',
   CURRENT_ROLE_TYPE: 'currentRoleType',

@@ -80,6 +80,7 @@
   },
   "style": "v2",
   "renderer": "skyline",
+  "appBar": {},
   "rendererOptions": {
     "skyline": {
       "defaultDisplayBlock": true,

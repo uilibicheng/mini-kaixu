@@ -1,0 +1,7 @@
+<!--app-bar/index.wxml-->
+<view class="expand-container">
+  <LoginModal
+    visible="{{loginVisible}}"
+    bind:visible="toggleLoginModal"
+    bind:handleLoginSuccess="handleLoginSuccess" />
+</view>

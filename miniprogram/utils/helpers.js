@@ -2,6 +2,7 @@ import { STORAGE, } from '@/config/constants'
 import { queryString } from './util'
 import loginApi from '@/api/login'
 import router from './router'
+import { TABBAR_ROUTE } from '../config/constants'
 
 
 export function showToast({
@@ -204,4 +205,30 @@ export const getUrlParams = (url) => {
     params[key] = decodeURIComponent(val)
   })
   return params
+}
+
+export function isTabbar(route) {
+  route = route.startsWith('/') ? route : `/${route}`
+  return TABBAR_ROUTE.includes(route)
+}
+
+// 刷新当前页
+export function refreshCurrentPage() {
+  const curPages = getCurrentPages()
+  console.log('curPages', curPages);
+  const curIndex = curPages.length - 1
+  if (curIndex > -1) {
+    let route = curPages[curIndex].route
+    if (route) {
+      const methoddName = isTabbar(route) ? 'reLaunch' : 'redirectTo'
+      console.log('methoddName', methoddName);
+      wx[methoddName]({
+        url: '/' + route,
+      })
+    }
+  } else {
+    wx.reLaunch({
+      url: '/pages/index/index',
+    })
+  }
 }

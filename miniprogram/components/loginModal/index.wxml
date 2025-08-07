@@ -2,9 +2,8 @@
 <ActionSheet
   visible="{{visible}}"
   title=""
-  height="860rpx"
+  height="760rpx"
   isShowHeader="{{false}}"
-  bottom="{{isTabbar ? '100rpx' : ''}}"
   bind:close="onClose">
   <view slot="header" class="login-header">
     <view>登录注册</view>

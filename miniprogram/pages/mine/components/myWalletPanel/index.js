@@ -1,3 +1,4 @@
+import loginBehavior from "@/behaviors/loginBehavior";
 import { unfinishFunctionToast } from "../../../../utils/helpers"
 import router from "../../../../utils/router"
 
@@ -6,6 +7,7 @@ Component({
   options: {
     addGlobalClass: true
   },
+  behaviors: [loginBehavior],
   /**
    * 组件的属性列表
    */
@@ -29,8 +31,20 @@ Component({
     },
 
     jumpToMyDoudou() {
-      router.navigateTo({
-        url: '/pages/myWallet/myDoudou/myDoudou'
+      this.jump('/pages/myWallet/myDoudou/myDoudou')
+    },
+
+    jumpToPickDoudou() {
+      this.jump('/pages/myWallet/pickDoudou/pickDoudou')
+    },
+
+    jump(url) {
+      this.actionWithCheckLogin({
+        success: () => {
+          router.navigateTo({
+            url
+          })
+        }
       })
     }
   }

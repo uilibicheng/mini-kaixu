@@ -1,12 +1,14 @@
 // pages/mine/components/otherSetting/index.ts
 import { ComponentWithComputed } from "miniprogram-computed";
+import loginBehavior from "@/behaviors/loginBehavior";
 import router from "../../../../utils/router";
-import { actionWithCheckLogin, isLogin } from "../../../../utils/helpers";
+import { isLogin } from "../../../../utils/helpers";
 
 ComponentWithComputed({
   options: {
     addGlobalClass: true
   },
+  behaviors: [loginBehavior],
   /**
    * 组件的属性列表
    */
@@ -60,9 +62,8 @@ ComponentWithComputed({
   methods: {
     handleClick(e) {
       const {item} = e.currentTarget.dataset
-      console.log('item', item);
       if (item.checkLogin && !isLogin()) {
-        this.triggerEvent('toggleLoginModal')
+        this.actionWithCheckLogin()
         return
       }
       if (item.url) {

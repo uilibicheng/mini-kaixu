@@ -7,7 +7,7 @@
     <scroll-view class="page-scroll" scroll-y type="list">
       <view class="scroll-content">
         <!-- 个人信息 -->
-        <UserInfo isLogin="{{isLogin}}" bind:toggleLoginModal="toggleLoginModal" />
+        <UserInfo isLogin="{{isLogin}}" />
         <!-- VIP模块 -->
         <VipContent />
         <!-- 求职服务 -->
@@ -17,7 +17,7 @@
         <!-- 切换角色 -->
         <SwitchRolePanel />
         <!-- 其他 -->
-        <OtherSetting bind:toggleLoginModal="toggleLoginModal" />
+        <OtherSetting />
         <!-- 轮播 -->
         <view class="mgt24 banner-wrap">
           <Banner />
@@ -26,11 +26,5 @@
         <Qualification />
       </view>
     </scroll-view>
-    
-    <LoginModal
-      visible="{{loginVisible}}"
-      isTabbar="{{true}}"
-      bind:visible="toggleLoginModal"
-      bind:handleLoginSuccess="handleLoginSuccess" />
   </view>
  </view>

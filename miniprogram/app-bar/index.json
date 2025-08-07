@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "LoginModal": "/components/loginModal/index"
+  }
+}

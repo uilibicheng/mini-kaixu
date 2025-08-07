@@ -94,7 +94,7 @@ export default Behavior({
       wx.setStorageSync(STORAGE.USER_TOKEN, token)
       this.onClose()
       // 判断是否有登陆后的回调方法
-      this.triggerEvent('loginSuccess')
+      this.triggerEvent('handleLoginSuccess')
     },
 
     jumpToSelectRole(res) {
