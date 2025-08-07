@@ -1,3 +1,5 @@
+import userApi from "../../../../api/user"
+
 // subpackages/mine/pages/privacySetting/privacySetting.ts
 Page({
 
@@ -5,17 +7,43 @@ Page({
    * 页面的初始数据
    */
   data: {
-    avatarSwitch: false,
-    nickNameSwitch: false,
     resumeSelectVisible: false,
-    resumeSelectType: 1,
+    avatarVisibility: 0,
+    nameVisibility: 0,
+    resumeVisibility: 0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad() {
+    this.getUserPrivacy()
+  },
 
+  async getUserPrivacy() {
+    const res = await userApi.getUserPrivacy()
+    this.setData(res)
+    console.log('res', res);
+  },
+
+  async setAvatarVisibility() {
+    const avatarVisibility = this.data.avatarVisibility === 1 ? 0 : 1
+    try {
+      await userApi.setAvatarVisibility({avatarVisibility})
+    } catch (error) {
+      
+    }
+    this.getUserPrivacy()
+  },
+
+  async setNameVisibility() {
+    const nameVisibility = this.data.nameVisibility === 1 ? 0 : 1
+    try {
+      await userApi.setAvatarVisibility({nameVisibility})
+    } catch (error) {
+      
+    }
+    this.getUserPrivacy()
   },
 
   handleToggleShowResumeModal() {
@@ -24,11 +52,16 @@ Page({
     })
   },
 
-  handleSelectResumeType(e) {
+  async setResumeVisibility(e) {
     const {type} = e.currentTarget.dataset
-    this.setData({
-      resumeSelectType: type
-    })
+    try {
+      await userApi.setResumeVisibility({
+        resumeVisibility: type
+      })
+    } catch (error) {
+      
+    }
+    this.getUserPrivacy()
     this.handleToggleShowResumeModal()
   }
 })

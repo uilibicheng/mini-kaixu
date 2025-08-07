@@ -36,7 +36,8 @@ ComponentWithComputed({
         text: '隐私设置',
         isRedDot: false,
         label: '',
-        url: '/subpackages/mine/pages/privacySetting/privacySetting'
+        url: '/subpackages/mine/pages/privacySetting/privacySetting',
+        checkLogin: true,
       },
     }
   },

@@ -9,11 +9,11 @@
     </view>
     <view class="setting-row">
       <view>公开简历头像</view>
-      <switch class="setting-switch" color="#07C160" checked="{{avatarSwitch}}" bindchange=""/>
+      <switch class="setting-switch" color="#07C160" checked="{{avatarVisibility}}" bindchange="setAvatarVisibility" />
     </view>
     <view class="setting-row">
       <view>公开我的昵称</view>
-      <switch class="setting-switch" color="#07C160" checked="{{nickNameSwitch}}" bindchange=""/>
+      <switch class="setting-switch" color="#07C160" checked="{{nameVisibility}}" bindchange="setNameVisibility" />
     </view>
   </view>
 </view>
@@ -24,17 +24,17 @@
   isShowHeader="{{false}}"
   bind:close="handleToggleShowResumeModal">
   <view slot="content" class="option-box">
-    <view class="option-row" data-type="{{1}}" catchtap="handleSelectResumeType">
+    <view class="option-row" data-type="{{2}}" catchtap="setResumeVisibility">
       公开
-      <image wx:if="{{resumeSelectType === 1}}" class="icon-right" src="/assets/images/icon/icon-right.svg" />
+      <image wx:if="{{resumeVisibility === 2}}" class="icon-right" src="/assets/images/icon/icon-right.svg" />
     </view>
-    <view class="option-row" data-type="{{2}}" catchtap="handleSelectResumeType">
+    <view class="option-row" data-type="{{1}}" catchtap="setResumeVisibility">
       仅投递单位可见
-      <image wx:if="{{resumeSelectType === 2}}" class="icon-right" src="/assets/images/icon/icon-right.svg" />
+      <image wx:if="{{resumeVisibility === 1}}" class="icon-right" src="/assets/images/icon/icon-right.svg" />
     </view>
-    <view class="option-row" data-type="{{3}}" catchtap="handleSelectResumeType">
+    <view class="option-row" data-type="{{0}}" catchtap="setResumeVisibility">
       未公开
-      <image wx:if="{{resumeSelectType === 3}}" class="icon-right" src="/assets/images/icon/icon-right.svg" />
+      <image wx:if="{{resumeVisibility === 0}}" class="icon-right" src="/assets/images/icon/icon-right.svg" />
     </view>
   </view>
 </ActionSheet>

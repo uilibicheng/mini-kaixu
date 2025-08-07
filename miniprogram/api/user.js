@@ -83,4 +83,44 @@ export default {
       hideLoading,
     });
   },
+
+  // 我的模块-其他-隐私设置-获取用户隐私信息
+  getUserPrivacy(data, hideLoading = false) {
+    return Request({
+      url: "/applet/person/getUserPrivacy",
+      method: "GET",
+      data,
+      hideLoading,
+    });
+  },
+
+  // 我的模块-其他-隐私设置-设置简历公开状态
+  setResumeVisibility(data, hideLoading = false) {
+    return Request({
+      url: "/applet/person/setResumeVisibility",
+      method: "POST",
+      data,
+      hideLoading,
+    });
+  },
+
+  // 我的模块-其他-隐私设置-设置头像公开状态
+  setAvatarVisibility(data, hideLoading = false) {
+    return Request({
+      url: "/applet/person/setAvatarVisibility",
+      method: "POST",
+      data,
+      hideLoading,
+    });
+  },
+
+  // 我的模块-其他-隐私设置-设置昵称是否公开
+  setNameVisibility(data, hideLoading = false) {
+    return Request({
+      url: "/applet/person/setNameVisibility",
+      method: "POST",
+      data,
+      hideLoading,
+    });
+  },
 };
