@@ -1,0 +1,14 @@
+<!--pages/myResume/components/resumeItem/index.wxml-->
+<view class="resume-item-block">
+  <view class="item-block-header">
+    <view class="item-block-title">
+      自我评价
+      <OptionsRequire isRequire="{{false}}" />
+    </view>
+    <AddBtn wx:if="{{true}}" bind:click="jumpToSelfEvaluation" />
+    <EditBtn wx:else />
+  </view>
+  <view class="item-block-desc">
+    评价兴趣、特长，性格等，是自我认识基石！
+  </view>
+</view>

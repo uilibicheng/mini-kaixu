@@ -3,13 +3,13 @@
     "BottomBtnGroup": "/components/common/bottomBtnGroup/index",
     "PersonalInfo": "./components/personalInfoBlock/index",
     "JobIntentionBlock": "./components/jobIntentionBlock/index",
-    "ResumeAttachment": "./components/resumeAttachment/index",
-    "WorkExperience": "./components/workExperience/index",
-    "SelfEvaluation": "./components/selfEvaluation/index",
-    "EducationExperience": "./components/educationExperience/index",
-    "QualificationCertificate": "./components/qualificationCertificate/index",
-    "AwardedHonor": "./components/awardedHonor/index",
-    "TrialLectureVideo": "./components/trialLectureVideo/index",
-    "WorksShow": "./components/worksShow/index"
+    "ResumeAttachmentBlock": "./components/resumeAttachmentBlock/index",
+    "WorkExperienceBlock": "./components/workExperienceBlock/index",
+    "SelfEvaluationBlock": "./components/selfEvaluationBlock/index",
+    "EducationExperienceBlock": "./components/educationExperienceBlock/index",
+    "QualificationCertificateBlock": "./components/qualificationCertificateBlock/index",
+    "AwardedHonorBlock": "./components/awardedHonorBlock/index",
+    "TrialLectureVideoBlock": "./components/trialLectureVideoBlock/index",
+    "WorksShowBlock": "./components/worksShowBlock/index"
   }
 }

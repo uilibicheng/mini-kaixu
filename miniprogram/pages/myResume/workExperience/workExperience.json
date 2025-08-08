@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "BottomBtnGroup": "/components/common/bottomBtnGroup/index",
+    "ExperienceCard": "./components/experienceCard/index",
+    "SelectSubjectSheet": "/pages/jobIntention/components/selectSubjectSheet/index",
+    "OptionPicker": "/components/common/optionPicker/index"
+  }
+}

@@ -1,0 +1,131 @@
+/* pages/myResume/selfEvaluation/selfEvaluation.wxss */
+.common-page {
+  background: #f2f2f6;
+
+  .self-scroll {
+    width: 100%;
+    flex: 1;
+
+    .self-content {
+      width: 100%;
+      padding: 0 24rpx;
+      box-sizing: border-box;
+
+      .self-item {
+        margin-top: 24rpx;
+        width: 100%;
+
+        .self-title {
+          width: 100%;
+          font-weight: 500;
+          font-size: 32rpx;
+          color: rgba(0, 0, 0, 0.9);
+          line-height: 48rpx;
+          @include global.flex(x, start, center);
+          margin-bottom: 16rpx;
+          .self-title-desc {
+            margin-left: 16rpx;
+            font-size: 24rpx;
+            color: rgba(0, 0, 0, 0.3);
+            line-height: 40rpx;
+          }
+        }
+
+        .self-box {
+          width: 100%;
+          min-height: 480rpx;
+          background: #ffffff;
+          border-radius: 16rpx;
+          padding: 24rpx;
+          box-sizing: border-box;
+
+          .self-input-content {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            .desc-input {
+              width: 100%;
+              height: 100%;
+              font-size: 28rpx;
+              color: rgba(0, 0, 0, 0.9);
+              line-height: 40rpx;
+            }
+            .textarea-placeholder {
+              color: rgba(0, 0, 0, 0.3);
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+
+        .advance-box {
+          min-height: 640rpx;
+
+          .advance-add-wrap {
+            margin-top: 24rpx;
+            width: 100%;
+            @include global.flex(x, between, center);
+            font-size: 28rpx;
+
+            .advance-input-wrap {
+              width: 486rpx;
+              height: 64rpx;
+              background: #f2f2f6;
+              border-radius: 8rpx;
+              padding-left: 16rpx;
+              padding-right: 24rpx;
+              @include global.flex(x, center, center);
+              .advance-input {
+                width: 100%;
+                height: 48rpx;
+              }
+            }
+            .input-placeholder {
+              color: rgba(0, 0, 0, 0.3);
+            }
+
+            .advance-add-btn {
+              width: 120rpx;
+              height: 64rpx;
+              background: global.$main-color;
+              border-radius: 8rpx;
+              color: #ffffff;
+              @include global.flex(x, center, center);
+            }
+          }
+
+          .advance-text {
+            font-size: 28rpx;
+            color: rgba(0, 0, 0, 0.9);
+            line-height: 48rpx;
+          }
+
+          .advance-list {
+            margin-top: 44rpx;
+            width: 100%;
+            @include global.flex(x, start, start);
+            flex-wrap: wrap;
+            .advance-btn {
+              width: 312rpx;
+              height: 64rpx;
+              line-height: 64rpx;
+              background: #f2f2f6;
+              border-radius: 8rpx;
+              margin-right: 30rpx;
+              margin-bottom: 40rpx;
+              padding: 0 16rpx;
+              box-sizing: border-box;
+              &:nth-child(2n) {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -20,7 +20,15 @@
     "pages/webView/webView",
     "pages/myWallet/incomeDetail/incomeDetail",
     "pages/myWallet/pickDoudou/pickDoudou",
-    "pages/personalInfo/personalInfo"
+    "pages/personalInfo/personalInfo",
+    "pages/myResume/resumeAttachment/resumeAttachment",
+    "pages/myResume/workExperience/workExperience",
+    "pages/myResume/selfEvaluation/selfEvaluation",
+    "pages/myResume/educationExperience/educationExperience",
+    "pages/myResume/qualificationCertificate/qualificationCertificate",
+    "pages/myResume/awardedHonor/awardedHonor",
+    "pages/myResume/trialLectureVideo/trialLectureVideo",
+    "pages/myResume/worksShow/worksShow"
   ],
   "requiredPrivateInfos": [
     "chooseAddress"
@@ -93,7 +101,9 @@
   },
   "usingComponents": {
     "NavigationBar": "./components/navigationBar/navigationBar",
-    "MessageBox": "./components/common/messageBox/index"
+    "MessageBox": "./components/common/messageBox/index",
+    "BottomBtnGroup": "./components/common/bottomBtnGroup/index",
+    "ActionSheet": "./components/common/actionSheet/index"
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",

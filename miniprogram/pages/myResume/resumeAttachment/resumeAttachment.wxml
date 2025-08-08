@@ -1,0 +1,47 @@
+<!--pages/myResume/resumeAttachment/resumeAttachment.wxml-->
+<view class="common-page">
+  <NavigationBar title="简历附件" background="#F2F2F6" />
+
+  <view class="attachment-content">
+    <view class="attachment-header">
+      <view>简历附件pdf</view>
+      <view class="attachment-header-num">（{{pdfInfo ? 1 : 0}}/1）</view>
+    </view>
+
+    <view class="attachment-box">
+      <!-- 上传 -->
+      <view wx:if="{{!pdfInfo}}" class="attachment-upload-wrap" bindtap="handleUploadResume">
+        <view class="attachment-upload-left">
+          <image class="resume-wechat" src="/assets/images/mine/resume/resume-wechat.svg"/>
+          <view class="">微信上传</view>
+        </view>
+        <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg"/>
+      </view>
+
+      <view wx:else class="attachment-pdf-wrap">
+        <view class="attachment-pdf-top">
+          <image class="icon-pdf" src="/assets/images/mine/resume/icon-pdf.svg"/>
+          <view class="attachment-pdf-info" bindtap="handlePreview">
+            <view class="attachment-pdf-name">
+              <text max-lines="{{1}}" overflow="ellipsis">{{pdfInfo.fileName}}</text>
+              <view class="text">.pdf</view>
+            </view>
+            <view class="attachment-pdf-time">{{pdfInfo.sizeName}}｜{{pdfInfo.time}}上传</view>
+          </view>
+        </view>
+        <view class="attachment-pdf-bottom">
+          <view class="attachment-pdf-btn delete-btn" bindtap="handleDelete">删除</view>
+          <view class="attachment-pdf-btn upload-btn">重新上传</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="attachment-bottom">
+      <view class="attachment-bottom-title">简历附件上传说明</view>
+      <view class="attachment-bottom-text">1.简历附件支持上传pdf格式文件大小限制为20M</view>
+      <view class="attachment-bottom-text">2.您上传的简历附件不得含有违规信息,如需帮助请联系客服0772-3599889</view>
+    </view>
+  </view>
+</view>
+
+<MessageBox id="message-box" />

@@ -30,6 +30,11 @@ Component({
   methods: {
     handleClose() {
       this.triggerEvent('close')
-    }
+    },
+
+    handleClick(e) {
+      const { index } = e.currentTarget.dataset;
+      this.triggerEvent('click', {index})
+    },
   }
 })

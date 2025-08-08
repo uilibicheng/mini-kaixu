@@ -1,0 +1,39 @@
+/* pages/personalInfo/components/personalItem/index.wxss */
+.personal-item {
+  padding: 32rpx 0;
+  width: 100%;
+  @include global.flex(x, between, center);
+  border-bottom: 1rpx solid #e2e2e2;
+  box-sizing: border-box;
+  &.last-bottom {
+    border-bottom: 0;
+  }
+
+  .personal-item-left {
+    flex-shrink: 0;
+    margin-right: 56rpx;
+    @include global.flex(y, start, start);
+    .personal-item-title {
+      font-size: 28rpx;
+      color: rgba(0, 0, 0, 0.5);
+      line-height: 40rpx;
+      .icon-require {
+        width: 16rpx;
+        height: 16rpx;
+        position: absolute;
+        top: 0;
+        right: -16rpx;
+      }
+    }
+    .personal-item-desc {
+      font-size: 24rpx;
+      color: rgba(0, 0, 0, 0.3);
+      line-height: 40rpx;
+    }
+  }
+
+  .personal-item-right {
+    flex: 1;
+    @include global.flex(x, end, center);
+  }
+}

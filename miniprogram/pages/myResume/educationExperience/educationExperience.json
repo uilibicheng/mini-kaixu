@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "BottomBtnGroup": "/components/common/bottomBtnGroup/index",
+    "ExperienceCard": "./components/experienceCard/index",
+    "OptionPicker": "/components/common/optionPicker/index"
+  }
+}

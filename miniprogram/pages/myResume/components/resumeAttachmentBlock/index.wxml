@@ -1,0 +1,24 @@
+<!--pages/myResume/components/resumeItem/index.wxml-->
+<view class="resume-item-block">
+  <view class="item-block-header">
+    <view class="item-block-title">
+      简历附件
+      <OptionsRequire isRequire="{{true}}" />
+    </view>
+    <EditBtn wx:if="{{false}}" />
+  </view>
+  <view class="item-block-desc" wx:if="{{true}}">
+    提交你的PDF简历附件，便于hr老师查阅下载！
+    <UploadBtn bind:click="jumpToResumeAttachment" />
+  </view>
+  <view wx:else class="item-pdf" bindtap="handlePreviewPdf">
+    <view class="item-pdf-info">
+      <image class="icon-pdf" src="/assets/images/mine/resume/icon-pdf.svg"/>
+      <view class="attachment-pdf-name">
+        <text max-lines="{{1}}" overflow="ellipsis">程宇涵小学语文个人简历文字文字文字文字程宇涵小学语文个人简历文字文字文字文字</text>
+        <view class="text">.pdf</view>
+      </view>
+    </view>
+    <view class="item-pdf-btn">查看</view>
+  </view>
+</view>

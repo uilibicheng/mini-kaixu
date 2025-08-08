@@ -1,0 +1,213 @@
+/* pages/myResume/qualificationCertificate/qualificationCertificate.wxss */
+.common-page {
+  .certificate-container {
+    width: 100%;
+    flex: 1;
+    @include global.flex(y, start, start);
+    position: relative;
+
+    .icon-search {
+      flex-shrink: 0;
+      width: 32rpx;
+      height: 32rpx;
+      margin-right: 20rpx;
+    }
+
+    .certificate-header {
+      width: 100%;
+      flex-shrink: 0;
+      margin-top: 24rpx;
+      @include global.flex(x, between, center);
+      padding: 0 24rpx;
+      box-sizing: border-box;
+
+      .certificate-search {
+        width: 520rpx;
+        height: 80rpx;
+        background: #f2f2f6;
+        border-radius: 8rpx;
+        font-size: 28rpx;
+        color: rgba(0, 0, 0, 0.3);
+        padding: 0 24rpx;
+        box-sizing: border-box;
+        @include global.flex(x, start, center);
+      }
+      .certificate-select-num {
+        font-weight: 500;
+        font-size: 36rpx;
+        color: global.$main-color;
+      }
+    }
+
+    .certificate-select-wrap {
+      width: 100%;
+      flex-shrink: 0;
+      margin-top: 28rpx;
+      @include global.flex(x, start, center);
+      .certificate-select-label {
+        padding-left: 16rpx;
+        padding-right: 16rpx;
+        flex-shrink: 0;
+        font-size: 28rpx;
+        color: rgba(0, 0, 0, 0.3);
+      }
+      .certificate-select-scroll {
+        flex: 1;
+        height: 80rpx;
+        .certificate-select-list {
+          height: 100%;
+          @include global.flex(x, start, center);
+          .certificate-select-item {
+            height: 72rpx;
+            padding: 0 20rpx;
+            background: #e5fcf4;
+            border-radius: 8rpx;
+            font-size: 28rpx;
+            color: global.$main-color;
+            @include global.flex(x, center, center);
+            margin-right: 20rpx;
+            .icon-green-close {
+              margin-left: 8rpx;
+              width: 48rpx;
+              height: 48rpx;
+            }
+          }
+        }
+      }
+    }
+
+    .certificate-content {
+      width: 100%;
+      flex: 1;
+      margin-top: 28rpx;
+      @include global.flex(x, start, start);
+
+      .certificate-cate-scroll {
+        width: 240rpx;
+        height: 100%;
+        background: #f2f2f6;
+        flex-shrink: 0;
+        .certificate-cate-item {
+          width: 100%;
+          height: 96rpx;
+          @include global.flex(x, center, center);
+          font-size: 28rpx;
+          color: rgba(0, 0, 0, 0.9);
+          line-height: 48rpx;
+          &.active-cate-item {
+            font-weight: 500;
+            color: global.$main-color;
+            background: global.$white-color;
+          }
+        }
+      }
+
+      .certificate-option-scroll {
+        flex: 1;
+        height: 100%;
+        background: global.$white-color;
+
+        .certificate-option-block {
+          width: 100%;
+          @include global.flex(y, start, start);
+          padding: 0 24rpx 16rpx 32rpx;
+          box-sizing: border-box;
+          .certificate-option-title {
+            font-size: 28rpx;
+            color: rgba(0, 0, 0, 0.3);
+            line-height: 48rpx;
+            margin-bottom: 20rpx;
+          }
+          .certificate-option-item {
+            padding: 0 20rpx;
+            max-width: 100%;
+            box-sizing: border-box;
+            height: 72rpx;
+            line-height: 72rpx;
+            background: #f2f2f6;
+            border-radius: 8rpx;
+            margin-bottom: 32rpx;
+          }
+        }
+      }
+    }
+
+    .certificate-search-page {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 99;
+      @include global.flex(y, start, start);
+      background: global.$white-color;
+
+      .search-page-header {
+        margin-top: 24rpx;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 24rpx;
+        @include global.flex(x, between, center);
+        .search-page-search {
+          width: 520rpx;
+          height: 80rpx;
+          background: #f2f2f6;
+          border-radius: 8rpx;
+          padding: 0 24rpx;
+          @include global.flex(x, start, center);
+
+          .search-input {
+            flex: 1;
+            height: 100%;
+            line-height: 80rpx;
+            font-size: 28rpx;
+            color: #000000;
+          }
+          .input-placeholder {
+            color: rgba(0, 0, 0, 0.3);
+          }
+        }
+        .search-page-cancel {
+          flex-shrink: 0;
+          padding-left: 60rpx;
+          height: 100%;
+          @include global.flex(x, end, center);
+          font-size: 28rpx;
+          color: rgba(0, 0, 0, 0.4);
+        }
+      }
+
+      .search-page-scroll {
+        flex: 1;
+        width: 100%;
+        margin-top: 40rpx;
+        .search-list {
+          width: 100%;
+          padding: 0 24rpx;
+          box-sizing: border-box;
+          .search-item {
+            width: 100%;
+            @include global.flex(x, start, center);
+            font-size: 28rpx;
+            color: rgba(0, 0, 0, 0.9);
+            line-height: 40rpx;
+            .search-item-name {
+              color: global.$main-color;
+            }
+            .search-item-btn {
+              flex-shrink: 0;
+              margin-left: 24rpx;
+              width: 120rpx;
+              height: 56rpx;
+              background: global.$main-color;
+              border-radius: 8rpx;
+              font-size: 28rpx;
+              color: #ffffff;
+              @include global.flex(x, center, center);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+<!--pages/myResume/qualificationCertificate/qualificationCertificate.wxml-->
+<view class="common-page">
+  <NavigationBar title="所获荣誉" background="#fff" />
+
+  <view class="certificate-container">
+    <block wx:if="{{!isSearch}}">
+      <view class="certificate-header">
+        <view class="certificate-search" bindtap="toggleShowSearch">
+          <image class="icon-search" src="/assets/images/icon/icon-search.svg" />
+          搜索所获荣誉具体名称
+        </view>
+        <view class="certificate-select-num">3/5</view>
+      </view>
+    
+      <view class="certificate-select-wrap">
+        <view class="certificate-select-label">已选</view>
+        <scroll-view class="certificate-select-scroll" scroll-x type="list">
+          <view class="certificate-select-list">
+            <block wx:for="{{4}}" wx:key="index">
+              <view class="certificate-select-item">
+                小学语文教师资格证书
+                <image class="icon-green-close" src="/assets/images/icon//icon-green-close.svg" />
+              </view>
+            </block>
+          </view>
+        </scroll-view>
+      </view>
+    
+      <view class="certificate-content">
+        <scroll-view class="certificate-cate-scroll" scroll-y type="list">
+          <block wx:for="{{9}}" wx:key="index">
+            <view class="certificate-cate-item {{index === 1 ? 'active-cate-item' : ''}}">教育类</view>
+          </block>
+        </scroll-view>
+        <scroll-view class="certificate-option-scroll" scroll-y type="list">
+          <block wx:for="{{3}}" wx:for-index="optionIndex" wx:key="optionIndex">
+            <view class="certificate-option-block">
+              <view class="certificate-option-title">小学</view>
+              <block wx:for="{{8}}" wx:key="index">
+                <view class="certificate-option-item {{index === 1 ? 'active-option-item' : ''}}">小学语文教师资格证书</view>
+              </block>
+            </view>
+          </block>
+        </scroll-view>
+      </view>
+    
+      <BottomBtnGroup
+        needSafeArea="{{true}}"
+        btnArr="{{[btnInfo]}}"
+        height="100rpx"
+        bind:handleSave="handleSave" />
+    </block>
+
+    <view wx:else class="certificate-search-page">
+      <view class="search-page-header">
+        <view class="search-page-search">
+          <image class="icon-search" src="/assets/images/icon/icon-search.svg" />
+          <input
+            class="search-input"
+            placeholder="搜索所获荣誉具体名称"
+            placeholder-class="input-placeholder"
+          />
+        </view>
+        <view class="search-page-cancel" bindtap="toggleShowSearch">取消</view>
+      </view>
+
+      <scroll-view class="search-page-scroll" scroll-y type="list">
+        <view class="search-list">
+          <view class="search-item">
+            自定义添加“
+            <view class="search-item-name">设计证书</view>“
+            <view class="search-item-btn">添加</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

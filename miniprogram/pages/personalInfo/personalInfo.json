@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "BottomBtnGroup": "/components/common/bottomBtnGroup/index",
+    "PersonalItem": "./components/personalItem/index",
+    "ActionSheet": "/components/common/actionSheet/index",
+    "OptionPicker": "/components/common/optionPicker/index",
+    "SelectAreaContent": "/components/selectAreaContent/index"
+  }
 }

@@ -1,4 +1,190 @@
 <!--pages/personalInfo/personalInfo.wxml-->
 <view class="common-page">
   <NavigationBar title="个人信息" background="#F2F2F6" />
+
+  <scroll-view class="personal-scroll" scroll-y type="list">
+    <view class="personal-content">
+      <PersonalItem title="您的头像" bind:click="handleSelectAvatar">
+        <view slot="left" class="personal-item-desc">
+         真实照片更容易提高求职成功率
+        </view>
+        <view slot="right" class="personal-item-right">
+          <image class="personal-avatar" src="" />
+          <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+        </view>
+      </PersonalItem>
+
+      <PersonalItem title="姓名">
+        <view slot="right" class="personal-item-right">
+          <input
+            class="personal-input"
+            placeholder="请输入真实名字"
+            placeholder-class="input-placeholder"
+          />
+          <image class="icon-edit" src="/assets/images/icon/icon-edit.svg" />
+        </view>
+      </PersonalItem>
+
+      <PersonalItem title="性别">
+        <view slot="right" class="personal-item-right">
+          <view class="radio-item" data-sex="{{1}}" bindtap="handleSelectSex">
+            <image wx:if="{{teacherInfo.sex === 1}}" class="icon-radio" src="/assets/images/icon/icon-radio-selected.svg" />
+            <image wx:else class="icon-radio" src="/assets/images/icon/icon-radio.svg" />
+            男
+          </view>
+          <view class="radio-item" data-sex="{{0}}" bindtap="handleSelectSex">
+            <image wx:if="{{teacherInfo.sex === 0}}" class="icon-radio" src="/assets/images/icon/icon-radio-selected.svg" />
+            <image wx:else class="icon-radio" src="/assets/images/icon/icon-radio.svg" />
+            女
+          </view>
+        </view>
+      </PersonalItem>
+
+      <PersonalItem title="手机号">
+        <view slot="right" class="personal-item-right">
+        <view class="personal-input">151****7437</view>
+        </view>
+      </PersonalItem>
+
+      <PersonalItem title="邮箱">
+        <view slot="right" class="personal-item-right">
+          <input
+            class="personal-input"
+            placeholder="请输入邮箱"
+            placeholder-class="input-placeholder"
+          />
+          <image class="icon-edit" src="/assets/images/icon/icon-edit.svg" />
+        </view>
+      </PersonalItem>
+
+      <PersonalItem title="当前身份" bind:click="handleSelectIdentity">
+        <view slot="right" class="personal-item-right">
+          <view class="input-placeholder">请选择</view>
+          <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+        </view>
+      </PersonalItem>
+
+      <view class="select-row">
+        <view class="select-item" bindtap="handleSelectBirth">
+          <view class="select-item-title">
+            出生日期
+            <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
+          </view>
+          <view class="select-item-bottom">
+          <view class="personal-input">请选择</view>
+          <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+        </view>
+        </view>
+        <view class="select-item" bindtap="handleSelectJobTime">
+          <view class="select-item-title">
+            参加工作
+            <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
+          </view>
+          <view class="select-item-bottom">
+          <view class="personal-input">请选择</view>
+          <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+        </view>
+        </view>
+        <view class="select-item" bindtap="handleSelectEducation">
+          <view class="select-item-title">
+            最高学历
+            <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
+          </view>
+          <view class="select-item-bottom">
+          <view class="personal-input">请选择</view>
+          <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+        </view>
+        </view>
+      </view>
+
+      <PersonalItem title="现居住地" bind:click="handleSelectArea">
+        <view slot="right" class="personal-item-right">
+          <view class="input-placeholder">请选择</view>
+          <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+        </view>
+      </PersonalItem>
+
+      <PersonalItem title="详细地址">
+        <view slot="right" class="personal-item-right">
+          <input
+            class="personal-input"
+            placeholder="请输入详细地址"
+            placeholder-class="input-placeholder"
+          />
+          <image class="icon-edit" src="/assets/images/icon/icon-edit.svg" />
+        </view>
+      </PersonalItem>
+
+      <PersonalItem title="微信" isLast="{{true}}">
+        <view slot="right" class="personal-item-right">
+          <input
+            class="personal-input"
+            placeholder="请输入微信号"
+            placeholder-class="input-placeholder"
+          />
+          <image class="icon-edit" src="/assets/images/icon/icon-edit.svg" />
+        </view>
+      </PersonalItem>
+    </view>
+  </scroll-view>
+
+  <BottomBtnGroup
+    needSafeArea="{{true}}"
+    btnArr="{{[btnInfo]}}"
+    height="100rpx"
+    bind:handleSavePersonalInfo="handleSavePersonalInfo" />
 </view>
+
+<!-- 当前身份、最高学历 -->
+<ActionSheet
+  visible="{{selectVisible}}"
+  title="{{panelTitle}}"
+  height="640rpx"
+  bind:close="toggleShowSelectVisible">
+  <view slot="content" class="select-box">
+    <block wx:for="{{selectOptionList}}" wx:key="index">
+      <view
+        class="select-item {{selectIndex === index ? 'select-active-item' : ''}}"
+        data-index="{{index}}"
+        catchtap="handleSelectOption">
+        {{item.label}}
+      </view>
+    </block>
+  </view>
+  <view slot="footer">
+    <BottomBtnGroup
+      needSafeArea="{{false}}"
+      btnArr="{{[selectBtnInfo]}}"
+      height="112rpx"
+      bind:handleReset="handleReset"
+      bind:handleSubmit="handleSubmit" />
+  </view>
+</ActionSheet>
+
+<!-- 出生日期 -->
+<OptionPicker
+  visible="{{showOptionPicker}}"
+  title="{{panelTitle}}"
+  pickerList="{{pickerOptionList}}"
+  pickerValue="{{pickerValue}}"
+  bind:close="toggleShowOptionPicker" />
+
+<!-- 居住地 -->
+<ActionSheet
+  visible="{{selectAreaVisible}}"
+  title="现居地址"
+  height="1150rpx"
+  bind:close="toggleShowAreaVisible">
+  <view slot="content" class="panel-box">
+    <!-- 选择地区 -->
+    <SelectAreaContent />
+  </view>
+  <view slot="footer">
+    <BottomBtnGroup
+      needSafeArea="{{false}}"
+      btnArr="{{selectAreaBtnArr}}"
+      height="112rpx"
+      bind:handleAreaReset="handleAreaReset"
+      bind:handleAreaSubmit="handleAreaSubmit" />
+  </view>
+</ActionSheet>

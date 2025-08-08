@@ -1,0 +1,53 @@
+<!--pages/myResume/selfEvaluation/selfEvaluation.wxml-->
+<view class="common-page">
+  <NavigationBar title="个人信息" background="#F2F2F6" />
+
+  <scroll-view class="self-scroll" scroll-y type="list">
+    <view class="self-content">
+      <view class="self-item">
+        <view class="self-title">个人介绍</view>
+        <view class="self-box">
+          <view class="self-input-content">
+            <textarea class="desc-input" />
+            <view class="desc-input textarea-placeholder">
+              <text>请输入自我评价</text>
+              <text>如：【小学/初中/高中】 教学经验（应届生可写：系统掌握了教育学、心理学理论及【学科】教学方法）</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="self-item">
+        <view class="self-box advance-box">
+          <view class="self-title">
+            优势关健词
+            <view class="self-title-desc">最多可以添加5个标签</view>
+          </view>
+
+          <view class="advance-add-wrap">
+            <view class="advance-input-wrap">
+              <input
+                class="advance-input advance-text"
+                placeholder="请自定义标签名称，最多8个字"
+                placeholder-class="input-placeholder"
+              />
+            </view>
+            <view class="advance-add-btn">添加</view>
+          </view>
+
+          <view class="advance-list">
+            <block wx:for="{{4}}" wx:key="index">
+              <text class="advance-btn advance-text" max-line="{{1}}" overflow="ellipsis">市以上荣誉市以上</text>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <BottomBtnGroup
+    needSafeArea="{{true}}"
+    btnArr="{{[btnInfo]}}"
+    height="100rpx"
+    bind:handleSavePersonalInfo="handleSavePersonalInfo" />
+</view>

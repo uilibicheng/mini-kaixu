@@ -1,1 +1,148 @@
 /* pages/personalInfo/personalInfo.wxss */
+.common-page {
+  background: #f2f2f6;
+
+  .personal-scroll {
+    flex: 1;
+    width: 100%;
+
+    .personal-content {
+      margin: 24rpx 24rpx 60rpx;
+      width: 702rpx;
+      background: global.$white-color;
+      border-radius: 16rpx;
+      padding: 0 24rpx;
+      box-sizing: border-box;
+      overflow: hidden;
+
+      .personal-item-desc {
+        font-size: 24rpx;
+        color: rgba(0, 0, 0, 0.3);
+        line-height: 40rpx;
+      }
+
+      .personal-item-right {
+        flex: 1;
+        @include global.flex(x, end, center);
+
+        .personal-avatar {
+          width: 88rpx;
+          height: 88rpx;
+          border-radius: 88rpx;
+          overflow: hidden;
+          margin-right: 14rpx;
+          background-color: aqua;
+        }
+
+        .radio-item {
+          @include global.flex(x, start, center);
+          font-size: 28rpx;
+          color: rgba(0, 0, 0, 0.9);
+          margin-right: 80rpx;
+          &:last-child {
+            margin-right: 0;
+          }
+          .icon-radio {
+            width: 40rpx;
+            height: 40rpx;
+            margin-right: 16rpx;
+          }
+        }
+      }
+
+      .personal-input {
+        flex: 1;
+        font-size: 28rpx;
+        color: rgba(0, 0, 0, 0.9);
+        height: 40rpx;
+        line-height: 40rpx;
+        text-align: right;
+        margin-right: 16rpx;
+      }
+      .input-placeholder {
+        font-size: 28rpx;
+        color: rgba(0, 0, 0, 0.3);
+        line-height: 40rpx;
+      }
+      .icon-edit {
+        flex-shrink: 0;
+        width: 24rpx;
+        height: 24rpx;
+      }
+
+      .icon-right-arrow {
+        flex-shrink: 0;
+        width: 40rpx;
+        height: 40rpx;
+      }
+
+      .select-row {
+        width: 100%;
+        height: 176rpx;
+        @include global.flex(x, center, center);
+        border-bottom: 1rpx solid #e2e2e2;
+
+        .select-item {
+          width: 218rpx;
+          height: 96rpx;
+          @include global.flex(y, between, center);
+          border-right: 1rpx solid #e2e2e2;
+          box-sizing: border-box;
+          &:last-child {
+            border-right: 0;
+          }
+
+          .select-item-title {
+            font-size: 28rpx;
+            color: rgba(0, 0, 0, 0.5);
+            line-height: 40rpx;
+            padding-right: 16rpx;
+            .icon-require {
+              width: 16rpx;
+              height: 16rpx;
+              position: absolute;
+              top: 0;
+              right: 0;
+            }
+          }
+          .select-item-bottom {
+            @include global.flex(x, center, center);
+            .personal-input {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.select-box {
+  width: 100%;
+  overflow: hidden;
+  @include global.flex(x, start, start);
+  flex-wrap: wrap;
+  padding-left: 24rpx;
+  padding-right: 4rpx;
+  .select-item {
+    margin-top: 40rpx;
+    margin-right: 20rpx;
+    width: 220rpx;
+    height: 64rpx;
+    border-radius: 4rpx;
+    font-size: 28rpx;
+    background: #f2f2f6;
+    color: rgba(0, 0, 0, 0.7);
+    @include global.flex(x, center, center);
+    &.select-active-item {
+      background: #E5FCF4;
+      color: global.$main-color;
+    }
+  }
+}
+
+.panel-box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

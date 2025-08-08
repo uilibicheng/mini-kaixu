@@ -9,21 +9,21 @@
       <!-- 求职意向 -->
       <JobIntentionBlock />
       <!-- 简历附件 -->
-      <ResumeAttachment />
+      <ResumeAttachmentBlock />
       <!-- 工作经历 -->
-      <WorkExperience />
+      <WorkExperienceBlock />
       <!-- 自我评价 -->
-      <SelfEvaluation />
+      <SelfEvaluationBlock />
       <!-- 教育经历 -->
-      <EducationExperience />
+      <EducationExperienceBlock />
       <!-- 资格证书 -->
-      <QualificationCertificate />
+      <QualificationCertificateBlock />
       <!-- 所获荣誉 -->
-      <AwardedHonor />
+      <AwardedHonorBlock />
       <!-- 试讲视频 -->
-      <TrialLectureVideo />
+      <TrialLectureVideoBlock />
       <!-- 作品集 -->
-      <WorksShow />
+      <WorksShowBlock />
 
     </view>
   </scroll-view>

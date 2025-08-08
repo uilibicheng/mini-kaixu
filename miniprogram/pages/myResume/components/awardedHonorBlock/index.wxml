@@ -1,0 +1,13 @@
+<!--pages/myResume/components/resumeItem/index.wxml-->
+<view class="resume-item-block">
+  <view class="item-block-header">
+    <view class="item-block-title">
+      所获荣誉
+      <OptionsRequire isRequire="{{false}}" />
+    </view>
+    <AddBtn bind:click="jumpToAwardedHonor" />
+  </view>
+  <view class="item-block-desc">
+    展示你的教学能力和丰富实践成果！
+  </view>
+</view>

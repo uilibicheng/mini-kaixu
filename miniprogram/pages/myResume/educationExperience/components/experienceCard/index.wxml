@@ -1,0 +1,62 @@
+<!-- pages/jobIntention/components/intentionCard/index.wxml -->
+<view class="experience-block">
+  <view class="experience-title">
+    教育经历{{cardIndex + 1}}
+    <image class="icon-trash" src="/assets/images/icon/icon-trash.svg" bindtap="handleDelete" />
+  </view>
+  <view class="experience-row" bindtap="selectSubject">
+    <view class="experience-row-label">
+      学校名称
+      <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
+    </view>
+    <view class="experience-row-right">
+      <view wx:if="{{false}}" class="experience-input"></view>
+      <view wx:else class="experience-placeholder">请选择学校名称</view>
+      <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+    </view>
+  </view>
+
+  <view class="experience-row" bindtap="selectSubject">
+    <view class="experience-row-label">
+      专业名称
+      <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
+    </view>
+    <view class="experience-row-right">
+      <view wx:if="{{false}}" class="experience-input"></view>
+      <view wx:else class="experience-placeholder">请选择专业名称</view>
+      <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+    </view>
+  </view>
+
+  <view class="experience-row" bindtap="selectSubject">
+    <view class="experience-row-label">
+      所获学历
+      <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
+    </view>
+    <view class="experience-row-right">
+      <view wx:if="{{false}}" class="experience-input"></view>
+      <view wx:else class="experience-placeholder">请选择所获学历</view>
+      <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+    </view>
+  </view>
+
+  <view class="experience-row experience-acolumn">
+    <view class="experience-row-label">
+      在校时间
+      <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
+    </view>
+    <view class="experience-row-time">
+      <view class="experience-time-wrap" data-title="选择开始时间" bindtap="handleSelectTime">
+        <view wx:if="{{false}}" class="experience-input"></view>
+        <view wx:else class="experience-placeholder">请选择开始时间</view>
+        <image class="icon-filled-triangle" src="/assets/images/icon/icon-filled-triangle.svg" />
+      </view>
+      <view class="experience-time-middle">至</view>
+      <view class="experience-time-wrap" data-title="选择结束时间" bindtap="handleSelectTime">
+        <view wx:if="{{false}}" class="experience-input"></view>
+        <view wx:else class="experience-placeholder">请选择结束时间</view>
+        <image class="icon-filled-triangle" src="/assets/images/icon/icon-filled-triangle.svg" />
+      </view>
+    </view>
+  </view>
+</view>

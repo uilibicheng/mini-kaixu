@@ -1,6 +1,7 @@
 // components/common/optionPicker/index.ts
-Component({
+import { ComponentWithComputed } from 'miniprogram-computed'
 
+ComponentWithComputed({
   /**
    * 组件的属性列表
    */
@@ -16,6 +17,10 @@ Component({
     pickerList: {
       type: Array,
       value: []
+    },
+    pickerValue: {
+      tyep: Array,
+      value: []
     }
   },
 
@@ -23,7 +28,21 @@ Component({
    * 组件的初始数据
    */
   data: {
-    
+    value: [],
+  },
+
+  watch: {
+    visible(val) {
+      if (val) {
+        this.setData({
+          value: this.properties.pickerValue
+        })
+      } else [
+        this.setData({
+          value: []
+        })
+      ]
+    }
   },
 
   /**
@@ -32,6 +51,10 @@ Component({
   methods: {
     handleClose() {
       this.triggerEvent('close')
+    },
+
+    bindChange() {
+
     }
   }
 })

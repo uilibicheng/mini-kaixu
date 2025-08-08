@@ -4,11 +4,53 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/personalInfo/personalInfo",
-          "pathName": "pages/personalInfo/personalInfo",
+          "name": "pages/myResume/trialLectureVideo/trialLectureVideo",
+          "pathName": "pages/myResume/trialLectureVideo/trialLectureVideo",
           "query": "",
           "scene": null,
           "launchMode": "default"
+        },
+        {
+          "name": "pages/myResume/qualificationCertificate/qualificationCertificate",
+          "pathName": "pages/myResume/qualificationCertificate/qualificationCertificate",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/myResume/qualificationCertificate/qualificationCertificate",
+          "pathName": "pages/myResume/qualificationCertificate/qualificationCertificate",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/myResume/selfEvaluation/selfEvaluation",
+          "pathName": "pages/myResume/selfEvaluation/selfEvaluation",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/myResume/workExperience/workExperience",
+          "pathName": "pages/myResume/workExperience/workExperience",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/myResume/resumeAttachment/resumeAttachment",
+          "pathName": "pages/myResume/resumeAttachment/resumeAttachment",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/personalInfo/personalInfo",
+          "pathName": "pages/personalInfo/personalInfo",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "pages/myResume/myResume",

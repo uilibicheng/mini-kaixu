@@ -1,0 +1,68 @@
+<!-- pages/jobIntention/components/intentionCard/index.wxml -->
+<view class="experience-block">
+  <view class="experience-title">
+    工作经历{{cardIndex + 1}}
+    <image class="icon-trash" src="/assets/images/icon/icon-trash.svg" bindtap="handleDelete" />
+  </view>
+  <view class="experience-row">
+    <view class="experience-row-label">
+      单位名称
+      <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
+    </view>
+    <view class="experience-row-right">
+      <input
+        class="experience-input"
+        placeholder="请填写单位名称"
+        placeholder-class="experience-placeholder"
+      />
+      <image class="icon-edit" src="/assets/images/icon/icon-edit.svg" />
+    </view>
+  </view>
+
+  <view class="experience-row" bindtap="selectSubject">
+    <view class="experience-row-label">
+      学段学科
+      <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
+    </view>
+    <view class="experience-row-right">
+      <view wx:if="{{false}}" class="experience-input"></view>
+      <view wx:else class="experience-placeholder">请选择学段学科</view>
+      <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+    </view>
+  </view>
+
+  <view class="experience-row experience-acolumn">
+    <view class="experience-row-label">
+      起止时间
+      <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
+    </view>
+    <view class="experience-row-time">
+      <view class="experience-time-wrap" data-title="选择开始时间" bindtap="handleSelectTime">
+        <view wx:if="{{false}}" class="experience-input"></view>
+        <view wx:else class="experience-placeholder">请选择开始时间</view>
+        <image class="icon-filled-triangle" src="/assets/images/icon/icon-filled-triangle.svg" />
+      </view>
+      <view class="experience-time-middle">至</view>
+      <view class="experience-time-wrap" data-title="选择结束时间" bindtap="handleSelectTime">
+        <view wx:if="{{false}}" class="experience-input"></view>
+        <view wx:else class="experience-placeholder">请选择结束时间</view>
+        <image class="icon-filled-triangle" src="/assets/images/icon/icon-filled-triangle.svg" />
+      </view>
+    </view>
+  </view>
+
+  <view class="experience-row experience-acolumn">
+    <view class="experience-row-label">
+      工作内容
+      <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
+    </view>
+    <view class="experience-row-bottom">
+      <textarea
+        class="experience-input"
+        placeholder="请填写工作内容"
+        placeholder-class="experience-placeholder"
+        auto-height
+      />
+    </view>
+  </view>
+</view>

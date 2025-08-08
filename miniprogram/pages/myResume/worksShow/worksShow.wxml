@@ -1,0 +1,37 @@
+<!--pages/myResume/trialLectureVideo/trialLectureVideo.wxml-->
+<view class="common-page">
+  <NavigationBar title="作品集" background="#fff" />
+
+  <scroll-view class="video-scroll" scroll-y type="list">
+    <view class="videp-content">
+      <view class="video-title-row">
+        我的作品
+        <view class="video-title-right">
+          已添加
+          <view class="video-title-text">（{{videoList.length}}/12）</view>
+        </view>
+      </view>
+
+      <view class="video-list">
+        <block wx:for="{{videoList}}" wx:key="index">
+          <view class="video-item">
+            <image class="video-cover" src="" mode="aspectFill" />
+            <view class="videp-progress" wx:if="{{uploading}}">
+            </view>
+            <image class="icon-video-play" src="/assets/images/mine/resume/icon-video-play.svg" />
+            <image class="icon-video-close" src="/assets/images/mine/resume/icon-video-close.svg" />
+          </view>
+        </block>
+        <view wx:if="{{videoList.length < 3}}" class="video-item video-upload" bindtap="handleUpload">
+          <image class="icon-video" src="/assets/images/mine/resume/icon-video.svg" />
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <BottomBtnGroup
+    needSafeArea="{{true}}"
+    btnArr="{{[btnInfo]}}"
+    height="100rpx"
+    bind:handleSave="handleSave" />
+</view>

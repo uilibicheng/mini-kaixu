@@ -1,0 +1,13 @@
+<!--pages/myResume/components/resumeItem/index.wxml-->
+<view class="resume-item-block">
+  <view class="item-block-header">
+    <view class="item-block-title">
+      作品集
+      <OptionsRequire isRequire="{{false}}" />
+    </view>
+    <AddBtn bind:click="jumpToWorksShow" />
+  </view>
+  <view class="item-block-desc">
+    艺术类等相关专业可以上传相关作品集！
+  </view>
+</view>

@@ -7,7 +7,7 @@
   bind:close="handleClose">
   <view slot="content" class="option-box">
     <block wx:for="{{optionList}}" wx:key="index">
-      <view class="option-btn">{{item.label}}</view>
+      <view class="option-btn" data-index="{{index}}" bindtap="handleClick">{{item.label}}</view>
     </block>
   </view>
   <view slot="footer">

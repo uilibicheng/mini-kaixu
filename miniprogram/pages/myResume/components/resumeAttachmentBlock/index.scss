@@ -1,0 +1,35 @@
+/* pages/myResume/components/resumeItem/index.wxss */
+.item-pdf {
+  padding-top: 20rpx;
+  padding-bottom: 40rpx;
+  width: 100%;
+  @include global.flex(x, between, center);
+
+  .item-pdf-info {
+    flex: 1;
+    @include global.flex(x, start, center);
+    .icon-pdf {
+      flex-shrink: 0;
+      margin-right: 8rpx;
+      width: 32rpx;
+      height: 32rpx;
+    }
+    .attachment-pdf-name {
+      flex: 1;
+      @include global.flex(x, start, center);
+      font-size: 24rpx;
+      color: rgba(0, 0, 0, 0.9);
+      line-height: 32rpx;
+      .text {
+        flex-shrink: 0;
+      }
+    }
+  }
+  .item-pdf-btn {
+    flex-shrink: 0;
+    padding-left: 24rpx;
+    font-size: 24rpx;
+    line-height: 32rpx;
+    color: global.$main-color;
+  }
+}

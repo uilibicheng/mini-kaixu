@@ -1,0 +1,13 @@
+<!--pages/personalInfo/components/personalItem/index.wxml-->
+<view class="personal-item {{isLast ? 'last-bottom' : ''}}" bindtap="handleClick">
+  <view class="personal-item-left">
+    <view class="personal-item-title">
+      {{title}}
+      <image wx:if="{{isRequire}}" class="icon-require" src="/assets/images/icon/icon-require.svg" />
+    </view>
+    <slot name="left" />
+  </view>
+  <view class="personal-item-right">
+    <slot name="right" />
+  </view>
+</view>

@@ -1,2 +1,2 @@
 <!--pages/myResume/components/uploadBtn/index.wxml-->
-<view class="item-upload-btn">上传</view>
+<view class="item-upload-btn" bindtap="handleUpload">上传</view>

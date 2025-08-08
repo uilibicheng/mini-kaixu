@@ -1,0 +1,36 @@
+<!--pages/myResume/workExperience/workExperience.wxml-->
+<view class="common-page">
+  <NavigationBar title="教育经历" color="rgba(0,0,0,0.9)" background="#F2F2F6" />
+
+  <scroll-view class="experience-scroll" scroll-y type="list">
+    <view class="experience-content">
+      <block wx:for="{{intentCardList}}" wx:key="index">
+        <ExperienceCard
+          cardIndex="{{index}}"
+          cardInfo="{{item}}"
+          bind:deleteCard="deleteCardMessage"
+          bind:selectSubject="selectSubject"
+          bind:selectTime="selectTime" />
+      </block>
+
+      <view class="add-btn" bindtap="handleAddIntentionCard">
+        <image class="icon-add" src="/assets/images/jobIntention/icon-add.svg" />
+        继续添加工作经历
+      </view>
+    </view>
+  </scroll-view>
+
+  <BottomBtnGroup
+    needSafeArea="{{true}}"
+    btnArr="{{[btnInfo]}}"
+    height="100rpx"
+    bind:handleSave="handleSave" />
+
+  <!-- 出生日期 -->
+  <OptionPicker
+    visible="{{showOptionPicker}}"
+    title="{{optionPickerTitle}}"
+    pickerList="{{pickerOptionList}}"
+    pickerValue="{{pickerValue}}"
+    bind:close="toggleShowOptionPicker" />
+</view>
