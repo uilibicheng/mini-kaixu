@@ -1,0 +1,31 @@
+function formatDecimal(num){
+  // 转换为数字类型（自动处理字符串数字）
+  var number = parseInt(num)
+  
+  // 非数字返回空字符串
+  if (isNaN(number)) {
+    return ''
+  }
+  
+  // 转换为字符串并分割整数和小数部分
+  var str = number.toString()
+  var parts = str.split('.')
+  
+  // 处理整数情况
+  if (parts.length === 1) {
+    return parts[0] + '.00'
+  }
+  
+  // 处理小数情况（补充到两位）
+  var decimal = parts[1]
+  if (decimal.length === 1) {
+    return str + '0'
+  }
+  
+  // 保留原始精度（超过两位不处理）
+  return str
+}
+
+module.exports = {
+  formatDecimal: formatDecimal
+}

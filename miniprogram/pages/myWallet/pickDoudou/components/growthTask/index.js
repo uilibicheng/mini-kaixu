@@ -1,4 +1,5 @@
 // pages/myWallet/pickDoudou/components/growthTask/index.ts
+
 Component({
   options: {
     addGlobalClass: true,
@@ -7,7 +8,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    growthTaskList: {
+      type: Array,
+      value: []
+    }
   },
 
   /**

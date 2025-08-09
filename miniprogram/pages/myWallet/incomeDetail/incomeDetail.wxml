@@ -1,31 +1,40 @@
 <!--pages/myWallet/incomeDetail/incomeDetail.wxml-->
+<wxs src="../../../wxs/common.wxs" module="commonWxs" />
+
 <view class="common-page">
   <NavigationBar title="收支明细" background="#F2F2F6" />
 
   <view class="income-header">
     <view class="iconme-tab">
-      <view class="income-tab-item {{true ? 'active-tab-item' : ''}}">全部</view>
-      <view class="income-tab-item {{false ? 'active-tab-item' : ''}}">收入</view>
-      <view class="income-tab-item {{false ? 'active-tab-item' : ''}}">支出</view>
+      <view class="income-tab-item {{logType === 0 ? 'active-tab-item' : ''}}" data-type="{{0}}" bindtap="handleChangeTab">全部</view>
+      <view class="income-tab-item {{logType === 1 ? 'active-tab-item' : ''}}" data-type="{{1}}" bindtap="handleChangeTab">收入</view>
+      <view class="income-tab-item {{logType === 2 ? 'active-tab-item' : ''}}" data-type="{{2}}" bindtap="handleChangeTab">支出</view>
     </view>
     <view class="income-info">
-      <view class="">总收入：261.00豆豆</view>
-      <view class="">总支出：99.00豆豆</view>
+      <view class="">总收入：{{commonWxs.formatDecimal(logInfo.income)}}豆豆</view>
+      <view class="">总支出：{{commonWxs.formatDecimal(logInfo.pay)}}豆豆</view>
     </view>
   </view>
 
   <view class="income-content">
-    <scroll-view wx:if="{{true}}" class="income-scroll" scroll-y type="list">
+    <scroll-view
+      wx:if="{{logList && logList.length}}"
+      class="income-scroll"
+      scroll-y
+      scroll-top="{{scrollTop}}"
+      type="list"
+      bindscrolltolower="loadMore">
       <view class="income-list">
-        <block wx:for="{{6}}" wx:key="index">
+        <block wx:for="{{logList}}" wx:key="index">
           <view class="income-item">
             <view class="income-item-left">
-              <text class="income-item-text" max-lines="{{1}}" overflow="ellipsis">充值｜200豆豆</text>
-              <view class="income-item-time">2025-09-30 12:06:27</view>
+              <text class="income-item-text" max-lines="{{1}}" overflow="ellipsis">{{item.title}}</text>
+              <view class="income-item-time">{{item.createTime}}</view>
             </view>
-            <view class="income-item-num {{index % 2 === 0 ? 'increase' : 'reduce'}}">+200.00</view>
+            <view class="income-item-num {{item.logType === 1 ? 'increase' : 'reduce'}}">{{item.logType === 1 ? '+' : ''}}{{commonWxs.formatDecimal(item.amount)}}</view>
           </view>
         </block>
+        <view class="loading-tip">{{end ? '已经到底了' : '加载中...'}}</view>
       </view>
     </scroll-view>
     <view class="income-empty" wx:else>

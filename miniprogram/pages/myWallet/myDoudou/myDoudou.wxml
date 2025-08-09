@@ -1,4 +1,6 @@
 <!--pages/myWallet/myDoudou/myDoudou.wxml-->
+<wxs src="../../../wxs/common.wxs" module="commonWxs" />
+
 <view class="common-page">
   <NavigationBar title="我的豆豆" background="#FFF" />
 
@@ -6,7 +8,7 @@
     <image class="icon-doudou" src="/assets/images/icon/icon-doudou.svg" />
 
     <view class="doudou-title">豆豆余额</view>
-    <view class="doudou-num">201.00</view>
+    <view class="doudou-num">{{commonWxs.formatDecimal(balance || 0)}}</view>
 
     <view class="doudou-btn active-btn" bindtap="jumpToRecharge">去充值</view>
     <view class="doudou-btn" bindtap="jumpToPickDoudou">捡豆豆</view>

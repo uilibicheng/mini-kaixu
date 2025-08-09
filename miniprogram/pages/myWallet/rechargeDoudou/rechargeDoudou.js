@@ -1,3 +1,5 @@
+import goodsApi from "../../../api/goods"
+
 // pages/myWallet/rechargeDoudou/rechargeDoudou.ts
 Page({
 
@@ -5,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    rechargeList: [30, 50, 100, 200, 300, 400],
+    goodsList: [],
     selectIndex: 0,
   },
 
@@ -13,7 +15,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad() {
+    this.getGoodsList()
+  },
 
+  async getGoodsList(){
+    const list = await goodsApi.getGoodsList({
+      type: 1
+    })
+    this.setData({
+      goodsList: list
+    })
   },
 
   handleSelect(e) {

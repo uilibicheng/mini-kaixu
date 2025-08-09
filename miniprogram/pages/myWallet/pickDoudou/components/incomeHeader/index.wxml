@@ -1,18 +1,20 @@
 <!--pages/myWallet/pickDoudou/components/incomeHeader/index.wxml-->
+<wxs src="../../../../../wxs/common.wxs" module="commonWxs" />
+
 <view class="income-header">
   <image src="/assets/images/mine/wallet/pick-doudou-bg.png" mode="widthFix" />
   <view class="income-header-absolute">
     <NavigationBar title="" showNavigationLeft="{{false}}" background="transparent" />
     <view class="income-header-box">
       <view class="income-header-top">
-        <view class="income-header-num">0</view>
+        <view class="income-header-num">{{commonWxs.formatDecimal(balance || 0)}}</view>
         <view class="income-header-text">我的豆豆</view>
       </view>
       <view class="income-header-bottom">
         <view class="income-get">
-          今日已获得<text class="income-get-text">0</text>豆豆
+          今日已获得<text class="income-get-text">{{commonWxs.formatDecimal(awardInfo.income || 0)}}</text>豆豆
         </view>
-        <view class="income-header-btn {{false ? 'signed-in-btn' : ''}}">今日签到</view>
+        <view class="income-header-btn {{hasCheckedIn ? 'signed-in-btn' : ''}}" bindtap="handleChcekIn">{{hasCheckedIn ? '已签到' : '今日签到'}}</view>
       </view>
     </view>
   </view>

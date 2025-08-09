@@ -84,6 +84,15 @@
             border-bottom: 0;
           }
         }
+
+        .loading-tip {
+          margin: 0 auto;
+          padding: 20rpx 0 90rpx;
+          text-align: center;
+          font-size: 24rpx;
+          color: rgba(0, 0, 0, 0.3);
+          line-height: 32rpx;
+        }
       }
     }
     .income-empty {

@@ -148,3 +148,26 @@ export function emptyObject(obj) {
   }
   return true
 }
+
+export function formatDecimal(num, length) {
+  // 转换为数字类型（自动处理字符串数字）
+  const number = Number(num);
+  
+  // 非数字返回空字符串
+  if (isNaN(number)) return '';
+
+  // 转换为字符串并分割整数和小数部分
+  const str = number.toString();
+  const [integerPart, decimalPart] = str.split('.');
+
+  // 处理整数情况
+  if (!decimalPart) {
+    return `${integerPart}.00`;
+  }
+
+  // 处理小数情况（补充到两位）
+  const paddedDecimal = decimalPart.padEnd(length, '0');
+  return decimalPart.length === length
+    ? str 
+    : `${integerPart}.${paddedDecimal}`;
+}

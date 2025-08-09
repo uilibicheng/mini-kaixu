@@ -33,7 +33,8 @@ export default Behavior({
         })
       } catch (error) {
         this.setData({
-          articleList: []
+          articleList: [],
+          end: true
         })
       }
     },

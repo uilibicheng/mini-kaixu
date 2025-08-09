@@ -11,10 +11,10 @@
     enhanced="{{true}}"
     bounces="{{false}}"
     bindscroll="handleScroll">
-    <IncomeHeader />
+    <IncomeHeader balance="{{balance}}" awardInfo="{{awardInfo}}" bind:refresh="initData" />
     <!-- 每日任务 -->
     <DailyTask />
     <!-- 成长任务 -->
-    <GrowthTask />
+    <GrowthTask growthTaskList="{{growthTaskList}}" />
   </scroll-view>
 </view>

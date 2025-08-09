@@ -1,16 +1,18 @@
 <!--pages/myWallet/rechargeDoudou/rechargeDoudou.wxml-->
+<wxs src="../../../wxs/common.wxs" module="commonWxs" />
+
 <view class="common-page">
   <NavigationBar title="充值豆豆" background="#FFF" />
 
   <scroll-view class="recharge-scroll" scroll-y type="list">
     <view class="recharge-content">
       <view class="recharge-list">
-        <block wx:for="{{rechargeList}}" wx:key="index">
+        <block wx:for="{{goodsList}}" wx:key="index">
           <view
             class="recharge-item {{selectIndex === index ? 'active-item' : ''}}"
             data-index="{{index}}"
             bindtap="handleSelect">
-            <view>{{item}}</view>
+            <view>{{item.price}}</view>
             <view class="recharge-item-text">豆豆</view>
           </view>
         </block>
@@ -29,7 +31,7 @@
           <view class="row-label">
             应付金额
           </view>
-          <view class="row-type-price">¥30.00</view>
+          <view class="row-type-price">¥{{commonWxs.formatDecimal(goodsList[selectIndex].price)}}</view>
         </view>
       </view>
 

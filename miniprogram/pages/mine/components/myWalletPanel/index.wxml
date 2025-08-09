@@ -1,4 +1,6 @@
 <!--pages/mine/components/myWallet/index.wxml-->
+<wxs src="../../../../wxs/common.wxs" module="commonWxs" />
+
 <view class="mine-block mgt24">
   <view class="block-title">
     我的钱包
@@ -12,7 +14,7 @@
       <view class="wallet-btn">去赚钱</view>
     </view>
     <view class="wallet-item" catchtap="jumpToMyDoudou">
-      <view class="wallet-num">0.00</view>
+      <view class="wallet-num">{{commonWxs.formatDecimal(balance || 0)}}</view>
       <view class="wallet-title">豆豆余额(个)</view>
       <view class="wallet-btn active-btn" catchtap="jumpToPickDoudou">捡豆豆</view>
     </view>

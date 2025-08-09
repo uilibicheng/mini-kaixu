@@ -1,18 +1,18 @@
 <!--pages/myWallet/pickDoudou/components/growthTask/index.wxml-->
 <view class="growth-task">
   <view class="growth-title">成长捡豆</view>
-  <block wx:for="{{8}}" wx:key="index">
+  <block wx:for="{{growthTaskList}}" wx:key="index">
     <view class="growth-item">
       <view class="growth-item-left">
         <view class="growth-item-icon-wrap">
-          <image class="growth-item-icon" src="" />
+          <image class="growth-item-icon" src="/assets/images/mine/wallet/task/{{item.iconKey}}.svg" />
         </view>
         <view class="growth-item-info">
-          <view class="growth-item-name">上传简历附件</view>
-          <view class="growth-item-num">+2.0豆豆</view>
+          <view class="growth-item-name">{{item.taskTitle}}</view>
+          <view class="growth-item-num">{{item.taskAward}}</view>
         </view>
       </view>
-      <view class="task-btn {{index === 1 ? 'task-disabled-btn' : ''}}">{{index === 1 ? '已领取' : '去完成'}}</view>
+      <view class="task-btn {{item.taskStatus === 2 ? 'task-disabled-btn' : ''}}">{{item.taskStatus === 2 ? '已领取' : item.taskStatus === 1 ? '立即领取' : '去完成'}}</view>
     </view>
   </block>
 </view>
