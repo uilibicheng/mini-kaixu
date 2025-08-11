@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "VIPEquityBlock": "./components/VIPEquityBlock/index",
+    "VIPCompareTable": "./components/VIPCompareTable/index",
+    "VIPEquityDetail": "./components/VIPEquityDetail/index"
+  }
+}

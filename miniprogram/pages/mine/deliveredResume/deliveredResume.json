@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "JobItemBolck": "/components/jobItemBolck/index",
+    "ErrorOrEmpty": "/components/common/errorOrEmpty/index",
+    "LoadingTip": "/components/common/loadingTip/index"
+  }
+}

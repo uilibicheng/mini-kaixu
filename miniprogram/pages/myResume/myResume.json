@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "BottomBtnGroup": "/components/common/bottomBtnGroup/index",
-    "PersonalInfo": "./components/personalInfoBlock/index",
+    "personalInfoBlock": "./components/personalInfoBlock/index",
     "JobIntentionBlock": "./components/jobIntentionBlock/index",
     "ResumeAttachmentBlock": "./components/resumeAttachmentBlock/index",
     "WorkExperienceBlock": "./components/workExperienceBlock/index",

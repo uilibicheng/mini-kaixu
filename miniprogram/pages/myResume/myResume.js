@@ -1,5 +1,6 @@
 // pages/myResume/myResume.ts
 import { ComponentWithComputed } from "miniprogram-computed";
+import { getStorageUserBaseInfo, getUserBaseInfo } from "../../utils/helpers";
 
 ComponentWithComputed({
 
@@ -12,14 +13,19 @@ ComponentWithComputed({
       method: 'handlePreview',
       isActive: true,
     },
+    userBaseInfo: {},
   },
 
   methods: {
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad() {
-  
+    async onShow() {
+      await getUserBaseInfo()
+      const userBaseInfo = getStorageUserBaseInfo()
+      this.setData({
+        userBaseInfo
+      })
     },
   
     handlePreview() {

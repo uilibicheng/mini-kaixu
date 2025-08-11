@@ -1,0 +1,25 @@
+<!--subpackages/mine/pages/myComment/myComment.wxml-->
+<view class="common-page safe-bottom">
+  <NavigationBar title="已投递" background="#fff" />
+
+  <scroll-view class="page-scroll" scroll-y type="list">
+    <block wx:if="{{true}}">
+      <view class="page-list">
+        <view class="page-block" wx:for="{{3}}" wx:for-index="blockIndex" wx:key="blockIndex">
+          <view class="page-block-title">2025-07-23</view>
+          <block wx:for="{{2}}" wx:key="index">
+            <JobItemBolck>
+              <view slot="header-right" class="page-item-status {{index === 1 ? 'end-status' : ''}}">
+                {{index === 1 ? '已查看' : '待查看'}}
+              </view>
+            </JobItemBolck>
+          </block>
+        </view>
+      </view>
+      <LoadingTip end="{{true}}" />
+    </block>
+    <view class="page-empty" wx:else>
+      <ErrorOrEmpty />
+    </view>
+  </scroll-view>
+</view>

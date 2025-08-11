@@ -26,8 +26,8 @@
 
   .intention-row {
     width: 100%;
-    height: 100rpx;
-    padding-top: 4rpx;
+    // height: 100rpx;
+    padding: 32rpx 0 28rpx;
     box-sizing: border-box;
     border-bottom: 1rpx solid #e2e2e2;
     @include global.flex(x, between, center);
@@ -49,7 +49,10 @@
     }
 
     .intention-row-right {
-      @include global.flex(x, start, center);
+      flex: 1;
+      @include global.flex(x, end, center);
+      margin-left: 40rpx;
+      text-align: right;
       .intention-placeholder {
         color: rgba(0, 0, 0, 0.3);
       }

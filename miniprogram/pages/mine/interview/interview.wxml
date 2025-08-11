@@ -1,0 +1,36 @@
+<!--subpackages/mine/pages/myComment/myComment.wxml-->
+<view class="common-page safe-bottom">
+  <NavigationBar title="面试" background="#fff" />
+
+  <view class="interview-tab">
+    <block wx:for="{{tabList}}" wx:key="index">
+      <view
+        class="interview-tab-item {{selectStatus === item.status ? 'active-tab-item' : ''}}"
+        data-item="{{item}}"
+        bindtap="handleChangeTab">
+        {{item.label}}
+      </view>
+    </block>
+  </view>
+
+  <scroll-view class="page-scroll" scroll-y type="list">
+    <block wx:if="{{true}}">
+      <view class="page-list">
+        <view class="page-block" wx:for="{{3}}" wx:for-index="blockIndex" wx:key="blockIndex">
+          <view class="page-block-title">2025-07-23</view>
+          <block wx:for="{{2}}" wx:key="index">
+            <JobItemBolck>
+              <view slot="header-right" class="page-item-status {{index === 1 ? 'end-status' : ''}}">
+                报名中
+              </view>
+            </JobItemBolck>
+          </block>
+        </view>
+      </view>
+      <LoadingTip end="{{true}}" />
+    </block>
+    <view class="page-empty" wx:else>
+      <ErrorOrEmpty />
+    </view>
+  </scroll-view>
+</view>

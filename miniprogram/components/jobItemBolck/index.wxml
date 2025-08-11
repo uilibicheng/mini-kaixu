@@ -2,7 +2,9 @@
 <view class="job-item" bindtap="jumpToJobDetail">
   <view class="flex-row">
     <text class="job-name">【杭州·公办·非编】小学语文</text>
-    <view class="job-salary">10-12K/年</view>
+    <view class="flex-row-right">
+      <slot name="header-right" />
+    </view>
   </view>
 
   <view class="flex-row job-requirement">
@@ -32,6 +34,8 @@
         <view class="info-area">杭州市 余杭区</view>
       </view>
     </view>
-    <view class="info-btn">立即报名</view>
+    <view class="flex-row-right">
+      <slot name="borrom-right" />
+    </view>
   </view>
 </view>

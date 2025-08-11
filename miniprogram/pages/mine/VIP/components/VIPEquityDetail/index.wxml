@@ -1,0 +1,33 @@
+<!--pages/mine/VIP/components/VIPEquityDetail/index.wxml-->
+<view class="equity-detail">
+  <view class="detail-title">会员权益详情</view>
+  <scroll-view
+    class="detail-scroll"
+    scroll-x
+    type="list"
+    scroll-with-animation
+    scroll-into-view="{{detailViewId}}">
+    <view class="detail-list">
+      <block wx:for="{{vipList}}" wx:key="index">
+        <view class="detail-item" id="detail-{{index}}" data-index="{{index}}" bindtap="handleSelect">
+          <view class="detail-item-img">
+            <image class="detail-item-icon" src="/assets/images/mine/vip/detail/{{item.key}}.svg" />
+          </view>
+          <view class="detail-item-text">{{item.text}}</view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+  <scroll-view
+    class="desc-scroll"
+    scroll-x
+    type="list"
+    scroll-with-animation
+    scroll-into-view="{{descViewId}}">
+    <view class="desc-list">
+      <block wx:for="{{vipList}}" wx:key="index">
+        <image id="desc-{{index}}" class="desc-item-img" src="/assets/images/mine/vip/detail/desc-{{item.key}}.png" mode="heightFix" />
+      </block>
+    </view>
+  </scroll-view>
+</view>

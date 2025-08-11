@@ -1,13 +1,13 @@
 <!--pages/myResume/components/resumeItem/index.wxml-->
 <view class="resume-item-block">
   <view class="resume-item-left">
-    <image class="personal-avatar" src="/assets/images/mine/resume/default-avatar.svg" mode="aspectFill" />
+    <image class="personal-avatar" src="{{userBaseInfo.avatar ? userBaseInfo.avatar : '/assets/images/mine/resume/default-avatar.svg'}}" mode="aspectFill" />
     <view class="personal-info">
       <view class="item-block-title">
-        ***
+        {{userBaseInfo.name ? userBaseInfo.name : '***'}}
         <OptionsRequire isRequire="{{true}}" />
       </view>
-      <view class="item-block-desc personal-desc">填写个人信息</view>
+      <view class="item-block-desc personal-desc">{{userDesc ? userDesc : '填写个人信息'}}</view>
     </view>
   </view>
   <view class="personal-btn">

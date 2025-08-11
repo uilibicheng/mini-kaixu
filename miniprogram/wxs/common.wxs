@@ -26,6 +26,12 @@ function formatDecimal(num){
   return str
 }
 
+function formatDate(date) {
+  var arr = date.split('-')
+  return arr[0] + '年' + arr[1] + '月'
+}
+
 module.exports = {
-  formatDecimal: formatDecimal
+  formatDecimal: formatDecimal,
+  formatDate: formatDate
 }

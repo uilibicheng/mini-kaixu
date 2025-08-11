@@ -11,7 +11,7 @@
         <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
       </view>
       <view class="intention-row-right">
-        <view wx:if="{{cardInfo[item.key]}}" class="intention-vale">{{cardInfo[item.key]}}</view>
+        <view wx:if="{{cardInfo[item.key] && cardInfo[item.key].selectValue}}" class="intention-vale">{{cardInfo[item.key].selectValue}}</view>
         <view wx:else class="intention-placeholder">请填写{{item.label}}</view>
         <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
       </view>

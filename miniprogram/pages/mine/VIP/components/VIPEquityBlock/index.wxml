@@ -1,0 +1,15 @@
+<!--pages/mine/VIP/components/VIPEquityBlock/index.wxml-->
+<view class="VIP-box">
+  <view class="equity-title">会员权益</view>
+  <view class="vip-list">
+    <block wx:for="{{vipList}}" wx:key="index">
+      <view class="vip-item">
+        <view class="vip-itme-top">
+          <image class="vip-item-icon" src="/assets/images/mine/vip/{{item.key}}.svg" />
+          <view class="vip-label" wx:if="{{item.label}}">{{item.label}}</view>
+        </view>
+        <view class="vip-item-name">{{item.text}}</view>
+      </view>
+    </block>
+  </view>
+</view>

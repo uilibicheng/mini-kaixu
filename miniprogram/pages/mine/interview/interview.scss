@@ -1,0 +1,83 @@
+/* subpackages/mine/pages/myComment/myComment.wxss */
+.common-page {
+  background: #f2f2f6;
+
+  .interview-tab {
+    flex-shrink: 0;
+    width: 100%;
+    height: 80rpx;
+    background: #ffffff;
+    padding: 0 4rpx;
+    box-sizing: border-box;
+    @include global.flex(x, start, center);
+    .interview-tab-item {
+      height: 80rpx;
+      padding: 8rpx 20rpx 0;
+      font-size: 28rpx;
+      color: rgba(0, 0, 0, 0.7);
+      line-height: 39rpx;
+      box-sizing: border-box;
+      @include global.flex(x, start, center);
+      &.active-tab-item {
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.9);
+        position: relative;
+        &::after {
+          display: block;
+          content: '';
+          width: 40rpx;
+          height: 8rpx;
+          background: #27ce79;
+          border-radius: 200rpx;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  .page-scroll {
+    width: 100%;
+    flex: 1;
+    margin-top: 24rpx;
+
+    .page-list {
+      width: 100%;
+      padding: 0 24rpx;
+      box-sizing: border-box;
+
+      .page-block {
+        width: 100%;
+        margin-bottom: 20rpx;
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .page-block-title {
+          font-weight: 600;
+          font-size: 28rpx;
+          color: rgba(0, 0, 0, 0.3);
+          line-height: 40rpx;
+          margin-bottom: 20rpx;
+        }
+        .page-item-status {
+          font-weight: 600;
+          font-size: 28rpx;
+          color: #f2505d;
+          line-height: 40rpx;
+          &.end-status {
+            color: rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
+    }
+
+    .page-empty {
+      width: 100%;
+      margin-top: 300rpx;
+      @include global.flex(x, center, center);
+    }
+  }
+}

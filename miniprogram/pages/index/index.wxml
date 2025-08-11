@@ -31,7 +31,10 @@
         <!-- 岗位列表 -->
         <view class="job-list">
           <block wx:for="{{6}}" wx:key="index">
-            <JobItem />
+            <JobItemBolck>
+              <view slot="header-right" class="job-salary">10-12K/年</view>
+              <view slot="borrom-right" class="info-btn">立即报名</view>
+            </JobItemBolck>
           </block>
         </view>
       </scroll-view>

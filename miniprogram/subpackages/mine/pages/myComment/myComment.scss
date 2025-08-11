@@ -1,0 +1,102 @@
+/* subpackages/mine/pages/myComment/myComment.wxss */
+.common-page {
+  background: #f2f2f6;
+
+  .comment-scroll {
+    width: 100%;
+    flex: 1;
+
+    .comment-list {
+      width: 100%;
+      padding: 24rpx;
+      padding-bottom: 0;
+      box-sizing: border-box;
+
+      .comment-block {
+        width: 100%;
+        margin-bottom: 32rpx;
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .comment-block-title {
+          font-weight: 600;
+          font-size: 28rpx;
+          color: rgba(0, 0, 0, 0.3);
+          line-height: 40rpx;
+        }
+
+        .comment-item {
+          margin-top: 20rpx;
+          width: 100%;
+          padding: 0 24rpx;
+          box-sizing: border-box;
+          background: #ffffff;
+          border-radius: 16rpx;
+          .comment-item-top {
+            width: 100%;
+            height: 154rpx;
+            border-bottom: 1rpx solid #f2f2f6;
+            @include global.flex(x, start, center);
+            position: relative;
+            .comment-item-left {
+              flex: 1;
+              margin-right: 150rpx;
+              @include global.flex(x, start, center);
+              .comment-item-avatar {
+                width: 80rpx;
+                height: 80rpx;
+                border-radius: 80rpx;
+                overflow: hidden;
+                flex-shrink: 0;
+              }
+              .comment-item-info {
+                flex: 1;
+                margin-left: 18rpx;
+                .comment-item-name {
+                  font-weight: 600;
+                  font-size: 32rpx;
+                  color: rgba(0, 0, 0, 0.9);
+                  line-height: 48rpx;
+                }
+                .comment-item-text {
+                  margin-top: 8rpx;
+                  font-size: 24rpx;
+                  color: rgba(0, 0, 0, 0.3);
+                  line-height: 32rpx;
+                }
+              }
+            }
+            .comment-item-btn {
+              position: absolute;
+              bottom: 14rpx;
+              right: 0rpx;
+              width: 140rpx;
+              height: 64rpx;
+              background: #f7f7f7;
+              border-radius: 8rpx;
+              font-weight: 500;
+              font-size: 28rpx;
+              color: global.$main-color;
+              @include global.flex(x, center, center);
+            }
+          }
+
+          .comment-item-bottom {
+            padding: 32rpx 0;
+            width: 100%;
+            font-size: 24rpx;
+            color: rgba(0, 0, 0, 0.9);
+            line-height: 32rpx;
+          }
+        }
+      }
+    }
+
+    .comment-empty {
+      width: 100%;
+      margin-top: 300rpx;
+      @include global.flex(x, center, center);
+    }
+  }
+}

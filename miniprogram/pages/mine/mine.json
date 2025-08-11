@@ -3,7 +3,7 @@
     "DefaultNavigationBar": "/components/defaultNavigationBar/index",
     "LoginModal": "/components/loginModal/index",
     "UserInfo": "./components/userInfo/index",
-    "VipContent": "./components/vipContent/index",
+    "VIPModule": "./components/VIPModule/index",
     "JobService": "./components/jobService/index",
     "MyWalletPanel": "./components/myWalletPanel/index",
     "SwitchRolePanel": "./components/switchRolePanel/index",

@@ -18,19 +18,19 @@
     </view>
   </view>
   <view class="info-bottom">
-    <view class="info-item">
+    <view class="info-item" bindtap="jumptToDeliveredResume">
       <view class="info-num">21</view>
       <view class="info-text">已投递</view>
     </view>
-    <view class="info-item">
+    <view class="info-item" bindtap="jumptToInterview">
       <view class="info-num">21</view>
       <view class="info-text">待面试</view>
     </view>
-    <view class="info-item">
+    <view class="info-item" bindtap="jumpToMyCollectJob">
       <view class="info-num">21</view>
       <view class="info-text">收藏</view>
     </view>
-    <view class="info-item">
+    <view class="info-item" bindtap="jumpToMyComment">
       <view class="info-num">21</view>
       <view class="info-text">我的点评</view>
     </view>

@@ -1,8 +1,9 @@
-import { STORAGE, } from '@/config/constants'
+import { STORAGE } from '@/config/constants'
 import { queryString } from './util'
 import loginApi from '@/api/login'
 import router from './router'
 import { TABBAR_ROUTE } from '../config/constants'
+import userApi from '../api/user'
 
 
 export function showToast({
@@ -85,6 +86,33 @@ export function getCurrentPageUrl() {
     }
   }
   return url
+}
+
+export async function getUserBaseInfo() {
+  try {
+    if (isLogin()) {
+      const data = await userApi.getUserBaseInfo()
+      await setUserBaseInfo(data)
+    }
+  } catch (error) {
+    removeLoginStorage()
+  }
+}
+
+export async function setUserBaseInfo(info) {
+  return new Promise(resolve => {
+    if (info) {
+      wx.setStorageSync(STORAGE.USER_BASE_INFO, info)
+    } else {
+      removeLoginStorage()
+    }
+    resolve(info)
+  })
+}
+
+export function getStorageUserBaseInfo() {
+  const userBaseInfo = wx.getStorageSync(STORAGE.USER_BASE_INFO)
+  return userBaseInfo
 }
 
 export function tryLogin() {
@@ -195,6 +223,7 @@ function goToLogin(url) {
 export function removeLoginStorage() {
   wx.removeStorageSync(STORAGE.USER_TOKEN)
   wx.removeStorageSync(STORAGE.CURRENT_ROLE_TYPE)
+  wx.removeStorageSync(STORAGE.USER_BASE_INFO)
 }
 
 export const getUrlParams = (url) => {

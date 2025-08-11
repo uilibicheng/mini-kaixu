@@ -1,7 +1,8 @@
+import { ComponentWithComputed } from "miniprogram-computed";
 import router from "../../../../utils/router"
 
 // pages/myResume/components/resumeItem/index.ts
-Component({
+ComponentWithComputed({
   options: {
     addGlobalClass: true,
   },
@@ -9,7 +10,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    userBaseInfo: {
+      type: Object,
+      value: {}
+    }
   },
 
   /**
@@ -17,6 +21,20 @@ Component({
    */
   data: {
 
+  },
+
+  computed: {
+    userDesc(data) {
+      const {userBaseInfo} = data
+      const arr = []
+      if (userBaseInfo.hasOwnProperty('sex')) {
+        arr.push(userBaseInfo.sex === 0 ? '女' : '男')
+      }
+      if (userBaseInfo.hasOwnProperty('education')) {
+        arr.push(userBaseInfo.education)
+      }
+      return arr.join('｜')
+    }
   },
 
   /**

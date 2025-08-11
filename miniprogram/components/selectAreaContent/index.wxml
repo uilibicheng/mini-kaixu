@@ -1,18 +1,45 @@
 <!-- components/job/selectAreaContent/index.wxml -->
-<view class="area-content">
-  <scroll-view class="area-item-scroll" scroll-y type="list">
-    <block wx:for="{{12}}" wx:key="index">
-      <text class="area-item {{index === 2 ? 'active-item' : ''}}" max-lines="{{1}}" overflow="ellipsis">浙江省</text>
-    </block>
-  </scroll-view>
-  <scroll-view class="area-item-scroll" scroll-y type="list">
-    <block wx:for="{{12}}" wx:key="index">
-      <text class="area-item {{index === 2 ? 'active-item' : ''}}" max-lines="{{1}}" overflow="ellipsis">杭州市</text>
-    </block>
-  </scroll-view>
-  <scroll-view class="area-item-scroll" scroll-y type="list">
-    <block wx:for="{{12}}" wx:key="index">
-      <text class="area-item {{index === 2 ? 'active-item' : ''}}" max-lines="{{1}}" overflow="ellipsis">西湖区</text>
-    </block>
-  </scroll-view>
+<view class="area-content" wx:if="{{provinceList && provinceList.length}}">
+  <view class="area-panel">
+    <scroll-view class="area-item-scroll" scroll-y type="list" scroll-with-animation scroll-into-view="{{provinceViewId}}">
+      <block wx:for="{{provinceList}}" wx:key="index">
+        <text
+          class="area-item {{index === provinceIndex ? 'active-item' : ''}}"
+          id="province-{{index}}"
+          max-lines="{{1}}"
+          overflow="ellipsis"
+          data-index="{{index}}"
+          bindtap="handleSelectProvince">{{item.areaFullName}}</text>
+      </block>
+    </scroll-view>
+    <scroll-view class="area-item-scroll" scroll-y type="list" scroll-with-animation scroll-into-view="{{cityViewId}}">
+      <block wx:for="{{cityList}}" wx:key="index">
+        <text
+          class="area-item {{index === cityIndex ? 'active-item' : ''}}"
+          id="city-{{index}}"
+          max-lines="{{1}}"
+          overflow="ellipsis"
+          data-index="{{index}}"
+          bindtap="handleSelectCity">{{item.areaFullName}}</text>
+      </block>
+    </scroll-view>
+    <scroll-view class="area-item-scroll" scroll-y type="list" scroll-with-animation scroll-into-view="{{areaViewId}}">
+      <block wx:for="{{areaList}}" wx:key="index">
+        <text
+          class="area-item {{index === areaIndex ? 'active-item' : ''}}"
+          id="area-{{index}}"
+          max-lines="{{1}}"
+          overflow="ellipsis"
+          data-index="{{index}}"
+          bindtap="handleSelectArea">{{item.areaFullName}}</text>
+      </block>
+    </scroll-view>
+  </view>
+  <BottomBtnGroup
+    wx:if="{{isShowBtn}}"
+    needSafeArea="{{false}}"
+    btnArr="{{btnArray}}"
+    height="112rpx"
+    bind:handleAreaReset="handleAreaReset"
+    bind:handleAreaSubmit="handleAreaSubmit" />
 </view>

@@ -1,7 +1,9 @@
 // pages/mine/components/userInfo/index.ts
-import { actionWithCheckLogin } from "../../../../utils/helpers"
+import loginBehavior from "@/behaviors/loginBehavior";
+import router from "../../../../utils/router";
 
 Component({
+  behaviors: [loginBehavior],
   options: {
     addGlobalClass: true
   },
@@ -26,13 +28,43 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    handleClick() {
-      actionWithCheckLogin({
+    handleClick(success) {
+      this.actionWithCheckLogin({
         success: () => {
-        },
-        fail: () => {
-          this.triggerEvent('toggleLoginModal')
+          success && success()
         }
+      })
+    },
+
+    jumptToDeliveredResume() {
+      this.handleClick(() => {
+        router.navigateTo({
+          url: '/pages/mine/deliveredResume/deliveredResume'
+        })
+      })
+    },
+
+    jumptToInterview() {
+      this.handleClick(() => {
+        router.navigateTo({
+          url: '/pages/mine/interview/interview'
+        })
+      })
+    },
+
+    jumpToMyComment() {
+      this.handleClick(() => {
+        router.navigateTo({
+          url: '/subpackages/mine/pages/myComment/myComment'
+        })
+      })
+    },
+
+    jumpToMyCollectJob() {
+      this.handleClick(() => {
+        router.navigateTo({
+          url: '/pages/mine/myCollectJob/myCollectJob'
+        })
       })
     }
   }

@@ -2,7 +2,7 @@
   "component": true,
   "styleIsolation": "apply-shared",
   "usingComponents": {
-    "JobItem": "/pages/index/components/jobItem/index",
+    "JobItemBolck": "/components/jobItemBolck/index",
     "ErrorOrEmpty": "/components/common/errorOrEmpty/index"
   }
 }

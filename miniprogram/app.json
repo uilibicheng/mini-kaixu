@@ -2,6 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/mine/mine",
+    "pages/mine/myCollectJob/myCollectJob",
+    "pages/mine/interview/interview",
+    "pages/mine/deliveredResume/deliveredResume",
     "pages/message/message",
     "pages/notice/notice",
     "pages/selectRole/selectRole",
@@ -28,7 +31,8 @@
     "pages/myResume/qualificationCertificate/qualificationCertificate",
     "pages/myResume/awardedHonor/awardedHonor",
     "pages/myResume/trialLectureVideo/trialLectureVideo",
-    "pages/myResume/worksShow/worksShow"
+    "pages/myResume/worksShow/worksShow",
+    "pages/mine/VIP/VIP"
   ],
   "requiredPrivateInfos": [
     "chooseAddress"
@@ -54,7 +58,8 @@
         "pages/privacySetting/privacySetting",
         "pages/feedback/feedback",
         "pages/entrustInvite/entrustInvite",
-        "pages/switchRole/switchRole"
+        "pages/switchRole/switchRole",
+        "pages/myComment/myComment"
       ]
     }
   ],

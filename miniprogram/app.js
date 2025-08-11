@@ -1,3 +1,5 @@
+import { getUserBaseInfo } from "./utils/helpers";
+
 // app.ts
 App({
   globalData: {
@@ -8,5 +10,7 @@ App({
     this.globalData.needLogin = false;
   },
 
-  async onShow() {},
+  async onShow() {
+    await getUserBaseInfo()
+  },
 });

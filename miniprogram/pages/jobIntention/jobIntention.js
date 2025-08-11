@@ -2,38 +2,41 @@
 import { ComponentWithComputed } from "miniprogram-computed";
 import messageBoxBehavior from "@/behaviors/messageBoxBehavior"
 import {showToast} from '@/utils/helpers'
-import { JOB_INTENTION_KEY } from "../../config/constants";
+import { DICT_TYPE_MAP, JOB_INTENTION_KEY, JOB_NATURE_OPTION, SCHOOL_NATURE_OPTION } from "../../config/constants";
+import sysApi from '../../api/sys'
 
 const initCardInfo = {
-  [JOB_INTENTION_KEY.XDXK]: '',
-  [JOB_INTENTION_KEY.YXDQ]: '',
-  [JOB_INTENTION_KEY.QWXZ]: '',
-  [JOB_INTENTION_KEY.DWXZ]: '',
-  [JOB_INTENTION_KEY.GWXZ]: '',
-  [JOB_INTENTION_KEY.QZZT]: '',
+  [JOB_INTENTION_KEY.XDXK]: {
+    schoolStage: null,
+    subject: null,
+    selectValue: '',
+  },
+  [JOB_INTENTION_KEY.YXDQ]: {
+    provinceCode: null,
+    province: null,
+    cityCode: null,
+    city: null,
+    areaCode: null,
+    area: null,
+    selectValue: '',
+  },
+  [JOB_INTENTION_KEY.QWXZ]: {
+    salaryRange: null,
+    selectValue: '',
+  },
+  [JOB_INTENTION_KEY.DWXZ]: {
+    unitNature: null,
+    selectValue: '',
+  },
+  [JOB_INTENTION_KEY.GWXZ]: {
+    jobNature: null,
+    selectValue: '',
+  },
+  [JOB_INTENTION_KEY.QZZT]: {
+    workStatus: null,
+    selectValue: '',
+  },
 }
-// 岗位性质选项
-const jobNatureOptionList = [
-  {
-    label: '编制',
-    value: '',
-  },
-  {
-    label: '非编',
-    value: '',
-  },
-]
-// 单位性质选项
-const schoolNatureOptionList = [
-  {
-    label: '公办',
-    value: '',
-  },
-  {
-    label: '民办',
-    value: '',
-  },
-]
 // 期望薪资
 const salarExpectionList = [
   [{label: '面议', value: ''},{label: '参考办公', value: ''},{label: '1k', value: ''},{label: '2k', value: ''}],
@@ -60,6 +63,8 @@ ComponentWithComputed({
     ],
     intentCardList: [JSON.parse(JSON.stringify(initCardInfo))],
     selectType: '',
+    cardIndex: 0,
+    jobStatusOptionist: [],
   },
 
   computed: {
@@ -75,15 +80,15 @@ ComponentWithComputed({
       return selectType === JOB_INTENTION_KEY.QWXZ || selectType === JOB_INTENTION_KEY.QZZT
     },
     optionList(data) {
-      const {selectType} = data
+      const {selectType, jobStatusOptionist} = data
       if (selectType === JOB_INTENTION_KEY.GWXZ) {
-        return [...jobNatureOptionList]
+        return [...JOB_NATURE_OPTION]
       }
       if (selectType === JOB_INTENTION_KEY.DWXZ) {
-        return [...schoolNatureOptionList]
+        return [...SCHOOL_NATURE_OPTION]
       }
       if (selectType === JOB_INTENTION_KEY.QWXZ) {
-        return [...salarExpectionList]
+        return [...jobStatusOptionist]
       }
       if (selectType === JOB_INTENTION_KEY.QZZT) {
         return [...jobStatusList]
@@ -107,9 +112,22 @@ ComponentWithComputed({
      * 生命周期函数--监听页面加载
      */
     onLoad() {
-  
+      this.getJogStatusOptionList()
     },
 
+    async getJogStatusOptionList() {
+      const res = await this.getDict({
+        dictType: DICT_TYPE_MAP.jobStatus
+      }, true)
+      console.log('res121212',  res);
+    },
+
+    async getDict(params) {
+      const res = await sysApi.getDict(params)
+      return res
+    },
+
+    // 添加选项卡
     handleAddIntentionCard() {
       const {intentCardList} = this.data 
       intentCardList.push(JSON.parse(JSON.stringify(initCardInfo)))
@@ -118,6 +136,7 @@ ComponentWithComputed({
       })
     },
 
+    // 删除选项卡
     deleteCardMessage(e) {
       const {index} = e.detail
       this.$messageBox({
@@ -137,23 +156,88 @@ ComponentWithComputed({
       })
     },
 
+    // 对应选项卡点击选择
     handleSelectFromActionSheet(e) {
-      const {item, index} = e.detail
+      const {item, cardIndex, index} = e.detail
       console.log('item', item);
       this.setData({
         selectType: item.key,
+        cardIndex,
       })
       if (item.key === JOB_INTENTION_KEY.YXDQ) {
-        wx.navigateTo({
-          url: '/pages/jobIntention/areaIntention',
-        });
+        this.jumpToAreaIntention()
       }
+    },
+
+    // 跳转到地区选择
+    jumpToAreaIntention() {
+      const that = this
+      wx.navigateTo({
+        url: '/pages/jobIntention/areaIntention',
+        events: {
+          acceptAreaInfo(info) {
+            console.log('acceptAreaInfo11111', info);
+            const {cardIndex, selectType, intentCardList} = that.data
+            console.log('intentCardList', intentCardList, cardIndex, selectType);
+            info.selectValue = info.province + (info.city !== info.province ? info.city : '') + info.area
+            intentCardList[cardIndex][selectType] = info
+            that.setData({
+              intentCardList,
+            })
+            console.log('info', info);
+            console.log('intentCardList', intentCardList)
+          }
+        },
+        success: res => {
+          const {cardIndex, selectType, intentCardList} = that.data
+          const areaInfo = intentCardList[cardIndex][selectType]
+          res.eventChannel.emit('sendAreaInfo', areaInfo)
+        },
+      })
     },
 
     handleCloseActionSheet() {
       this.setData({
         selectType: '',
       })
+    },
+    
+    // 提交学段学科
+    handleSubmitSubject(e) {
+      console.log('e', e);
+      const {schoolStage, subject} = e.detail
+      const {selectType, cardIndex, intentCardList} = this.data
+      const info = {
+        schoolStage,
+        subject,
+        selectValue: schoolStage + subject,
+      }
+      intentCardList[cardIndex][selectType] = info
+      this.setData({
+        intentCardList,
+      })
+      console.log('intentCardList', intentCardList)
+      this.handleCloseActionSheet()
+    },
+
+    // 单位性质和岗位性质选择
+    handleSelectNature(e) {
+      const {index} = e.detail
+      const {optionList, selectType, intentCardList, cardIndex} = this.data
+      let info = {
+        selectValue: optionList[index].label,
+      }
+      if (selectType === JOB_INTENTION_KEY.DWXZ) {
+        info.unitNature = optionList[index].value
+      }
+      if (selectType === JOB_INTENTION_KEY.GWXZ) {
+        info.jobNature = optionList[index].value
+      }
+      intentCardList[cardIndex][selectType] = info
+      this.setData({
+        intentCardList,
+      })
+      this.handleCloseActionSheet()
     },
 
     handleSave() {

@@ -31,7 +31,6 @@
           border-radius: 88rpx;
           overflow: hidden;
           margin-right: 14rpx;
-          background-color: aqua;
         }
 
         .radio-item {
@@ -54,7 +53,7 @@
         flex: 1;
         font-size: 28rpx;
         color: rgba(0, 0, 0, 0.9);
-        height: 40rpx;
+        min-height: 40rpx;
         line-height: 40rpx;
         text-align: right;
         margin-right: 16rpx;

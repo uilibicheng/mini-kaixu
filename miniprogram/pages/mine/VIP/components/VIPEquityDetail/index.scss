@@ -1,0 +1,67 @@
+/* pages/mine/VIP/components/VIPEquityDetail/index.wxss */
+.equity-detail {
+  padding-bottom: 46rpx;
+  .detail-title {
+    font-weight: 500;
+    font-size: 28rpx;
+    color: rgba(0, 0, 0, 0.9);
+    line-height: 48rpx;
+  }
+
+  .detail-scroll {
+    width: 100%;
+    height: 190rpx;
+
+    .detail-list {
+      @include global.flex(x, start, center);
+      padding-left: 16rpx;
+      height: 100%;
+
+      .detail-item {
+        height: 100%;
+        padding: 0 20rpx;
+        @include global.flex(y, center, center);
+        &:first-child .detail-item-img {
+          border-color: #AD6500;
+        }
+
+        .detail-item-img {
+          width: 80rpx;
+          height: 80rpx;
+          background: #ffffff;
+          border-radius: 200rpx;
+          border: 2rpx solid #fff;
+          box-sizing: border-box;
+          @include global.flex(x, center, center);
+          .detail-item-icon {
+            width: 40rpx;
+            height: 40rpx;
+          }
+        }
+        .detail-item-text {
+          margin-top: 8rpx;
+          font-weight: 500;
+          font-size: 28rpx;
+          color: #8c5404;
+          line-height: 40rpx;
+        }
+      }
+    }
+  }
+
+  .desc-scroll {
+    width: 100%;
+    height: 400rpx;
+
+    .desc-list {
+      padding-left: 24rpx;
+      height: 100%;
+      box-sizing: border-box;
+      @include global.flex(x, start, start);
+      .desc-item-img {
+        height: 360rpx;
+        margin-right: 24rpx;
+      }
+    }
+  }
+}

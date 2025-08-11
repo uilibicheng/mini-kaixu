@@ -1,0 +1,2 @@
+<!--components/common/loadingTip/index.wxml-->
+<view class="loading-tip">{{end ? '已经到底了' : '加载中...'}}</view>

@@ -16,6 +16,6 @@
   </view>
   <view slot="footer" class="option-footer">
     <view class="footer-btn" bindtap="handleClose">取消</view>
-    <view class="footer-btn active-btn">完成</view>
+    <view class="footer-btn active-btn" bindtap="handleSubmit">完成</view>
   </view>
 </ActionSheet> 

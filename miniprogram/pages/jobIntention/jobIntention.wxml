@@ -32,12 +32,13 @@
   <SelectSubjectSheet
     visible="{{showSubjectSheet}}"
     bind:close="handleCloseActionSheet"
-    bind:submit="handleActionSheetSubmit" />
+    bind:submit="handleSubmitSubject" />
   <!-- 单位性质和岗位性质选项 -->
   <OptionCard
     visible="{{showOptionCard}}"
     optionList="{{optionList}}"
-    bind:close="handleCloseActionSheet" />
+    bind:close="handleCloseActionSheet"
+    bind:click="handleSelectNature" />
   <!-- 期望薪资。求职状态 -->
   <OptionPicker
     visible="{{showOptionPicker}}"

@@ -1,4 +1,6 @@
-<!--pages/personalInfo/personalInfo.wxml-->
+<!--pages/userBaseInfo/userBaseInfo.wxml-->
+<wxs src="../../wxs/common.wxs" module="commonWxs" />
+
 <view class="common-page">
   <NavigationBar title="个人信息" background="#F2F2F6" />
 
@@ -9,7 +11,7 @@
          真实照片更容易提高求职成功率
         </view>
         <view slot="right" class="personal-item-right">
-          <image class="personal-avatar" src="" />
+          <image class="personal-avatar" src="{{userBaseInfo.avatar}}" />
           <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
         </view>
       </PersonalItem>
@@ -18,6 +20,7 @@
         <view slot="right" class="personal-item-right">
           <input
             class="personal-input"
+            model:value="{{userBaseInfo.username}}"
             placeholder="请输入真实名字"
             placeholder-class="input-placeholder"
           />
@@ -28,12 +31,12 @@
       <PersonalItem title="性别">
         <view slot="right" class="personal-item-right">
           <view class="radio-item" data-sex="{{1}}" bindtap="handleSelectSex">
-            <image wx:if="{{teacherInfo.sex === 1}}" class="icon-radio" src="/assets/images/icon/icon-radio-selected.svg" />
+            <image wx:if="{{userBaseInfo.sex === 1}}" class="icon-radio" src="/assets/images/icon/icon-radio-selected.svg" />
             <image wx:else class="icon-radio" src="/assets/images/icon/icon-radio.svg" />
             男
           </view>
           <view class="radio-item" data-sex="{{0}}" bindtap="handleSelectSex">
-            <image wx:if="{{teacherInfo.sex === 0}}" class="icon-radio" src="/assets/images/icon/icon-radio-selected.svg" />
+            <image wx:if="{{userBaseInfo.sex === 0}}" class="icon-radio" src="/assets/images/icon/icon-radio-selected.svg" />
             <image wx:else class="icon-radio" src="/assets/images/icon/icon-radio.svg" />
             女
           </view>
@@ -42,7 +45,7 @@
 
       <PersonalItem title="手机号">
         <view slot="right" class="personal-item-right">
-        <view class="personal-input">151****7437</view>
+        <view class="personal-input">{{userBaseInfo.phone}}</view>
         </view>
       </PersonalItem>
 
@@ -50,6 +53,7 @@
         <view slot="right" class="personal-item-right">
           <input
             class="personal-input"
+            model:value="{{userBaseInfo.email}}"
             placeholder="请输入邮箱"
             placeholder-class="input-placeholder"
           />
@@ -57,49 +61,54 @@
         </view>
       </PersonalItem>
 
-      <PersonalItem title="当前身份" bind:click="handleSelectIdentity">
+      <PersonalItem title="当前身份" data-type="identity" bind:click="handleSelectRadio">
         <view slot="right" class="personal-item-right">
-          <view class="input-placeholder">请选择</view>
+          <view class="personal-input" wx:if="{{userBaseInfo.identity}}">{{userBaseInfo.identity}}</view>
+          <view class="input-placeholder" wx:else>请选择</view>
           <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
         </view>
       </PersonalItem>
 
       <view class="select-row">
-        <view class="select-item" bindtap="handleSelectBirth">
+        <view class="select-item" data-type="birthDate" bindtap="handleSelectPicker">
           <view class="select-item-title">
             出生日期
             <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
           </view>
           <view class="select-item-bottom">
-          <view class="personal-input">请选择</view>
-          <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+            <view class="personal-input" wx:if="{{userBaseInfo.birthDate}}">{{commonWxs.formatDate(userBaseInfo.birthDate)}}</view>
+            <view class="personal-input" wx:else>请选择</view>
+            <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+          </view>
         </view>
-        </view>
-        <view class="select-item" bindtap="handleSelectJobTime">
+        <view class="select-item" data-type="workDate" bindtap="handleSelectPicker">
           <view class="select-item-title">
             参加工作
             <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
           </view>
           <view class="select-item-bottom">
-          <view class="personal-input">请选择</view>
-          <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+            <view class="personal-input" wx:if="{{userBaseInfo.workDate}}">{{commonWxs.formatDate(userBaseInfo.workDate)}}</view>
+            <view class="personal-input" wx:else>请选择</view>
+            <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+          </view>
         </view>
-        </view>
-        <view class="select-item" bindtap="handleSelectEducation">
+        <view class="select-item" data-type="education" bindtap="handleSelectRadio">
           <view class="select-item-title">
             最高学历
             <image class="icon-require" src="/assets/images/icon/icon-require.svg" />
           </view>
           <view class="select-item-bottom">
-          <view class="personal-input">请选择</view>
-          <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
-        </view>
+            <view class="personal-input" wx:if="{{userBaseInfo.education}}">{{userBaseInfo.education}}</view>
+            <view class="personal-input" wx:else>请选择</view>
+            <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
+          </view>
         </view>
       </view>
 
       <PersonalItem title="现居住地" bind:click="handleSelectArea">
         <view slot="right" class="personal-item-right">
-          <view class="input-placeholder">请选择</view>
+          <view class="personal-input" wx:if="{{areaFullName}}">{{areaFullName}}</view>
+          <view class="input-placeholder" wx:else>请选择</view>
           <image class="icon-right-arrow" src="/assets/images/icon/icon-right-arrow.svg" />
         </view>
       </PersonalItem>
@@ -108,6 +117,7 @@
         <view slot="right" class="personal-item-right">
           <input
             class="personal-input"
+            model:value="{{userBaseInfo.address}}"
             placeholder="请输入详细地址"
             placeholder-class="input-placeholder"
           />
@@ -119,6 +129,7 @@
         <view slot="right" class="personal-item-right">
           <input
             class="personal-input"
+            model:value="{{userBaseInfo.wechatCode}}"
             placeholder="请输入微信号"
             placeholder-class="input-placeholder"
           />
@@ -147,7 +158,7 @@
         class="select-item {{selectIndex === index ? 'select-active-item' : ''}}"
         data-index="{{index}}"
         catchtap="handleSelectOption">
-        {{item.label}}
+        {{item.name}}
       </view>
     </block>
   </view>
@@ -156,8 +167,7 @@
       needSafeArea="{{false}}"
       btnArr="{{[selectBtnInfo]}}"
       height="112rpx"
-      bind:handleReset="handleReset"
-      bind:handleSubmit="handleSubmit" />
+      bind:handleSelectSubmit="handleSelectSubmit" />
   </view>
 </ActionSheet>
 
@@ -167,7 +177,8 @@
   title="{{panelTitle}}"
   pickerList="{{pickerOptionList}}"
   pickerValue="{{pickerValue}}"
-  bind:close="toggleShowOptionPicker" />
+  bind:close="toggleShowOptionPicker"
+  bind:handleSubmit="handleDateSubmit" />
 
 <!-- 居住地 -->
 <ActionSheet
@@ -177,14 +188,11 @@
   bind:close="toggleShowAreaVisible">
   <view slot="content" class="panel-box">
     <!-- 选择地区 -->
-    <SelectAreaContent />
-  </view>
-  <view slot="footer">
-    <BottomBtnGroup
-      needSafeArea="{{false}}"
-      btnArr="{{selectAreaBtnArr}}"
-      height="112rpx"
-      bind:handleAreaReset="handleAreaReset"
-      bind:handleAreaSubmit="handleAreaSubmit" />
+    <SelectAreaContent
+      visible="{{selectAreaVisible}}"
+      provinceCode="{{userBaseInfo.provinceCode}}"
+      cityCode="{{userBaseInfo.cityCode}}"
+      areaCode="{{userBaseInfo.areaCode}}"
+      bind:handleSubmit="handleAreaSubmit" />
   </view>
 </ActionSheet>

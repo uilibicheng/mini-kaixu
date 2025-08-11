@@ -63,9 +63,9 @@ Component({
     },
 
     handleSelect(e) {
-      console.log('e', e);
+      const {cardIndex} = this.data
       const {item, index} = e.currentTarget.dataset
-      this.triggerEvent('selectVlue', {item, index})
+      this.triggerEvent('selectVlue', {item, index, cardIndex})
     },
   }
 })

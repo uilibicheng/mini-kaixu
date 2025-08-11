@@ -1,0 +1,103 @@
+/* pages/mine/VIP/components/VIPCompareTable/index.wxss */
+.compare-table {
+  width: 100%;
+  background: #fff;
+  border-radius: 24rpx;
+  overflow: visible;
+
+  .table-row {
+    flex-shrink: 0;
+    width: 100%;
+    @include global.flex(x, start, start);
+    overflow: visible;
+
+    .table-column {
+      width: 234rpx;
+      flex-shrink: 0;
+      flex-grow: 0;
+      font-size: 28rpx;
+      @include global.flex(y, start, start);
+      overflow: visible;
+      .table-th {
+        width: 100%;
+        height: 96rpx;
+        @include global.flex(x, center, center);
+        box-sizing: border-box;
+      }
+      &:nth-child(1) .table-th {
+        background: #f7f8fc;
+        color: rgba(0,0,0,0.4);
+      }
+      &:nth-child(2) .table-th {
+        background: #eeeff7;
+        color: rgba(0,0,0,0.7);
+      }
+      &:nth-child(3) .table-th {
+        background: #f7e3c6;
+        color: #895B1A;
+      }
+      .table-td {
+        width: 100%;
+        height: 80rpx;
+        @include global.flex(x, center, center);
+        box-sizing: border-box;
+        overflow: visible;
+
+        .compare-name {
+          position: relative;
+          color: rgba(0, 0, 0, 0.9);
+          overflow: visible;
+          .vip-label {
+            position: absolute;
+            top: 12rpx;
+            right: -4rpx;
+            transform: translate(100%, -100%);
+            height: 32rpx;
+            line-height: 32rpx;
+            padding: 0 6rpx;
+            background-color: global.$main-color;
+            border-radius: 8rpx 8rpx 8rpx 0;
+            font-size: 20rpx;
+            color: global.$white-color;
+            font-weight: bold;
+            z-index: 9;
+          }
+        }
+
+        .normal-icon {
+          width: 48rpx;
+          height: 48rpx;
+        }
+        .normal-text {
+          color: rgba(0, 0, 0, 0.4);
+        }
+
+        .VIP-icon {
+          width: 40rpx;
+          height: 40rpx;
+        }
+        .VIP-text {
+          font-weight: 500;
+          color: #ad6500;
+        }
+      }
+      &:nth-child(1) {
+        .table-th,
+        .table-td {
+          @include global.flex(x, start, center);
+          padding-left: 32rpx;
+        }
+      }
+    }
+
+    &:nth-child(odd) {
+      background: #f7f8fc;
+    }
+    &:nth-child(odd) .table-column:last-child .table-td {
+      background: #F7E3C6;
+    }
+    &:nth-child(even) .table-column:last-child .table-td {
+      background: #FCF6ED;
+    }
+  }
+}

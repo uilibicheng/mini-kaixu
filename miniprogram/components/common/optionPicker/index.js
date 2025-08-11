@@ -53,8 +53,15 @@ ComponentWithComputed({
       this.triggerEvent('close')
     },
 
-    bindChange() {
+    bindChange(e) {
+      this.setData({
+        value: e.detail.value
+      })
+    },
 
+    handleSubmit() {
+      const {value} = this.data
+      this.triggerEvent('handleSubmit', {value})
     }
   }
 })

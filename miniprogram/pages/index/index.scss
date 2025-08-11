@@ -148,6 +148,24 @@
           width: 100%;
           padding: 0 24rpx;
           box-sizing: border-box;
+
+          .job-salary {
+            color: #f2505d;
+            font-weight: bold;
+            font-size: 28rpx;
+          }
+
+          .info-btn {
+            flex-shrink: 0;
+            width: 160rpx;
+            height: 48rpx;
+            background-color: #e5fcf4;
+            border-radius: 8rpx;
+            color: global.$main-color;
+            font-size: 24rpx;
+            font-weight: bold;
+            @include global.flex(x, center, center);
+          }
         }
       }
 

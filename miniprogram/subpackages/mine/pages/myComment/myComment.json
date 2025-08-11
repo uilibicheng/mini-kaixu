@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "ErrorOrEmpty": "/components/common/errorOrEmpty/index",
+    "LoadingTip": "/components/common/loadingTip/index"
+  }
+}

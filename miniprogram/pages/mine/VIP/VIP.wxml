@@ -1,0 +1,76 @@
+<!--pages/mine/VIP/VIP.wxml-->
+<view class="common-page">
+  <root-portal>
+    <NavigationBar title="" isWhiteBack="{{true}}" background="{{isScroll ? '#0B3939' : 'transparent'}}">
+      <view slot="center" class="nav-title">升级VIP提升求职效率</view>
+    </NavigationBar>
+  </root-portal>
+
+  <scroll-view
+    class="VIP-scroll"
+    scroll-y
+    type="list"
+    enhanced="{{true}}"
+    bounces="{{false}}"
+    bindscroll="handleScroll">
+    <!-- <VIPHeader /> -->
+    <view class="VIP-scroll-block" style="height: {{contentHeight}}px;">
+      <image class="VIP-scroll-bg" src="/assets/images/mine/vip/VIP-bg.png" mode="widthFix" />
+      <view class="VIP-page">
+        <view class="VIP-header">
+          <view class="VIP-time-status">{{!userBaseInfo.vip ? '未开通' : ''}}</view>
+        </view>
+        <view class="VIP-content">
+          <view class="VIP-goods">
+            <block wx:for="{{goodsList}}" wx:key="index">
+              <view
+                class="VIP-box goods-box {{selectGoodsIndex === index ? 'active-goods-box' : ''}}"
+                data-index="{{index}}"
+                bindtap="handleSelectGoods">
+                <view class="goods-title">
+                  {{item.name}}
+                  <image wx:if="{{selectGoodsIndex === index}}" class="icon-radio" src="/assets/images/icon/icon-radio-selected-gray.svg" />
+                  <image wx:else class="icon-radio" src="/assets/images/icon/icon-radio.svg" />
+                </view>
+                <view class="goods-price-wrap">
+                  <view class="goods-price-num">{{item.price}}</view>
+                  <view class="goods-price-unit">元/{{item.unit}}</view>
+                </view>
+              </view>
+            </block>
+          </view>
+
+          <!-- 会员权益 -->
+          <view class="mgt24">
+            <VIPEquityBlock />
+          </view>
+
+          <!-- 特权对比表格 -->
+          <view class="mgt24">
+            <VIPCompareTable />
+          </view>
+
+          <view class="mgt48">
+            <VIPEquityDetail />
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="VIP-footer safe-bottom" wx:if="{{currentGoods}}">
+    <view class="footer-btn">
+      <view class="footer-btn-price">
+        <view class="footer-btn-num">{{currentGoods.price}}</view>
+        <view class="footer-btn-unit">元/{{currentGoods.unit}}</view>
+      </view>
+      <view class="footer-btn-text">立即开通</view>
+    </view>
+    <view class="footer-agree-wrap" bindtap="toggleAgree">
+      <image wx:if="{{isAgree}}" class="icon-radio" src="/assets/images/icon/icon-radio-selected-gray.svg" />
+      <image wx:else class="icon-radio" src="/assets/images/icon/icon-radio.svg" />
+      <view>同意</view>
+      <view class="agree-text">《开旭会员权益》</view>
+    </view>
+  </view>
+</view>

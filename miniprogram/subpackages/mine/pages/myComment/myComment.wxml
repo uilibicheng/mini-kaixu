@@ -1,0 +1,33 @@
+<!--subpackages/mine/pages/myComment/myComment.wxml-->
+<view class="common-page safe-bottom">
+  <NavigationBar title="我的点评" background="#fff" />
+
+  <scroll-view class="comment-scroll" scroll-y type="list">
+    <block wx:if="{{true}}">
+      <view class="comment-list">
+        <view class="comment-block" wx:for="{{3}}" wx:for-index="blockIndex" wx:key="blockIndex">
+          <view class="comment-block-title">2025-07-23</view>
+          <block wx:for="{{2}}" wx:key="index">
+            <view class="comment-item">
+              <view class="comment-item-top">
+                <view class="comment-item-left">
+                  <image class="comment-item-avatar" src="" />
+                  <view class="comment-item-info">
+                    <view class="comment-item-name">杭州启明实验学校</view>
+                    <view class="comment-item-text">公办｜4000-5000人</view>
+                  </view>
+                </view>
+                <view class="comment-item-btn">删除点评</view>
+              </view>
+              <view class="comment-item-bottom">避雷，避雷，千万别来这个学校，太抗了！避雷.....文字文字文字文字文字文字字文字文字文字文字字文字文字文字文字字字字字字字字</view>
+            </view>
+          </block>
+        </view>
+      </view>
+      <LoadingTip end="{{true}}" />
+    </block>
+    <view class="comment-empty" wx:else>
+      <ErrorOrEmpty />
+    </view>
+  </scroll-view>
+</view>

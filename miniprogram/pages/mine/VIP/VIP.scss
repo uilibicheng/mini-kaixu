@@ -1,0 +1,175 @@
+/* pages/mine/VIP/VIP.wxss */
+.nav-title {
+  flex: 1;
+  text-align: left;
+  font-weight: bold;
+  font-size: 32rpx;
+  color: #ffffff;
+  line-height: 40rpx;
+}
+.common-page {
+  background: #f2f2f6;
+
+  .VIP-scroll {
+    flex: 1;
+    width: 100%;
+
+    .VIP-scroll-block {
+      position: relative;
+      width: 100%;
+      min-height: 100%;
+
+      .VIP-scroll-bg {
+        width: 100%;
+      }
+
+      .VIP-page {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+
+        .VIP-header {
+          margin-top: 240rpx;
+          width: 100%;
+          height: 40rpx;
+          padding-left: 306rpx;
+          box-sizing: border-box;
+          overflow: hidden;
+          @include global.flex(x, start, start);
+          .VIP-time-status {
+            height: 100%;
+            padding: 0 8rpx;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8rpx;
+            @include global.flex(x, center, center);
+            font-weight: 600;
+            font-size: 24rpx;
+            line-height: 24rpx;
+            color: #ffe6c3;
+          }
+        }
+
+        .VIP-content {
+          margin-top: 96rpx;
+          width: 100%;
+          background: #f2f2f6;
+          border-radius: 24rpx 24rpx 0rpx 0rpx;
+          padding: 24rpx;
+          box-sizing: border-box;
+
+          .VIP-box {
+            width: 100%;
+            background: #ffffff;
+            border-radius: 16rpx;
+            padding: 0 24rpx;
+            box-sizing: border-box;
+          }
+
+          .VIP-goods {
+            width: 100%;
+            @include global.flex(x, between, start);
+            .goods-box {
+              width: 340rpx;
+              height: 160rpx;
+              border: 2rpx solid #fff;
+              &.active-goods-box {
+                background: #fcf6ed;
+                border-color: #fde3bf;
+              }
+              .goods-title {
+                width: 100%;
+                @include global.flex(x, between, center);
+                padding-top: 20rpx;
+                font-weight: 500;
+                font-size: 28rpx;
+                color: rgba(0, 0, 0, 0.9);
+                line-height: 40rpx;
+                .icon-radio {
+                  width: 40rpx;
+                  height: 40rpx;
+                }
+              }
+              .goods-price-wrap {
+                margin-top: 20rpx;
+                @include global.flex(x, start, end);
+                font-weight: 500;
+                .goods-price-num {
+                  font-size: 40rpx;
+                  color: #895b1a;
+                  line-height: 60rpx;
+                }
+                .goods-price-unit {
+                  font-size: 24rpx;
+                  color: #895b1a;
+                  line-height: 40rpx;
+                  margin-bottom: 4rpx;
+                }
+              }
+            }
+          }
+
+          .mgt24 {
+            margin-top: 24rpx;
+            width: 100%;
+          }
+          .mgt48 {
+            margin-top: 48rpx;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .VIP-footer {
+    flex-shrink: 0;
+    width: 100%;
+    height: 200rpx;
+    background: #fff;
+    @include global.flex(y, between, center);
+    .footer-btn {
+      margin-top: 12rpx;
+      width: 654rpx;
+      height: 80rpx;
+      background: #eece9f;
+      border-radius: 200rpx;
+      @include global.flex(x, center, center);
+      color: #593100;
+      font-weight: 500;
+      .footer-btn-price {
+        @include global.flex(x, start, end);
+        .footer-btn-num {
+          font-size: 48rpx;
+          line-height: 72rpx;
+        }
+        .footer-btn-unit {
+          margin-bottom: 8rpx;
+          font-size: 28rpx;
+          line-height: 40rpx;
+        }
+      }
+      .footer-btn-text {
+        margin-left: 40rpx;
+        font-size: 32rpx;
+        line-height: 48rpx;
+      }
+    }
+
+    .footer-agree-wrap {
+      @include global.flex(x, center, center);
+      font-size: 24rpx;
+      color: rgba(0, 0, 0, 0.9);
+      line-height: 32rpx;
+      .icon-radio {
+        width: 32rpx;
+        height: 32rpx;
+        margin-right: 8rpx;
+      }
+      .agree-text {
+        color: #AD6500;
+      }
+    }
+  }
+}

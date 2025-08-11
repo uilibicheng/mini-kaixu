@@ -4,13 +4,19 @@
 
   <view class="area-content">
     <!-- 选择地区 -->
-    <SelectAreaContent />
+    <SelectAreaContent
+      visible="{{areaVisible}}"
+      isShowBtn="{{false}}"
+      provinceCode="{{areaInfo.provinceCode}}"
+      cityCode="{{areaInfo.cityCode}}"
+      areaCode="{{areaInfo.areaCode}}"
+      bind:handleSelect="handleSelect" />
   </view>
 
   <BottomBtnGroup
     needSafeArea="{{true}}"
-    btnArr="{{btnArr}}"
+    btnArr="{{[btnInfo]}}"
     background="#fff"
     height="104rpx"
-    bind:handleSave="handleSubmit" />
+    bind:handleConfirm="handleConfirm" />
 </view>

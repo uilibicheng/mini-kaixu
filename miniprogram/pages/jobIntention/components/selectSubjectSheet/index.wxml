@@ -6,13 +6,6 @@
   bind:close="handleClose">
   <view slot="content" class="panel-box">
     <!-- 选择学段学科 -->
-    <SelectSubjectContent />
-  </view>
-  <view slot="footer">
-    <BottomBtnGroup
-      needSafeArea="{{false}}"
-      btnArr="{{btnArr}}"
-      height="112rpx"
-      bind:handleSubmit="handleSubmit" />
+    <SelectSubjectContent visible="{{visible}}" bind:submit="handleSubmit" />
   </view>
 </ActionSheet>

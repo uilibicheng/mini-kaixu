@@ -1,6 +1,6 @@
 import loginApi from "../api/login"
 import { STORAGE } from "../config/constants"
-import { showToast } from "../utils/helpers"
+import { getUserBaseInfo, showToast } from "../utils/helpers"
 
 export default Behavior({
   data: {
@@ -92,6 +92,7 @@ export default Behavior({
 
     async loginSuccess(token) {
       wx.setStorageSync(STORAGE.USER_TOKEN, token)
+      await getUserBaseInfo()
       this.onClose()
       // 判断是否有登陆后的回调方法
       this.triggerEvent('handleLoginSuccess')

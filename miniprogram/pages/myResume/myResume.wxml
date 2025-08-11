@@ -5,7 +5,7 @@
   <scroll-view class="resume-scroll" scroll-y type="list">
     <view class="resume-content">
       <!-- 个人信息 -->
-      <PersonalInfo />
+      <personalInfoBlock userBaseInfo="{{userBaseInfo}}" />
       <!-- 求职意向 -->
       <JobIntentionBlock />
       <!-- 简历附件 -->

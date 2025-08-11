@@ -15,14 +15,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    btnArr: [
-      {
-        name: '确定',
-        method: 'handleSubmit',
-        isActive: true,
-        width: '',
-      },
-    ]
+    
   },
 
   /**
@@ -33,8 +26,10 @@ Component({
       this.triggerEvent('close')
     },
 
-    handleSubmit() {
-      this.triggerEvent('submit')
+    handleSubmit(e) {
+      this.triggerEvent('submit', {
+        ...e.detail
+      })
     }
   }
 })

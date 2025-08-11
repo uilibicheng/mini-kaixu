@@ -1,0 +1,55 @@
+/* subpackages/mine/pages/myComment/myComment.wxss */
+.common-page {
+  background: #f2f2f6;
+
+  .page-scroll {
+    width: 100%;
+    flex: 1;
+
+    .page-list {
+      width: 100%;
+      padding: 24rpx;
+      padding-bottom: 0;
+      box-sizing: border-box;
+
+      .page-block {
+        width: 100%;
+        margin-bottom: 20rpx;
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .page-block-title {
+          font-weight: 600;
+          font-size: 28rpx;
+          color: rgba(0, 0, 0, 0.3);
+          line-height: 40rpx;
+          margin-bottom: 20rpx;
+        }
+        .page-item-status {
+          font-weight: 600;
+          font-size: 28rpx;
+          color: #f2505d;
+          line-height: 40rpx;
+          &.end-status {
+            color: rgba(0,0,0,0.3);
+          }
+        }
+
+        .page-item-collect {
+          padding: 8rpx;
+          .icon-star {
+            width: 40rpx;
+            height: 40rpx;
+          }
+        }
+      }
+    }
+
+    .page-empty {
+      width: 100%;
+      margin-top: 300rpx;
+      @include global.flex(x, center, center);
+    }
+  }
+}

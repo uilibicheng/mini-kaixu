@@ -4,11 +4,46 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/myResume/trialLectureVideo/trialLectureVideo",
-          "pathName": "pages/myResume/trialLectureVideo/trialLectureVideo",
+          "name": "pages/mine/VIP/VIP",
+          "pathName": "pages/mine/VIP/VIP",
           "query": "",
           "scene": null,
           "launchMode": "default"
+        },
+        {
+          "name": "pages/mine/interview/interview",
+          "pathName": "pages/mine/interview/interview",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/deliveredResume/deliveredResume",
+          "pathName": "pages/mine/deliveredResume/deliveredResume",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/mine/myCollectJob/myCollectJob",
+          "pathName": "pages/mine/myCollectJob/myCollectJob",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "subpackages/mine/pages/myComment/myComment",
+          "pathName": "subpackages/mine/pages/myComment/myComment",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/myResume/trialLectureVideo/trialLectureVideo",
+          "pathName": "pages/myResume/trialLectureVideo/trialLectureVideo",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         },
         {
           "name": "pages/myResume/qualificationCertificate/qualificationCertificate",
